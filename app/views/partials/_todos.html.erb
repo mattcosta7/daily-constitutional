@@ -1,0 +1,6 @@
+<%@user.todos.each do |todo| %>
+  <%if todo.duedate.today? %>
+    <%="#{todo.duedate} #{todo.description}"%>
+    <br>
+  <%end%>
+<%end%>

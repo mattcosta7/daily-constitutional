@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  icon: MyString
+  conditions: MyString
+  text: MyText
+  pop: MyString
+  high_temp: MyString
+  low_temp: MyString
+
+two:
+  icon: MyString
+  conditions: MyString
+  text: MyText
+  pop: MyString
+  high_temp: MyString
+  low_temp: MyString

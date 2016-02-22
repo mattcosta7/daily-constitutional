@@ -1,0 +1,6 @@
+<ul>
+  <li><%=image_tag @user.weather[:icon]%><%=@user.weather[:conditions]%></li>
+  <li>High: <%=@user.weather[:high_temp]%>, Low: <%=@user.weather[:low_temp]%></li>
+  <li>Chance of Precipitation <%=@user.weather[:pop]%></li>
+  <li><%=@user.weather[:text]%></li>
+</ul>
