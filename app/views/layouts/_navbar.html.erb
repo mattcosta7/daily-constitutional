@@ -1,0 +1,7 @@
+  <nav>
+    <ul>
+      <li><%=link_to 'home', user_path(current_user) if current_user%></li>
+      <li>favorites</li>
+      <li><%=link_to 'Sign Out', login_path, method: :delete if current_user %></li>
+    </ul>
+  </nav>

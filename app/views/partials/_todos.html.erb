@@ -1,6 +1,14 @@
+<%=Time.now.strftime('%D')%><br>
+<ul>
 <%@user.todos.each do |todo| %>
   <%if todo.duedate.today? %>
-    <%="#{todo.duedate} #{todo.description}"%>
-    <br>
+    <li><%="#{todo.description}, is completed? #{todo.is_completed}"%>
+    </li>
   <%end%>
+<%end%>
+</ul>
+<%=form_for @user.todos.build do |f|%>
+  <%= f.date_select :duedate %>
+  <%=f.text_field :description%>
+  <%=f.submit%>
 <%end%>

@@ -2,6 +2,12 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :users 
   resources :todos
+  scope '/blogs' do
+    post '/update_all_blogs' => 'blogs#update_all_blogs', as: :blogs_update_all_blogs
+    post '/:id/download_newest_entries' => 'blogs#download_newest_entries', as: :blog_download_newest_entries
+  end
+  resources :blogs
+  resources :entries, only: [:index, :show, :destroy]
   post '/login' => 'sessions#create', as: :login
   delete '/login' => 'sessions#destroy'
   # The priority is based upon order of creation: first created -> highest priority.

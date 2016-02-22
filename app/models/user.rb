@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   has_one :weather, dependent: :destroy
   has_many :reader_blogs
   has_many :blogs, through: :reader_blogs
+  has_many :user_stars
+  has_many :stars, through: :user_stars, source: :entry
 
   geocoded_by :location
   after_validation :geocode

@@ -7,14 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><%=link_to 'home', user_path(current_user) if current_user%></li>
-      <li><%=link_to 'todos', user_path(current_user) if current_user%></li>
-      <li><%=link_to 'Sign Out', login_path, method: :delete if current_user %></li>
-    </ul>
-
-  </nav>
+<%= render 'layouts/navbar'%>
   <%=flash[:notice] if flash[:notice]%>
   
   <%= yield %>

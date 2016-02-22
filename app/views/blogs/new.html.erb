@@ -1,0 +1,7 @@
+<h1>Blogs#new</h1>
+<p>Find me in app/views/blogs/new.html.erb</p>
+<%=form_for @blog do |f|%>
+  <%=f.label :url %>
+  <%=f.text_field :url %>
+  <%=f.submit%>
+<%end%>

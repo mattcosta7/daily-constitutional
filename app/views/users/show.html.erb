@@ -1,5 +1,13 @@
-<%=render @user%>
-<%=link_to "Edit", edit_user_path(current_user) if @user == current_user%>
-<%=render 'partials/weather'%>
-<%=render 'partials/mta' if @tStatus %>
-<%=render 'partials/todos' if @user.todos.length > 0%>
+<div class='left-side'>
+  <%=render @user%>
+  <%=link_to "Edit", edit_user_path(current_user) if @user == current_user%>
+  <%=render 'partials/weather'%>
+  <%=render 'partials/mta' if @tStatus %>
+  <%=render 'partials/todos' if @user.todos.length > 0%>
+</div>
+
+<div class='user-feeds'>
+<%=@user.blogs.each do |blog|%>
+  <%=blog.url%>
+<%end%>
+</div>
