@@ -1,19 +1,13 @@
-<div class='left-side'>
-  <%=render @user%>
-  <%=link_to "Edit", edit_user_path(current_user) if @user == current_user%>
-  <%=render 'partials/weather'%>
-  <%=render 'partials/mta' if @tStatus %>
-  <%=render 'partials/todos' if @user.todos.length > 0%>
-</div>
-
 <div class='user-feeds'>
-
-  <%@entries.first(20).each do |entry|%>
-    <li class='entry-unhider'><%= entry.published.strftime('%D') %> <%= entry.title %> <%= entry.blog.url %>
-      <ul>
-    <li class='blog-entry-content'>
-    <%=entry.content.html_safe%>
-      </ul>
+  <ul>
+    <%@entries.first(50).each do |entry|%>
+      <li><span class='entry-unhider'><%= entry.published.strftime('%D') %> <%= entry.title %> <%= entry.blog.url %></span><span>Star</span>
+        <ul>
+          <li class='blog-entry-content'>
+            <%=entry.content.html_safe%>
+          </li>
+        </ul>
       </li>
-  <%end%>
+    <%end%>
+  </ul>
 </div>

@@ -1,0 +1,19 @@
+<div class="mdl-layout__drawer">
+  <span class='site-title'>
+    <%=link_to 'Daily Constitutional', root_path %>
+  </span>
+  <%=render @user if @user%>
+  <%=link_to "Edit", edit_user_path(current_user) if @user == current_user%>
+  <div class='drawer-cell'>
+    <%=render 'partials/weather'if @user%>
+  </div>
+  <div class='drawer-cell'>
+    <%=render 'partials/mta' if @tStatus %>
+  </div>
+  <div class='drawer-cell'>
+    <%=render 'partials/todos' if current_user%>
+  </div>
+  <div class='drawer-cell'>
+    <%=render 'partials/music' if current_user%> 
+  </div>
+</div>

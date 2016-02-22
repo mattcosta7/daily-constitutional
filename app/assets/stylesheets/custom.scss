@@ -1,10 +1,6 @@
-.left-side{
-  width:250px;
-  float:left;
-  height: 100vh
-}
-
 nav{
+  position: relative;
+  left:300px;
   ul{
     list-style-type: none;
     li{
@@ -21,3 +17,47 @@ nav{
 }
 
 
+.mdl-layout__drawer{
+  width:300px;
+  ul{
+    list-style-type: none;
+    position: relative;
+    left:-20px;
+  }
+}
+
+.drawer-cell{
+  border-bottom: 1px solid black;
+}
+@media screen and (min-width: 1025px){
+  .main-content{
+    height:100%;
+    overflow: scroll;
+    position: relative;
+    left:300px;
+  }
+  nav{
+    width: -webkit-calc(100% - 300px);
+    width:    -moz-calc(100% - 300px);
+    width:         calc(100% - 300px);
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .main-content{
+    height:100%;
+    overflow: scroll;
+    position: relative;
+    left:20px;
+  }
+  .mdl-layout__drawer{
+    left:-50px;
+  }
+  .mdl-layout__drawer.is-visible{
+    left:0px;
+  }
+  nav{
+    width:100%;
+    left:50px;
+  }
+}

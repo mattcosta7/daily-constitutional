@@ -6,7 +6,7 @@ $(document).ready(function(){
   $('.blog-entry-content').hide();
 
   $('.entry-unhider').on('click',function(){
-    $(this).find('.blog-entry-content').toggle();
+    $(this).parent().find('.blog-entry-content').toggle();
   })
 
 

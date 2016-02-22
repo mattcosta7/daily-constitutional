@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>V3</title>
+  <title>DailyC</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.blue_grey-orange.min.css" />
+  <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.3/dialog-polyfill.min.css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.3/dialog-polyfill.min.js'></script>
+ <%= javascript_include_tag 'application' %>
   <%= stylesheet_link_tag    'application', media: 'all'%>
-  <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'layouts/navbar'%>
-  <%=flash[:notice] if flash[:notice]%>
-  
-  <%= yield %>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+  <%=render 'layouts/drawer' if current_user%>
 
+  <%= render 'layouts/navbar'%>
+  <%=flash[:notice] if flash[:notice]%>
+  <div class='main-content'>
+    <%= yield %>
+  </div>
+
+</div>
 </body>
 </html>
