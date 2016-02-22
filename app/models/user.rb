@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :blogs, through: :reader_blogs
   has_many :user_stars
   has_many :stars, through: :user_stars, source: :entry
-
+  has_many :entries, through: :blogs
   geocoded_by :location
   after_validation :geocode
   

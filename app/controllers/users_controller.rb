@@ -36,9 +36,8 @@ class UsersController < ApplicationController
     if ((Time.now - @user.weather.updated_at)/60 > 60)
       @user.weather.update_attributes(Apis::Weather.getWeather)
     end
-    if @user.distance_from("New York City") <= 50
-      @tStatus = Apis::Mta.get
-    end
+    @tStatus = Apis::Mta.get
+    @entries = @user.entries.order(:published).reverse
     respond_to do |format|
       format.html
       format.json { render :json => {user: @user, delays: @tStatus, weather: @weather} } 

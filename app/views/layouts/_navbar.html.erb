@@ -2,6 +2,14 @@
     <ul>
       <li><%=link_to 'home', user_path(current_user) if current_user%></li>
       <li>favorites</li>
+      <li>
+        <% if current_user %>
+          <%=form_for :blog, url: blogs_path, method: :post do |f|%>
+            <%=f.text_field :url%>
+            <%=f.submit :'Add A Feed'%>
+          <%end%>
+        <%end%>
+      </li>
       <li><%=link_to 'Sign Out', login_path, method: :delete if current_user %></li>
     </ul>
   </nav>

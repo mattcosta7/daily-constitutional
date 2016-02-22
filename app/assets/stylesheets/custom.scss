@@ -1,6 +1,7 @@
 .left-side{
   width:250px;
   float:left;
+  height: 100vh
 }
 
 nav{
@@ -8,6 +9,15 @@ nav{
     list-style-type: none;
     li{
       display: inline;
+      form{
+        display: inline;
+      }
     }
   }
 }
+
+.bold{
+  font-weight: bolder;
+}
+
+

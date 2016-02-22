@@ -7,7 +7,13 @@
 </div>
 
 <div class='user-feeds'>
-<%=@user.blogs.each do |blog|%>
-  <%=blog.url%>
-<%end%>
+
+  <%@entries.first(20).each do |entry|%>
+    <li class='entry-unhider'><%= entry.published.strftime('%D') %> <%= entry.title %> <%= entry.blog.url %>
+      <ul>
+    <li class='blog-entry-content'>
+    <%=entry.content.html_safe%>
+      </ul>
+      </li>
+  <%end%>
 </div>

@@ -4,6 +4,8 @@ class SessionsController < ApplicationController
     @user = User.find_by_email(params[:session][:email])
     if @user && @user.authenticate(params[:session][:password])
       @user.location = request.remote_ip
+      puts request.remote_ip
+      puts Geocoder.search(@user.location)
       @user.save
       if ((Time.now - @user.weather.updated_at)/60 > 60)
         @user.weather.update_attributes(Apis::Weather.getWeather)

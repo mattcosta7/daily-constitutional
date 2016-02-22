@@ -3,6 +3,13 @@ $(document).ready(function(){
 
   $('.train-delay-status').hide();
 
+  $('.blog-entry-content').hide();
+
+  $('.entry-unhider').on('click',function(){
+    $(this).find('.blog-entry-content').toggle();
+  })
+
+
   $('.swap-signin').on('click',function(){
     $('#signin-swap-2').toggle();
     $('#signin-swap-1').toggle();

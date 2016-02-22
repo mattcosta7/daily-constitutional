@@ -1,4 +1,4 @@
 <%=@user.email%><br>
 <%=@user.location%><br>
-<%=Geocoder::search(@user.coordinates)[0].city+", "+Geocoder::search(@user.coordinates)[0].state%><br>
+<%=Geocoder::search(@user.coordinates)[0].city+", "+Geocoder::search(@user.coordinates)[0].state if @user.latitude%><br>
 <%=@user.coordinates%><br>
