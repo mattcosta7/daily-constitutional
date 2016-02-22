@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   before_save :downcase_email
   has_many :todos, dependent: :destroy
   has_one :weather, dependent: :destroy
+  has_many :reader_blogs
+  has_many :blogs, through: :reader_blogs
 
   geocoded_by :location
   after_validation :geocode

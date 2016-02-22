@@ -11,10 +11,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160221220617) do
+ActiveRecord::Schema.define(version: 20160222035718) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "blogs", force: :cascade do |t|
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "blogs", ["user_id"], name: "index_blogs_on_user_id", using: :btree
+
+  create_table "entries", force: :cascade do |t|
+    t.string   "title"
+    t.text     "url"
+    t.string   "author"
+    t.text     "content"
+    t.datetime "published"
+    t.integer  "blog_id"
+    t.text     "summary"
+    t.string   "categories"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "entries", ["blog_id"], name: "index_entries_on_blog_id", using: :btree
+
+  create_table "reader_blogs", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "blog_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "reader_blogs", ["user_id"], name: "index_reader_blogs_on_user_id", using: :btree
 
   create_table "todos", force: :cascade do |t|
     t.datetime "duedate"
@@ -51,6 +83,9 @@ ActiveRecord::Schema.define(version: 20160221220617) do
 
   add_index "weathers", ["user_id"], name: "index_weathers_on_user_id", using: :btree
 
+  add_foreign_key "blogs", "users"
+  add_foreign_key "entries", "blogs"
+  add_foreign_key "reader_blogs", "users"
   add_foreign_key "todos", "users"
   add_foreign_key "weathers", "users"
 end
