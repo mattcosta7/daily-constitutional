@@ -28,6 +28,8 @@ class UsersController < ApplicationController
         flash[:notice]='fail'
         redirect_to :back
       end
+    else
+      redirect_to :back
     end
   end
 

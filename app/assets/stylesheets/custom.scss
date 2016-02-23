@@ -1,21 +1,16 @@
-nav{
-  position: relative;
-  left:300px;
-  ul{
-    list-style-type: none;
-    li{
-      display: inline;
-      form{
-        display: inline;
-      }
-    }
-  }
+.mdl-layout__container{
+  top:0px;
 }
+
 
 .bold{
   font-weight: bolder;
 }
 
+.mdl-layout-title{
+  text-align: center;
+  margin: 20px;
+}
 
 .mdl-layout__drawer{
   width:300px;
@@ -29,26 +24,47 @@ nav{
 .drawer-cell{
   border-bottom: 1px solid black;
 }
+
 @media screen and (min-width: 1025px){
   .main-content{
     height:100%;
     overflow: scroll;
     position: relative;
-    left:300px;
+    left:100px;
+    width: -webkit-calc(100% - 350px);
+    width:    -moz-calc(100% - 350px);
+    width:         calc(100% - 350px);
   }
   nav{
-    width: -webkit-calc(100% - 300px);
-    width:    -moz-calc(100% - 300px);
-    width:         calc(100% - 300px);
+    width: -webkit-calc(100% - 350px);
+    width:    -moz-calc(100% - 350px);
+    width:         calc(100% - 350px);
+    ul{
+      list-style-type: none;
+      position:relative;
+      left:-335px;
+      li{
+        display: inline;
+        form{
+          display: inline;
+        }
+      }
+    }
   }
 }
 
 @media screen and (max-width: 1024px){
+  .article-title{
+    font-size: 1.3em;
+  }
   .main-content{
     height:100%;
     overflow: scroll;
     position: relative;
-    left:20px;
+    left:30px;
+    width: -webkit-calc(100% - 50px);
+    width:    -moz-calc(100% - 50px);
+    width:         calc(100% - 50px);
   }
   .mdl-layout__drawer{
     left:-50px;
@@ -59,5 +75,32 @@ nav{
   nav{
     width:100%;
     left:50px;
+    ul{
+      list-style-type: none;
+      position:relative;
+      left:0px;
+      li{
+        display: inline;
+        form{
+          display: inline;
+        }
+      }
+    }
   }
+}
+
+.cross-out{
+  text-decoration: line-through;
+}
+
+.circle{
+  font-size: 10px;
+}
+
+.star-button{
+  text-align: top;
+}
+
+.mdl-list__item .mdl-list__item-secondary-content {
+  align-items: flex-start;
 }

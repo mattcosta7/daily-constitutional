@@ -90,6 +90,33 @@ class TodosController < ApplicationController
     end
   end
 
+  def complete!
+    @todo = Todo.find(params[:id])
+    if @todo.user == current_user
+      if @todo.update_attributes(is_completed: true)
+        redirect_to :back
+      else
+        flash[:notice]="error"
+      end
+    else
+      flash[:notice]='wrong user'
+    end
+  end
+
+  def uncomplete!
+    @todo = Todo.find(params[:id])
+    if @todo.user == current_user
+      if @todo.update_attributes(is_completed: false)
+        redirect_to :back
+      else
+        flash[:notice]="error"
+      end
+    else
+      flash[:notice]='wrong user'
+    end
+  end
+
+
   private
   def todo_params
     params.require(:todo).permit(:duedate,:description).merge(user_id: current_user.id)

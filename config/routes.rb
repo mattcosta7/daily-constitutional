@@ -10,6 +10,11 @@ Rails.application.routes.draw do
   resources :entries, only: [:index, :show, :destroy]
   post '/login' => 'sessions#create', as: :login
   delete '/login' => 'sessions#destroy'
+  post '/star/:id' => 'entries#star', as: :star
+  delete '/unstar/:id' => 'entries#unstar', as: :unstar
+  get '/favorites/:id' => 'userstars#index', as: :favorites
+  patch '/todos/:id/complete' => 'todos#complete!', as: :complete
+  patch '/todos/:id/uncomplete' => 'todos#uncomplete!', as: :uncomplete
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,15 +1,27 @@
-<nav>
-  <ul>
-    <li><%=link_to 'home', user_path(current_user) if current_user%></li>
-    <li>favorites</li>
-    <li>
-      <% if current_user %>
-        <%=form_for :blog, url: blogs_path, method: :post do |f|%>
-          <%=f.text_field :url%>
-          <%=f.submit :'Add A Feed'%>
+<header class="mdl-layout__header">
+  <div class="mdl-layout__header-row">
+    <div class="mdl-layout-spacer"></div>
+    <nav>
+      <ul>
+        <li>
+          <%=link_to 'home', user_path(current_user)  if current_user%>
+        </li>
+        <li>
+          <%=link_to 'Starred', favorites_path(current_user)  if current_user%>
+        </li>
+          <% if current_user %>
+        <li>
+          <%=form_for :blog, url: blogs_path, method: :post  do |f|%>
+            <%=f.text_field :url%>
+            <%=f.submit :'Add A Feed'%>
+          <%end%>
+        </li>
         <%end%>
-      <%end%>
-    </li>
-    <li><%=link_to 'Sign Out', login_path, method: :delete if current_user %></li>
-  </ul>
-</nav>
+        <li>
+          <%=link_to 'Sign Out', login_path, method: :delete  if current_user %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<%=render 'layouts/drawer'%>

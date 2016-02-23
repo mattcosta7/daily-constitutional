@@ -1,9 +1,26 @@
 <%=Time.now.strftime('%D')%><br>
 <ul>
-<%@user.todos.each do |todo| %>
-  <%if todo.duedate.today? %>
-    <li><%="#{todo.description}, is completed? #{todo.is_completed}"%>
-    </li>
+<%current_user.todos.each do |todo| %>
+  <%if (todo.duedate + 5.hours).today? %>
+    <% if !todo.is_completed %> 
+      <li>
+        <%="#{todo.description}"%>
+        <%= link_to complete_path(todo), method: :patch do %>
+        <i class="material-icons circle">
+          radio_button_unchecked
+        </i>
+        <%end%>
+      </li>
+    <%else%>
+      <li class='cross-out'>
+        <%="#{todo.description}"%>
+        <%= link_to uncomplete_path(todo), method: :patch do %>
+        <i class="material-icons circle">
+          radio_button_unchecked
+        </i>
+        <%end%>
+      </li>
+    <%end%>
   <%end%>
 <%end%>
 </ul>

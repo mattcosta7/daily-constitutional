@@ -1,0 +1,21 @@
+<div class='user-feeds'>
+  <ul class='mdl-list'>
+    <%@entries.first(50).each do |entry|%>
+      <li class='mdl-list__item'>
+        <div class='star-button'>
+          <%=render partial: 'entries/star_button', locals: {entry: entry}%>
+        </div> 
+        <div class=' entry-unhider'>
+          <span class='mdl-list__item-primary-content article-title'><%= entry.title %></span>
+          <span class='article-url mdl-list__item-secondary-content '><%= entry.blog.url %></span>
+          <ul>
+            <li class='blog-entry-content'>
+            <%=entry.content.html_safe%>
+            </li>
+          </ul>
+        </div>
+      </li>
+    <%end%>
+  </ul>
+</div>
+

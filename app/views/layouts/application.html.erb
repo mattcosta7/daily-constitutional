@@ -12,15 +12,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
-  <%=render 'layouts/drawer' if current_user%>
-
-  <%= render 'layouts/navbar'%>
-  <%=flash[:notice] if flash[:notice]%>
-  <div class='main-content'>
-    <%= yield %>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <%= render 'layouts/navbar'%>
+    <main class="mdl-layout__content">
+      <div class="page-content">
+        <div class='main-content'>
+          <%=flash[:notice] if flash[:notice]%>
+          <%= yield %>
+        </div>
+      </div>
+    </main>
   </div>
-
-</div>
 </body>
 </html>
+
