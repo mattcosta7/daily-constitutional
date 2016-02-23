@@ -17,6 +17,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.location = request.remote_ip
     if @user.save
       @weather = Weather.new(Apis::Weather.getWeather)
       if @weather.save
