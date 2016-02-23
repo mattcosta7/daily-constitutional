@@ -10,6 +10,7 @@
  <%= javascript_include_tag 'application' %>
   <%= stylesheet_link_tag    'application', media: 'all'%>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=.6">
 </head>
 <body>
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
@@ -19,6 +20,13 @@
         <div class='main-content'>
           <%=flash[:notice] if flash[:notice]%>
           <%= yield %>
+          <div id='modal'>
+            <div class='closer-icon-holder'>
+              <i id='close-icon' class="material-icons">close</i>
+            </div>
+            <div id='modal-content'>
+            </div>
+          </div>
         </div>
       </div>
     </main>

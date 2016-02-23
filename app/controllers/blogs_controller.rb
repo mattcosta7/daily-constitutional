@@ -40,16 +40,6 @@ class BlogsController < ApplicationController
     redirect_to blogs_path
   end
 
-  def download_newest_entries
-    @blog = Blog.find(params[:id])
-    @blog.download_newest_entries!(params[:download_entries][:entries_num].to_i)
-    redirect_to blog_path(@blog)
-  end
-
-  def update_all_blogs
-    Blog.update_all_blogs
-    redirect_to blogs_path
-  end
   
   private
 

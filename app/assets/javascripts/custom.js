@@ -3,10 +3,16 @@ $(document).ready(function(){
 
   $('.train-delay-status').hide();
 
+  $('#modal').hide();
+
   $('.blog-entry-content').hide();
 
   $('.entry-unhider').on('click',function(){
-    $(this).parent().find('.blog-entry-content').toggle();
+    $('#modal-content').html($(this).parent().find('.blog-entry-content').html())
+    $('#modal').show();
+    $('#close-icon').on('click',function(){
+      $('#modal').hide();
+    })
   })
 
 

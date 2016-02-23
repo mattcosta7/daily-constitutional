@@ -2,25 +2,15 @@
   <div class="mdl-layout__header-row">
     <div class="mdl-layout-spacer"></div>
     <nav>
-      <ul>
-        <li>
-          <%=link_to 'home', user_path(current_user)  if current_user%>
-        </li>
-        <li>
-          <%=link_to 'Starred', favorites_path(current_user)  if current_user%>
-        </li>
-          <% if current_user %>
-        <li>
-          <%=form_for :blog, url: blogs_path, method: :post  do |f|%>
-            <%=f.text_field :url%>
-            <%=f.submit :'Add A Feed'%>
-          <%end%>
-        </li>
-        <%end%>
-        <li>
-          <%=link_to 'Sign Out', login_path, method: :delete  if current_user %>
-        </li>
-      </ul>
+
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+        <%=link_to 'Home', user_path(current_user) if current_user%>
+        <%=link_to 'Starred', favorites_path(current_user) if current_user%>
+        <%=link_to 'Sign Out', login_path, method: :delete  if current_user %>
+      </div>
+      
+      
+
     </nav>
   </div>
 </header>

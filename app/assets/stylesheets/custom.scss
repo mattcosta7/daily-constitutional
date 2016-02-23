@@ -1,8 +1,29 @@
 .mdl-layout__container{
   top:0px;
 }
-
-
+.mdl-layout__drawer{
+  width:300px;
+  ul{
+    list-style-type: none;
+    position: relative;
+    left:-20px;
+  }
+}
+#modal{
+  position:fixed;
+  top:100px;
+  background-color: white;
+  height: 100vh;
+  overflow: scroll;
+}
+#modal-content{
+  z-index:8;
+  width: -webkit-calc(100% - 75px);
+  width:    -moz-calc(100% - 75px);
+  width:         calc(100% - 75px);
+  position: relative;
+  top: 35px; 
+}
 .bold{
   font-weight: bolder;
 }
@@ -54,9 +75,6 @@
 }
 
 @media screen and (max-width: 1024px){
-  .article-title{
-    font-size: 1.3em;
-  }
   .main-content{
     height:100%;
     overflow: scroll;
@@ -67,7 +85,7 @@
     width:         calc(100% - 50px);
   }
   .mdl-layout__drawer{
-    left:-50px;
+    left:-200px;
   }
   .mdl-layout__drawer.is-visible{
     left:0px;
@@ -103,4 +121,27 @@
 
 .mdl-list__item .mdl-list__item-secondary-content {
   align-items: flex-start;
+}
+
+.mdl-layout-title{
+  color: #607d8b;
+  text-decoration: none;
+}
+
+.mdl-button--accent.mdl-button--accent.mdl-button--raised{
+  margin-left:95px;
+}
+.drawer-cell{
+  overflow:scroll;
+}
+.drawer-cell-todo{
+  max-height: 232px;
+}
+
+.drawer-cell-feeds{
+  max-height: 192px;
+  overflow:scroll;
+}
+#close-icon-holder{
+  position:fixed;
 }
