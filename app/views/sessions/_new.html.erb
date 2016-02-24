@@ -1,8 +1,13 @@
-<h2>Sign In!</h2>
-<%=form_for :session, url:login_path do |f|%>
-  <%=f.label :email%>
-  <%=f.text_field :email%>
-  <%=f.label :password%>
-  <%=f.password_field :password%>
-  <%=f.submit :'Sign In' %>
-<%end%>
+
+  <h2>Sign In!</h2>
+  <%=form_for :session, url:login_path do |f|%>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <%=f.label :email, class: "mdl-textfield__label" %>
+      <%=f.text_field :email, class: "mdl-textfield__input"%>
+    </div><br>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <%=f.label :password, class: "mdl-textfield__label" %>
+      <%=f.password_field :password, class: "mdl-textfield__input"%>
+    </div><br>
+      <%=f.submit :'Sign In', class: "mdl-button mdl-js-button mdl-button--flat mdl-button--accent"%>
+  <%end%>

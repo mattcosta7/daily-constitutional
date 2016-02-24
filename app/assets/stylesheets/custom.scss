@@ -56,6 +56,9 @@
     width:    -moz-calc(100% - 350px);
     width:         calc(100% - 350px);
   }
+  .mdl-textfield{
+    left:-270px;
+  }
   nav{
     width: -webkit-calc(100% - 350px);
     width:    -moz-calc(100% - 350px);
@@ -144,4 +147,10 @@
 }
 #close-icon-holder{
   position:fixed;
+}
+
+.home-form{
+  width: 100vw;
+  position:relative;
+  margin: 0 auto;
 }

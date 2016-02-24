@@ -3,7 +3,7 @@
     <div class="mdl-layout-spacer"></div>
     <nav>
 
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-left">
         <%=link_to 'Home', user_path(current_user) if current_user%>
         <%=link_to 'Starred', favorites_path(current_user) if current_user%>
         <%=link_to 'Sign Out', login_path, method: :delete  if current_user %>
