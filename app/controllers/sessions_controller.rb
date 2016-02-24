@@ -5,17 +5,17 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:session][:password])
       @user.location = request.remote_ip
       @user.save
-      @user.blogs.each do |blog|
-        feed = Feedjira::Feed.fetch_and_parse(blog.url)
-        feed.entries.first(10).each do |new_entry|
-          if !Entry.where(url: new_entry.url).first
-            puts new_entry
-            a = Entry.new(Blog.makeEntryHash(new_entry, blog))
-            a.save
-            puts a
-          end
-        end
-      end
+      # @user.blogs.each do |blog|
+      #   feed = Feedjira::Feed.fetch_and_parse(blog.url)
+      #   feed.entries.first(10).each do |new_entry|
+      #     if !Entry.where(url: new_entry.url).first
+      #       puts new_entry
+      #       a = Entry.new(Blog.makeEntryHash(new_entry, blog))
+      #       a.save
+      #       puts a
+      #     end
+      #   end
+      # end
       if ((Time.now - @user.weather.updated_at)/60 > 60)
         @user.weather.update_attributes(Apis::Weather.getWeather)
       end

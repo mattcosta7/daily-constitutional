@@ -25,7 +25,7 @@ class BlogsController < ApplicationController
         end
         redirect_to :back
       rescue => ex
-        flash[:notice]="hey"
+        flash[:notice]="There was an issue with your link, dude!"
         logger.error ex.message
         redirect_to :back
       end
