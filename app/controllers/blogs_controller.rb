@@ -19,6 +19,7 @@ class BlogsController < ApplicationController
           redirect_to :back
         rescue => ex
           flash[:notice]="There was an issue with your link, dude!"
+          current_user.blogs.last.destroy
           logger.error ex.message
           redirect_to :back
         end
