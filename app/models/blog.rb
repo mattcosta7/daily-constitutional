@@ -34,7 +34,7 @@ class Blog < ActiveRecord::Base
     doc = Nokogiri::HTML(open(feed.url)) do |config|
       config.noent.noblanks.noerror
     end
-    doc.search("//script","//img","//iframe","//object","//embed","//param","//form","//meta","//link","//title","//audio").remove
+    doc.search("//script","//img","//iframe","//object","//embed","//param","//form","//meta","//link","//title").remove
     doc.search("//div","//p","//span","//a","//h1","//h2","//h3","//h4","//h5","//h6","//ul","//ol").attr('class','').attr('id','').attr('style','')
     doc = doc.search("//p").collect{ |p| p.parent }.uniq
     htmlReturn = ''
