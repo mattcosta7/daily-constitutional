@@ -1,12 +1,5 @@
 class UsersController < ApplicationController
-  def index
-    @users = User.all
-    respond_to do |format|
-      format.html
-      format.json { render :json => {response: @users} }
-    end
-  end
-
+  before_filter :validate, except: [:new,:create]
   def new
     @user = User.new
     respond_to do |format|
@@ -84,26 +77,28 @@ class UsersController < ApplicationController
   end
 
   def removefeed
-    if current_user
-      @user = current_user
-      @blog = Blog.find(params[:id])
-      if @user.blogs.include?(@blog)
-        if @user.reader_blogs.find_by_blog_id(params[:id]).destroy
-          flash[:notice]="demolished that suckka"
-          redirect_to :back
-        else
-          flash[:notice]="couldn't get it done"
-          redirect_to :back
-        end
+    @user = current_user
+    @blog = Blog.find(params[:id])
+    if @user.blogs.include?(@blog)
+      if @user.reader_blogs.find_by_blog_id(params[:id]).destroy
+        flash[:notice]="demolished that suckka"
+        redirect_to :back
+      else
+        flash[:notice]="couldn't get it done"
+        redirect_to :back
       end
     end
   end
-
-
-
 
   private
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation,:latitude, :longitude).merge(location: request.remote_ip)
   end
+
+  def validate
+    if !current_user
+      redirect_to root_path
+    end
+  end
+
 end
