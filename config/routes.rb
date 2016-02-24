@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/favorites/:id' => 'userstars#index', as: :favorites
   patch '/todos/:id/complete' => 'todos#complete!', as: :complete
   patch '/todos/:id/uncomplete' => 'todos#uncomplete!', as: :uncomplete
+  delete '/users/remove_feed/:id' => 'users#removefeed', as: :remove_feed
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

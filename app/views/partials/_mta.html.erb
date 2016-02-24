@@ -6,7 +6,7 @@
           <li>
             <%=image_tag "#{x[0]}.gif" %>- 
             <span>
-              <%= x[1] == "GOOD SERVICE" ? x[1] : link_to("#{x[1]}", "#")%>
+              <%= x[1] == "GOOD SERVICE" ? x[1] : link_to("#{x[1]}", "#", class: 'service-status')%>
             </span>
             <span class='train-delay-status'>
                <%=x[2].text.html_safe%>

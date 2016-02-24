@@ -83,6 +83,25 @@ class UsersController < ApplicationController
     end
   end
 
+  def removefeed
+    if current_user
+      @user = current_user
+      @blog = Blog.find(params[:id])
+      if @user.blogs.include?(@blog)
+        if @user.reader_blogs.find_by_blog_id(params[:id]).destroy
+          flash[:notice]="demolished that suckka"
+          redirect_to :back
+        else
+          flash[:notice]="couldn't get it done"
+          redirect_to :back
+        end
+      end
+    end
+  end
+
+
+
+
   private
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation,:latitude, :longitude).merge(location: request.remote_ip)

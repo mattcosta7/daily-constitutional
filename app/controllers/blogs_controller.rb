@@ -14,14 +14,18 @@ class BlogsController < ApplicationController
   end
 
   def create
-    @blog = Blog.create(blog_params)
-    current_user.blogs << @blog
-    feed = Feedjira::Feed.fetch_and_parse @blog.url
-    feed.entries.first(10).each do |new_entry|
-      a = Entry.new(makeEntryHash(new_entry))
-      a.save
+    @blog = Blog.new(blog_params)
+    if @blog.save
+      current_user.blogs << @blog
+      feed = Feedjira::Feed.fetch_and_parse @blog.url
+      feed.entries.first(10).each do |new_entry|
+        a = Entry.new(makeEntryHash(new_entry))
+        a.save
+      end
+      redirect_to user_path current_user
+    else
+      redirect_to :back
     end
-    redirect_to user_path current_user
   end
 
   def edit

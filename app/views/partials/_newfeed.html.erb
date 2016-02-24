@@ -1,0 +1,7 @@
+<%=form_for :blog, url: blogs_path, method: :post  do |f|%>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <%=f.label :'RSS Feed URL', class: "mdl-textfield__label rss-entry-label"%>
+      <%=f.text_field :url, class: "mdl-textfield__input rss-entry-field"%>
+      </div>
+      <%=f.submit :'Add Feed', class: "mdl-button mdl-js-button mdl-button--raised mdl-button--accent"%>
+  <%end%>

@@ -2,6 +2,13 @@ $(document).ready(function(){
   $('#signin-swap-2').hide();
 
   $('.train-delay-status').hide();
+  $('.service-status').on('click',function(){
+    $('#modal-content').html($(this).parent().parent().find('.train-delay-status').html())
+        $('#modal').show();
+        $('#close-icon').on('click',function(){
+          $('#modal').hide();
+        })
+  })
 
   $('#modal').hide();
 

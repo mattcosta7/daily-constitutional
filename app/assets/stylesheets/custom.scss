@@ -59,9 +59,21 @@
   .login-page-form{
     position: relative;
     left: 274px;
-}
+  }
   .mdl-textfield{
     left:-270px;
+  }
+  .rss-entry-label{
+    position:relative;
+    left:370px;
+  }
+  .rss-entry-field{
+    position:relative;
+    left:270px;
+  }
+  .sign-in-button{
+    position: relative;
+    left: -287px;
   }
   nav{
     width: -webkit-calc(100% - 350px);
@@ -96,6 +108,10 @@
   }
   .mdl-layout__drawer.is-visible{
     left:0px;
+  }
+  .sign-in-button{
+    position: relative;
+    left: -15px;
   }
   nav{
     width:100%;
