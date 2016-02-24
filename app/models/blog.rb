@@ -8,8 +8,10 @@ class Blog < ActiveRecord::Base
       begin
         feed = Feedjira::Feed.fetch_and_parse blog.url
         feed.entries.first(10).each do |new_entry|
-          a = Entry.new(Blog.makeEntryHash(new_entry, blog.id))
-          a.save
+          if !Entry.where(url: new_entry.url).first
+            a = Entry.new(Blog.makeEntryHash(new_entry, blog.id))
+            a.save
+          end
         end
       rescue => ex
         puts "Error, yo, #{ex}"
