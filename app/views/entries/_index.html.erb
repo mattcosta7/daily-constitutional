@@ -6,6 +6,7 @@
           <%=render partial: 'entries/star_button', locals: {entry: entry}%>
         </div> 
         <div class=' entry-unhider'>
+          <%=entry.published%>
           <span class='mdl-list__item-primary-content article-title'><%= entry.title %></span>
           <span class='article-url mdl-list__item-secondary-content '><%= entry.blog.url %></span>
           <ul>
