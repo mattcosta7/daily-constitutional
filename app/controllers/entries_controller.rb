@@ -33,10 +33,8 @@ class EntriesController < ApplicationController
       @entry = Entry.find(params[:id])
       puts @entry
       if !@entry.starred_by.include? current_user
-        puts !@entry.starred_by.include?(current_user)
         @entry.starred_by << current_user
-        puts @entry.starred_by
-        redirect_to current_user
+        redirect_to :back
       else
         redirect_to :back
       end
@@ -50,7 +48,7 @@ class EntriesController < ApplicationController
       @entry = Entry.find(params[:id])
       if @entry.starred_by.include? current_user
         UserStar.where(user_id: current_user.id, entry_id: @entry.id).first.destroy
-        redirect_to current_user
+        redirect_to :back
       else
         redirect_to :back
       end

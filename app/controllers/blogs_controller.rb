@@ -17,12 +17,18 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
     if @blog.save
       current_user.blogs << @blog
-      feed = Feedjira::Feed.fetch_and_parse @blog.url
-      feed.entries.first(10).each do |new_entry|
-        a = Entry.new(makeEntryHash(new_entry))
-        a.save
+      begin
+        feed = Feedjira::Feed.fetch_and_parse @blog.url
+        feed.entries.first(10).each do |new_entry|
+          a = Entry.new(makeEntryHash(new_entry))
+          a.save
+        end
+        redirect_to :back
+      rescue => ex
+        flash[:notice]="hey"
+        logger.error ex.message
+        redirect_to :back
       end
-      redirect_to user_path current_user
     else
       redirect_to :back
     end
