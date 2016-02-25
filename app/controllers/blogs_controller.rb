@@ -18,7 +18,7 @@ class BlogsController < ApplicationController
           end
           redirect_to :back
         rescue => ex
-          flash[:notice]="There was an issue with your link, dude!"
+          flash[:notice]="Only valid RSS Feeds!"
           current_user.blogs.last.destroy
           logger.error ex.message
           redirect_to :back

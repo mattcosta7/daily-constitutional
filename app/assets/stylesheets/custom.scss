@@ -16,6 +16,7 @@
   height: 100vh;
   overflow: scroll;
   width: 100%;
+  background-color: #F7F9F7;
 }
 #modal-content{
   z-index:8;
@@ -25,6 +26,7 @@
   position: relative;
   top: 35px; 
   left: 20px;
+  background-color: #F7F9F7;
 }
 
 #loading-modal{
@@ -123,7 +125,7 @@
     position: relative;
     left:0px;
     top:-10px;
-    width: 100%
+    width: 100%;
   }
   .mdl-layout__drawer{
     left:-200px;
@@ -135,6 +137,7 @@
     width: -webkit-calc(100% - 50px);
     width:    -moz-calc(100% - 50px);
     width:         calc(100% - 50px);
+    background-color: #F7F9F7;
   }
   .rss-entry-label{
     position:relative;
@@ -219,6 +222,7 @@
   background: white;
   width: 100%;
   z-index: 20;
+  background-color: #F7F9F7;
 }
 .close-icon{
   line-height: 3;
@@ -246,12 +250,14 @@
   position:fixed;
   right:10px;
   top:64px;
+  background-color: #F7F9F7;
 }
 
 #close-icon-bottom-right{
   position:fixed;
   right:10px;
   bottom:64px;
+  background-color: #F7F9F7;
 }
 
 .mdl-textfield--align-left{

@@ -20,13 +20,14 @@ class Blog < ActiveRecord::Base
   end
 
   def self.makeEntryHash feed, id
-    hash = {title: feed.title,
-            url: feed.url,
-            author: feed.author,
-            content: Blog.contentCheck(feed),
-            published: feed.published,
-            blog_id: id
-          }
+    hash = {
+      title: feed.title,
+      url: feed.url,
+      author: feed.author,
+      content: Blog.contentCheck(feed),
+      published: feed.published,
+      blog_id: id
+    }
     hash
   end
 

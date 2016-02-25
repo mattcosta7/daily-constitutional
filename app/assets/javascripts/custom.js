@@ -1,6 +1,6 @@
 $(document).ready(function(){
   
-  $('#flash').fadeOut(500);
+  $('#flash').fadeOut(1500);
 
   $('#signin-swap-2').hide();
 
