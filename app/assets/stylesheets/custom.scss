@@ -15,14 +15,16 @@
   background-color: white;
   height: 100vh;
   overflow: scroll;
+  width: 100%;
 }
 #modal-content{
   z-index:8;
-  width: -webkit-calc(100% - 75px);
-  width:    -moz-calc(100% - 75px);
-  width:         calc(100% - 75px);
+  width: -webkit-calc(100% - 350px);
+  width:    -moz-calc(100% - 350px);
+  width:         calc(100% - 350px);
   position: relative;
   top: 35px; 
+  left: 20px;
 }
 
 #loading-modal{
@@ -41,6 +43,10 @@
   transform: translate(-50%, -50%);
   height:20%;
   width:40%;
+}
+#loader-img{
+  background-color: white;
+  border-radius: 50%;
 }
 .bold{
   font-weight: bolder;
@@ -69,10 +75,9 @@
     height:100%;
     overflow: scroll;
     position: relative;
-    left:100px;
-    width: -webkit-calc(100% - 350px);
-    width:    -moz-calc(100% - 350px);
-    width:         calc(100% - 350px);
+    left:60px;
+    top:-10px;
+    width: 100%;
   }
   .login-page-form{
     position: relative;
@@ -116,16 +121,24 @@
     height:100%;
     overflow: scroll;
     position: relative;
-    left:30px;
-    width: -webkit-calc(100% - 50px);
-    width:    -moz-calc(100% - 50px);
-    width:         calc(100% - 50px);
+    left:0px;
+    top:-10px;
+    width: 100%
   }
   .mdl-layout__drawer{
     left:-200px;
   }
   .mdl-layout__drawer.is-visible{
     left:0px;
+  }
+  #modal-content{
+    width: -webkit-calc(100% - 50px);
+    width:    -moz-calc(100% - 50px);
+    width:         calc(100% - 50px);
+  }
+  .rss-entry-label{
+    position:relative;
+    left:100px;
   }
   .sign-in-button{
     position: relative;
@@ -164,6 +177,23 @@
   align-items: flex-start;
 }
 
+.user-feeds{
+  .mdl-list{
+    margin-top:2px;
+    .mdl-list__item{
+      border:1px solid grey;
+      background-color: #E6E8E6 ;
+      border-bottom: none;
+    }
+    .mdl-list__item:nth-child(odd){
+      background-color:#F7F9F7 ;
+    }
+    .mdl-list__item:last-child{
+      border-bottom:1px solid grey;
+    }
+  }
+}
+
 .mdl-layout-title{
   color: #607d8b;
   text-decoration: none;
@@ -192,4 +222,38 @@
 }
 .close-icon{
   line-height: 3;
+}
+
+#loader-image{
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.nav-link{
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-size:1.3em;
+  width:100px;
+  padding: 20px 0;
+}
+
+.nav-link:hover{
+  background-color: rgba(0,0,0,.3);
+}
+
+#close-icon-left{
+  position:fixed;
+  right:10px;
+  top:64px;
+}
+
+#close-icon-bottom-right{
+  position:fixed;
+  right:10px;
+  bottom:64px;
+}
+
+.mdl-textfield--align-left{
+  width:325px;
 }

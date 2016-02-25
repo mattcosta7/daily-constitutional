@@ -38,6 +38,7 @@ class Blog < ActiveRecord::Base
     end
     doc.search("//script","//img","//iframe","//object","//embed","//param","//form","//meta","//link","//title").remove
     doc.search("//div","//p","//span","//a","//h1","//h2","//h3","//h4","//h5","//h6","//ul","//ol").attr('class','').attr('id','').attr('style','')
+    doc.search('//a').attr('target','_blank')
     doc = doc.search("//p").collect{ |p| p.parent }.uniq
     htmlReturn = ''
     doc.each do |x|

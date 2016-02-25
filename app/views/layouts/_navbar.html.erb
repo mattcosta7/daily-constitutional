@@ -4,7 +4,7 @@
     <nav>
 
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--align-left">
-        <%=link_to 'Home', user_path(current_user), class: 'nav-link' if current_user%>
+        <%=link_to 'Feed', user_path(current_user), class: 'nav-link' if current_user%>
         <%=link_to 'Starred', favorites_path(current_user), class: 'nav-link' if current_user%>
         <%=link_to 'Sign Out', login_path, method: :delete, class: 'nav-link'  if current_user %>
       </div>

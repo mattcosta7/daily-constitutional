@@ -18,12 +18,15 @@
     <main class="mdl-layout__content">
       <div class="page-content">
         <div class='main-content'>
-          <%=flash[:notice] if flash[:notice]%>
+          <%= "<h3 id='flash'>#{flash[:notice]}</h3>".html_safe if flash[:notice]%>
           <%= yield %>
 
           <div id='modal'>
             <div class='closer-icon-holder'>
               <i id='close-icon' class="material-icons">  
+                close
+              </i>
+              <i id='close-icon-left' class="material-icons">  
                 close
               </i>
             </div>
@@ -36,7 +39,7 @@
   </div>
   <div id='loading-modal'>
     <div id="loader" >
-      <%=image_tag 'loading.gif'%>
+      <%=image_tag 'loading.gif', id: 'loader-image'%>
     </div>
   </div>
 </body>
