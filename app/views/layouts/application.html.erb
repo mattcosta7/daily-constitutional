@@ -20,9 +20,12 @@
         <div class='main-content'>
           <%=flash[:notice] if flash[:notice]%>
           <%= yield %>
+
           <div id='modal'>
             <div class='closer-icon-holder'>
-              <i id='close-icon' class="material-icons">close</i>
+              <i id='close-icon' class="material-icons">  
+                close
+              </i>
             </div>
             <div id='modal-content'>
             </div>
@@ -30,6 +33,11 @@
         </div>
       </div>
     </main>
+  </div>
+  <div id='loading-modal'>
+    <div id="loader" >
+      <%=image_tag 'loading.gif'%>
+    </div>
   </div>
 </body>
 </html>

@@ -1,2 +1,2 @@
-<%=link_to "<i class='material-icons star-icon'>star</i>".html_safe,  unstar_path(entry), method: :delete if entry.starred_by.include?(current_user) %> 
-<%=link_to "<i class='material-icons star-icon'>star_border</i>".html_safe,star_path(entry), method: :post  if !entry.starred_by.include?(current_user) %>
+<%=link_to "<i class='material-icons star-icon'>star</i>".html_safe,  unstar_path(entry), method: :post, data: {idNum: entry.id}, class: 'un-star-button-link', remote: true if entry.starred_by.include?(current_user) %> 
+<%=link_to "<i class='material-icons star-icon'>star_border</i>".html_safe,star_path(entry), method: :post, data: {idNum: entry.id}, class: 'star-button-link', remote: true if !entry.starred_by.include?(current_user) %>

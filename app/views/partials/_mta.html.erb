@@ -8,7 +8,7 @@
             <span>
               <%= x[1] == "GOOD SERVICE" ? x[1] : link_to("#{x[1]}", "#", class: 'service-status')%>
             </span>
-            <span class='train-delay-status'>
+            <span class='train-delay-status'  style="display:none;">
                <%=x[2].text.html_safe%>
             </span>
           </li>
