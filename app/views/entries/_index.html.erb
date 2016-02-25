@@ -9,11 +9,9 @@
           <%=entry.published%>
           <span class='mdl-list__item-primary-content article-title'><%= entry.title %></span>
           <span class='article-url mdl-list__item-secondary-content '><%= entry.blog.url %></span>
-          <ul>
-            <li class='blog-entry-content' style="display:none;">
-            <%=entry.content.html_safe%>
-            </li>
-          </ul>
+          <span class='blog-entry-content' style="display:none;">
+          <%=entry.content.html_safe%>
+          </span>
         </div>
       </li>
     <%end%>

@@ -21,9 +21,11 @@ $(document).ready(function(){
       return;
     }
     $('#modal-content').html($(this).find('.blog-entry-content').html())
-    $('#modal').show();
+    $('#modal').show('blind');
+    $('.mdl-list').hide('blind');
     $('#close-icon').on('click',function(){
-      $('#modal').hide();
+      $('#modal').hide('blind');
+      $('.mdl-list').show('blind')
     })
     $('#close-icon-left').on('click',function(){
       $('#modal').hide();
