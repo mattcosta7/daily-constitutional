@@ -1,6 +1,6 @@
 <div class='user-feeds'>
   <ul class='mdl-list'>
-    <%@entries.first(50).each do |entry|%>
+    <%@entries.each do |entry|%>
       <li class='mdl-list__item'>
         <div class='star-button'>
           <%=render partial: 'entries/star_button', locals: {entry: entry}%>

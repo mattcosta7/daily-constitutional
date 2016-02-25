@@ -31,9 +31,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if ((Time.now - @user.weather.updated_at)/60 > 60)
       @user.weather.update_attributes(Apis::Weather.getWeather)
+      @user.save
     end
     @tStatus = Apis::Mta.get
-    @entries = @user.entries.order(:published).reverse
+    @entries = @user.entries.order(:published).reverse.first(30)
     respond_to do |format|
       format.html
       format.json { render :json => {user: @user, delays: @tStatus, weather: @weather} } 
