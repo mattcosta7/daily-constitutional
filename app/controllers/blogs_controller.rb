@@ -1,10 +1,5 @@
 class BlogsController < ApplicationController
 
-
-  def new
-    @blog = Blog.new
-  end
-
   def create
     if !Blog.where(blog_params).first
       @blog = Blog.new(blog_params)

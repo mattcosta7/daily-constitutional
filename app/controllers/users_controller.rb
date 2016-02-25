@@ -2,10 +2,6 @@ class UsersController < ApplicationController
   before_filter :validate, except: [:new,:create]
   def new
     @user = User.new
-    respond_to do |format|
-      format.html
-      format.json { render :json => {response: @user} }
-    end
   end
 
   def create
@@ -35,18 +31,10 @@ class UsersController < ApplicationController
     end
     @tStatus = Apis::Mta.get
     @entries = @user.entries.order(:published).reverse.first(30)
-    respond_to do |format|
-      format.html
-      format.json { render :json => {user: @user, delays: @tStatus, weather: @weather} } 
-    end
   end
 
   def edit
     @user = User.find(params[:id])
-    respond_to do |format|
-      format.html
-      format.json { render :json => {response: @user} }
-    end
   end
 
   def update
@@ -93,7 +81,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation,:latitude, :longitude).merge(location: request.remote_ip)
+    params.require(:user).permit(:email, :password, :password_confirmation,:latitude, :longitude)
   end
 
   def validate

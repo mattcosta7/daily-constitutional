@@ -12,7 +12,7 @@
 #modal{
   position:fixed;
   top:65px;
-  background-color: white;
+  background-color: #fff;
   height: 100vh;
   overflow: scroll;
   width: 100%;
@@ -47,7 +47,7 @@
   width:40%;
 }
 #loader-img{
-  background-color: white;
+  background-color: #fff;
   border-radius: 50%;
 }
 .bold{
@@ -69,7 +69,7 @@
 }
 
 .drawer-cell{
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000;
 }
 
 @media screen and (min-width: 1025px){

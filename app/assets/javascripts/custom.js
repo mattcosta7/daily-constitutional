@@ -20,7 +20,7 @@ $(document).ready(function(){
     if($(e.target).is('i')){
       return;
     }
-    $('#modal-content').html($(this).parent().find('.blog-entry-content').html())
+    $('#modal-content').html($(this).find('.blog-entry-content').html())
     $('#modal').show();
     $('#close-icon').on('click',function(){
       $('#modal').hide();
