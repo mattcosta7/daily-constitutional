@@ -341,3 +341,10 @@
   text-align: center;
   margin: 0;
 }
+
+input[type="date"] {
+  background-color: #fafafa;
+  display: -webkit-inline-flex;
+  font-family: "Helvetica","Arial",sans-serif;
+  border:none;
+}

@@ -37,7 +37,6 @@ class UsersController < ApplicationController
     elsif @user.distance_to("San Francisco") <50
       @tStatus = [nil,nil,nil]
     end
-      
     @entries = @user.entries.order(:published).reverse.first(30)
   end
 

@@ -7,7 +7,7 @@
       <li class='mdl-list__item cross-out to-do-list-item'>
       <%end%>
           <span class='mdl-list__item-primary-content article-title'>
-            <%="#{todo.description}"%> - <%=todo.duedate.strftime('%A, %D %l:%M %p')%>
+            <%="#{todo.description}"%> - <%=todo.duedate.strftime('%A, %D')%>
             <% if !todo.is_completed %> 
               <%= link_to complete_path(todo), method: :post, remote: true, data:{idNum: todo.id}, class: 'complete-button'   do %>
                 <i class="material-icons circle2">

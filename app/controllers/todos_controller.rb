@@ -12,10 +12,10 @@ class TodosController < ApplicationController
       @tStatus = Apis::Mta.getNyc
     elsif @user.distance_to("Washington,DC") < 50
       @tStatus = Apis::Mta.getWdc
-    elsif @user.distance_to("San Francisco") <50
+    else
       @tStatus = [nil,nil,nil]
     end
-    @todos = @user.todos.order(:duedate).reverse
+    @todos = @user.todos.where("duedate >= ?", Time.now-24.hours).order(:duedate).reverse 
   end
 
   def create
