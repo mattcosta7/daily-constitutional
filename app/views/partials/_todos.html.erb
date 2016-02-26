@@ -1,46 +1,44 @@
-<h6 class='category-title'><%=link_to "To Do", todos_path%></h6>
+<h6 class='category-title'><%=link_to "To Do", todos_path, id: 'to-do-link'%></h6>
 <%=Time.now.strftime('%D')%><br>
-  <ul>
-  <%current_user.todos.each do |todo| %>
-    <%if (todo.duedate + 5.hours).today? %>
-      <% if !todo.is_completed %> 
-        <li>
-          <%="#{todo.description}"%>
-          <%= link_to complete_path(todo), method: :post, remote: true, data:{idNum: todo.id}, class: 'complete-button'   do %>
-          <i class="material-icons circle">
-            radio_button_unchecked
-          </i>
-          <%end%>
-          <%=link_to todo_path(todo), method: :delete do %>
-            <i class="material-icons feed-delete">delete_forever</i>
-          <%end%>
-        </li>
-      <%else%>
-        <li class='cross-out'>
-          <%="#{todo.description}"%>
-          <%= link_to uncomplete_path(todo), method: :post, remote: true, data:{idNum: todo.id}, class: 'un-complete-button'   do %>
-          <i class="material-icons circle">
-            radio_button_unchecked
-          </i>
-          <%end%>
-          <%=link_to todo_path(todo), method: :delete do %>
-            <i class="material-icons feed-delete">delete_forever</i>
-          <%end%>
-        </li>
-      <%end%>
+<ul>
+<%current_user.todos.each do |todo| %>
+  <%if (todo.duedate + 5.hours).today? %>
+    <% if !todo.is_completed %> 
+      <li>
+        <%="#{todo.description}"%>
+        <%= link_to complete_path(todo), method: :post, remote: true, data:{idNum: todo.id}, class: 'complete-button'   do %>
+        <i class="material-icons circle">
+          radio_button_unchecked
+        </i>
+        <%end%>
+        <%=link_to todo_path(todo), method: :delete do %>
+          <i class="material-icons feed-delete">delete_forever</i>
+        <%end%>
+      </li>
+    <%else%>
+      <li class='cross-out'>
+        <%="#{todo.description}"%>
+        <%= link_to uncomplete_path(todo), method: :post, remote: true, data:{idNum: todo.id}, class: 'un-complete-button'   do %>
+        <i class="material-icons circle">
+          radio_button_unchecked
+        </i>
+        <%end%>
+        <%=link_to todo_path(todo), method: :delete do %>
+          <i class="material-icons feed-delete">delete_forever</i>
+        <%end%>
+      </li>
     <%end%>
   <%end%>
-  </ul>
-  <div id='todo-form'>
-    <%=form_for @user.todos.build do |f|%>
-     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <%=f.label :'Set Date'%>
-       <%= f.date_field :duedate, :value => Time.now.strftime('%Y-%m-%d'), class: 'date-picker'%>
-      </div><br>
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <%=f.label :'Thing To Do', class: "mdl-textfield__label todo-entry"%>
-        <%=f.text_field :description, class: "mdl-textfield__input todo-entry"%>
-      </div>
-      <%=f.submit :'Add ToDo', class: "mdl-button mdl-js-button mdl-button--raised mdl-button--accent", id: 'new-feed-button'%>
-    <%end%>
-  </div>
+<%end%>
+</ul>
+<div id='todo-form'>
+  <%=form_for @user.todos.build do |f|%>
+    <%=f.label :'Set Date'%>
+    <%= f.date_field :duedate, :value => Time.now.strftime('%Y-%m-%d'), class: 'date-picker'%>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <%=f.label :'Thing To Do', class: "mdl-textfield__label todo-entry"%>
+      <%=f.text_field :description, class: "mdl-textfield__input todo-entry"%>
+    </div>
+    <%=f.submit :'Add ToDo', class: "mdl-button mdl-js-button mdl-button--raised mdl-button--accent", id: 'new-feed-button'%>
+  <%end%>
+</div>

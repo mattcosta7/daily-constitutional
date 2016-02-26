@@ -10,6 +10,16 @@
     left:-20px;
   }
 }
+.mdl-textfield{
+  padding-bottom:0;
+}
+.welcome-message{
+  width:100%;
+  text-align: center;
+  .home-form{
+    text-align: center;
+  }
+}
 #modal{
   position:fixed;
   top:65px;
@@ -23,6 +33,7 @@
     width: -webkit-calc(100% - 350px);
     width:    -moz-calc(100% - 350px);
     width:         calc(100% - 350px);
+    min-width: 530px;
     position: relative;
     top: 35px; 
     left: 20px;
@@ -82,6 +93,10 @@
     left:60px;
     top:-10px;
     width: 100%;
+  }
+  .welcome-message{
+    position: relative;
+    left:-20px;
   }
   .login-page-form{
     position: relative;
@@ -145,6 +160,7 @@
     width: -webkit-calc(100% - 50px);
     width:    -moz-calc(100% - 50px);
     width:         calc(100% - 50px);
+    min-width: 530px;
     background-color: #F7F9F7;
   }
   .rss-entry-label{
@@ -347,4 +363,25 @@ input[type="date"] {
   display: -webkit-inline-flex;
   font-family: "Helvetica","Arial",sans-serif;
   border:none;
+}
+
+#intro-text{
+  text-align: center;
+  margin: 40px auto 0;
+  font-size:1.4em;
+  width: 80%;
+  line-height: 1.6;
+  max-width: 800px;
+}
+.welcome-message{
+  width:100%;
+  text-align: center;
+  .home-form{
+    text-align: center;
+  }
+}
+
+#to-do-link{
+  text-decoration: none;
+  color: black;
 }
