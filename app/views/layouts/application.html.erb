@@ -34,7 +34,7 @@
         </div>
       <footer>
         <% if flash[:notice] %>
-          <div id='flash'><h5 id='flash-message'><%=flash[:notice]%></h5></div>
+          <div id='flash'><h5 id='flash-message'><%=flash[:notice].html_safe%></h5></div>
         <%end%>
       </footer>
       </div>

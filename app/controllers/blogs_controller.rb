@@ -16,7 +16,7 @@ class BlogsController < ApplicationController
           end
           redirect_to :back
         rescue => ex
-          flash[:notice]="Only valid RSS Feeds!"
+          flash[:notice]="Only valid RSS Feeds!<br><span id='spot2'><a href='mailto:matt+dailyC@mattc.io' target='_blank'>Favorite feed not working?</a></span>"
           current_user.blogs.last.destroy
           logger.error ex.message
           redirect_to :back
