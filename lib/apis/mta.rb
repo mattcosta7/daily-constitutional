@@ -7,7 +7,13 @@ class Apis::Mta
     @doc = Nokogiri::XML(open('http://web.mta.info/status/serviceStatus.txt'))
     @trainStatus = []
     for i in 0...9
-      @trainStatus.push([@doc.xpath('//name')[i].text+'.gif',@doc.xpath('//status')[i].text,@doc.xpath('//text')[i].text])
+      @trainStatus.push([
+        #image
+        @doc.xpath('//name')[i].text+'.gif',
+        #status
+        @doc.xpath('//status')[i].text,
+        #error
+        @doc.xpath('//text')[i].text])
     end
     @trainStatus
   end 

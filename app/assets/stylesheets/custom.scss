@@ -183,6 +183,15 @@
   text-align: top;
 }
 
+.star-icon:hover{
+  z-index:20;
+  color:grey;
+}
+.star-icon:active{
+  box-shadow: 1px 1px 5px #555 inset;
+  color:grey;
+}
+
 .mdl-list__item .mdl-list__item-secondary-content {
   align-items: flex-start;
 }
@@ -311,4 +320,8 @@
 
 .sep{
   line-height: 110px;
+}
+
+#todo-form .mdl-textfield{
+  left:0;
 }

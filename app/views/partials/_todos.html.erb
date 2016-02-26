@@ -10,6 +10,9 @@
             radio_button_unchecked
           </i>
           <%end%>
+          <%=link_to todo_path(todo), method: :delete do %>
+            <i class="material-icons feed-delete">delete_forever</i>
+          <%end%>
         </li>
       <%else%>
         <li class='cross-out'>
@@ -19,13 +22,21 @@
             radio_button_unchecked
           </i>
           <%end%>
+          <%=link_to todo_path(todo), method: :delete do %>
+            <i class="material-icons feed-delete">delete_forever</i>
+          <%end%>
         </li>
       <%end%>
     <%end%>
   <%end%>
   </ul>
-  <%=form_for @user.todos.build do |f|%>
-    <%= f.date_select :duedate %><br>
-    <%=f.text_field :description%>
-    <%=f.submit%>
-  <%end%>
+  <div id='todo-form'>
+    <%=form_for @user.todos.build do |f|%>
+      <%= f.date_select :duedate%><br>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%=f.label :'Thing To Do', class: "mdl-textfield__label todo-entry"%>
+        <%=f.text_field :description, class: "mdl-textfield__input todo-entry"%>
+      </div>
+      <%=f.submit :'Add ToDo', class: "mdl-button mdl-js-button mdl-button--raised mdl-button--accent", id: 'new-feed-button'%>
+    <%end%>
+  </div>
