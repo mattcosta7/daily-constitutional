@@ -21,11 +21,13 @@ $(document).ready(function(){
       return;
     }
     $('#modal-content').html($(this).find('.blog-entry-content').html())
-    $('#modal').show('blind');
-    $('.mdl-list').hide('blind');
+    $('#modal').show();
+    $('.mdl-list').hide();
+
     $('#close-icon').on('click',function(){
-      $('#modal').hide('blind');
-      $('.mdl-list').show('blind')
+      $('#modal').hide();
+      $('.mdl-list').show();
+      
     })
     $('#close-icon-left').on('click',function(){
       $('#modal').hide();
