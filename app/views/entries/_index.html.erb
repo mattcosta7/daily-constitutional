@@ -1,14 +1,14 @@
 <div class='user-feeds'>
   <ul class='mdl-list'>
     <%@entries.each do |entry|%>
-      <li class='mdl-list__item'>
+      <li class='mdl-list__item '>
         <div class='star-button'>
           <%=render partial: 'entries/star_button', locals: {entry: entry}%>
         </div> 
         <div class=' entry-unhider'>
-          <%=entry.published%>
+          <span><%=entry.published.strftime('%A, %D %l:%M %p')%></span>
           <span class='mdl-list__item-primary-content article-title'><%= entry.title %></span>
-          <span class='article-url mdl-list__item-secondary-content '><%= entry.blog.url %></span>
+          <span class='article-url mdl-list__item-secondary-content'><%= entry.blog.url %></span>
           <span class='blog-entry-content' style="display:none;">
           <%=entry.content.html_safe%>
           </span>

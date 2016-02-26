@@ -18,7 +18,6 @@
     <main class="mdl-layout__content">
       <div class="page-content">
         <div class='main-content'>
-          <%= "<h3 id='flash'>#{flash[:notice]}</h3>".html_safe if flash[:notice]%>
           <%= yield %>
           <div id='modal'>
             <div class='closer-icon-holder'>
@@ -33,6 +32,11 @@
             </div>
           </div>
         </div>
+      <footer>
+        <% if flash[:notice] %>
+          <div id='flash'><h5 id='flash-message'><%=flash[:notice]%></h5></div>
+        <%end%>
+      </footer>
       </div>
     </main>
   </div>

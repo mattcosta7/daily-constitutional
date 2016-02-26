@@ -24,13 +24,20 @@ class UsersController < ApplicationController
   end
 
   def show
-    @title = "Home"
+    @title = "Feed"
     @user = User.find(params[:id])
     if ((Time.now - @user.weather.updated_at)/60 > 60)
       @user.weather.update_attributes(Apis::Weather.getWeather)
       @user.save
     end
-    @tStatus = Apis::Mta.get
+    if @user.distance_to("New York City") < 50
+      @tStatus = Apis::Mta.getNyc
+    elsif @user.distance_to("Washington,DC") < 50
+      @tStatus = Apis::Mta.getWdc
+    elsif @user.distance_to("San Francisco") <50
+      @tStatus = [nil,nil,nil]
+    end
+      
     @entries = @user.entries.order(:published).reverse.first(30)
   end
 

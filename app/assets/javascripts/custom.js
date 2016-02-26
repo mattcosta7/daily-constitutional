@@ -1,8 +1,12 @@
 $(document).ready(function(){
-  
+  $('#flash').hide();
   //flash messages fade out on load
-  $('#flash').fadeOut(1500);
-  
+  if($('#flash').text() != ''){
+    $('#flash').slideDown(500);
+    $('#flash').on('click',function(){
+      $(this).slideUp(500);
+    })
+  }
   //hide signup initially
   $('#signin-swap-2').hide();
 

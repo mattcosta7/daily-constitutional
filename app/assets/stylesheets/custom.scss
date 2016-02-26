@@ -17,17 +17,18 @@
   overflow: scroll;
   width: 100%;
   background-color: #F7F9F7;
+  #modal-content{
+    z-index:8;
+    width: -webkit-calc(100% - 350px);
+    width:    -moz-calc(100% - 350px);
+    width:         calc(100% - 350px);
+    position: relative;
+    top: 35px; 
+    left: 20px;
+    background-color: #F7F9F7;
+  }
 }
-#modal-content{
-  z-index:8;
-  width: -webkit-calc(100% - 350px);
-  width:    -moz-calc(100% - 350px);
-  width:         calc(100% - 350px);
-  position: relative;
-  top: 35px; 
-  left: 20px;
-  background-color: #F7F9F7;
-}
+
 
 #loading-modal{
   position:fixed;
@@ -84,6 +85,8 @@
   .login-page-form{
     position: relative;
     left: 274px;
+    text-align: center;
+    display: inline-block;
   }
   .mdl-textfield{
     left:-270px;
@@ -126,6 +129,10 @@
     left:0px;
     top:-10px;
     width: 100%;
+  }
+  .login-page-form{
+    text-align: center;
+    display: inline-block;
   }
   .mdl-layout__drawer{
     left:-200px;
@@ -194,6 +201,12 @@
     .mdl-list__item:last-child{
       border-bottom:1px solid grey;
     }
+    .mdl-list__item:hover{
+      box-shadow: 1px 1px 5px #555 inset;
+    }
+    .mdl-list__item:active{
+      background-color: #feaa40;
+    }
   }
 }
 
@@ -243,10 +256,12 @@
 }
 
 .nav-link:hover{
-  background-color: rgba(0,0,0,.3);
+  box-shadow: 1px 1px 5px #555 inset;
 }
 
-
+.nav-link:active{
+  background-color: #F7F9F7;
+}
 
 
 .mdl-textfield--align-left{
@@ -255,6 +270,8 @@
 
 #modal *{
   font-size: 1em;
+  font-weight:normal;
+  font-style: none;
 }
 
 
@@ -267,4 +284,31 @@
 
 #close-icon,#close-icon-left{
   font-size:2em;
+
+}
+#close-icon:hover,#close-icon-left:hover{
+  box-shadow: 1px 1px 5px #555 inset;
+}
+
+#close-icon:active,#close-icon-left:active{
+  background-color: #feaa40;
+}
+
+#flash{
+  position:fixed;
+  bottom: 0px;
+  background-color: black;
+  z-index: 9999;
+  left:50%;
+  transform: translateX(-50%);
+  height:70px;
+  width:300px;
+  #flash-message{
+      color: #feaa40;
+      text-align:center;
   }
+}
+
+.sep{
+  line-height: 110px;
+}

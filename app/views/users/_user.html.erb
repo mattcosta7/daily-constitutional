@@ -1,2 +1,2 @@
 Signed in as: <%=@user.email%><br>
-Located:<%=Geocoder::search(@user.coordinates)[0].city+", "+Geocoder::search(@user.coordinates)[0].state if @user.latitude%><br>
+Located:<%=Geocoder::search(@user.coordinates)[0].city+", "+Geocoder::search(@user.coordinates)[0].state if @user.latitude if @user.coordinates%><br>

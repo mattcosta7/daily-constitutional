@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_filter :validate
+  before_filter :validate!
 
 #new blogs can be created, parse the url, if error say so, otherwise make entries
 #if not a new blog, just find the blog in question and append to that user
