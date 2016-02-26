@@ -1,28 +1,20 @@
 == Daily Constitutional
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby 2.2.3
 
 * System dependencies
 
 * Configuration
+  bundle install
 
 * Database creation
-
-* Database initialization
-
-* How to run the test suite
+  with postgres running rake db:create, rake db:migrate
 
 * Services (job queues, cache servers, search engines, etc.)
+  rake update_all_entries, locally updates blog entries
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Designed to provide an easy interface for the morning routine.
+**Weather and local train status is fetched by user IP
+**Users can create to do items, and cross off/remove as necessary
+**users can add rss feeds, that are auto-parsed, and returned as a list of recent articles, clicking on one opens a text-only version.
+**Feedjira and Nokogiri are used to parse RSS, HTML and XML files for the Weather, Train and RSS Feeds. 
