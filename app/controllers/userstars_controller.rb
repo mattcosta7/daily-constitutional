@@ -1,6 +1,7 @@
 class UserstarsController < ApplicationController
   def index
     if current_user 
+      @title = "Stars"
       @user = current_user
       @entries = current_user.stars
     else

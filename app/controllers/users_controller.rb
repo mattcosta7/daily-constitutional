@@ -24,6 +24,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @title = "Home"
     @user = User.find(params[:id])
     if ((Time.now - @user.weather.updated_at)/60 > 60)
       @user.weather.update_attributes(Apis::Weather.getWeather)
