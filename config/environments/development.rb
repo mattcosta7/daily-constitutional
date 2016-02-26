@@ -41,7 +41,7 @@ Rails.application.configure do
   #new york ip 
   #config.middleware.use('SpoofIp', '72.226.10.42')
   #Washington Metro
-  #config.middleware.use('SpoofIp', '173.166.164.15')
+  config.middleware.use('SpoofIp', '50.22.219.2')
   #Chicago
-  config.middleware.use('SpoofIp', '173.199.132.80')
+  #config.middleware.use('SpoofIp', '173.199.132.80')
 end
