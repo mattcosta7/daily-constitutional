@@ -38,6 +38,10 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-  config.middleware.use('SpoofIp', '72.226.10.42')
+  #new york ip 
+  #config.middleware.use('SpoofIp', '72.226.10.42')
+  #Washington Metro
   #config.middleware.use('SpoofIp', '173.166.164.15')
+  #Chicago
+  config.middleware.use('SpoofIp', '173.199.132.80')
 end

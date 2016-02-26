@@ -10,9 +10,6 @@
     left:-20px;
   }
 }
-.mdl-textfield{
-  padding-bottom:0;
-}
 .welcome-message{
   width:100%;
   text-align: center;
@@ -384,4 +381,8 @@ input[type="date"] {
 #to-do-link{
   text-decoration: none;
   color: black;
+}
+
+.mdl-button--accent.mdl-button--accent.mdl-button--raised{
+  top:-20px;
 }

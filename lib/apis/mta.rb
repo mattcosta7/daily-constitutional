@@ -34,4 +34,26 @@ class Apis::Mta
     end
     @trainStatus
   end
+
+  def self.getChicago
+    doc = Nokogiri::HTML.parse(open('http://www.transitchicago.com/'))
+    @trainStatus = []
+    for i in 0...8
+      @trainStatus.push([
+      #image
+      doc.search('.tblsystatus').children[i*2+1].children[1].text.gsub(/[^0-9a-z]/i, '')+'_chic.png',
+      #status
+      doc.search('.tblsystatus').children[i*2+1].children[3].text.gsub(/[^0-9a-z]/i, '')  == "NormalService" ? "GOOD SERVICE" : "DELAYS",
+      #error
+      "Not yet available"
+      #error
+      ])
+    end
+    @trainStatus
+  end
 end
+
+
+
+
+

@@ -31,11 +31,15 @@ class UsersController < ApplicationController
       @user.save
     end
     if @user.distance_to("New York City") < 50
-      @tStatus = Apis::Mta.getNyc
+     @tStatus = Apis::Mta.getNyc
     elsif @user.distance_to("Washington,DC") < 50
-      @tStatus = Apis::Mta.getWdc
-    elsif @user.distance_to("San Francisco") <50
-      @tStatus = [nil,nil,nil]
+     @tStatus = Apis::Mta.getWdc
+    elsif @user.distance_to("Boston") < 50
+     @tStatus = ["We Don't","Do Things", "In Boston, Yuck."]
+    elsif @user.distance_to("Chicago") < 50
+     @tStatus = Apis::Mta.getChicago
+    else
+       @tStatus = [nil,nil,nil]
     end
     @entries = @user.entries.order(:published).reverse.first(30)
   end
