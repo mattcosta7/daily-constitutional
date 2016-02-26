@@ -20,7 +20,6 @@
         <div class='main-content'>
           <%= "<h3 id='flash'>#{flash[:notice]}</h3>".html_safe if flash[:notice]%>
           <%= yield %>
-
           <div id='modal'>
             <div class='closer-icon-holder'>
               <i id='close-icon' class="material-icons">  

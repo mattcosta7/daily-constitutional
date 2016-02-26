@@ -246,6 +246,18 @@
   background-color: rgba(0,0,0,.3);
 }
 
+
+
+
+.mdl-textfield--align-left{
+  width:325px;
+}
+
+#modal *{
+  font-size: 1em;
+}
+
+
 #close-icon-left{
   position:fixed;
   right:10px;
@@ -253,13 +265,6 @@
   background-color: #F7F9F7;
 }
 
-#close-icon-bottom-right{
-  position:fixed;
-  right:10px;
-  bottom:64px;
-  background-color: #F7F9F7;
-}
-
-.mdl-textfield--align-left{
-  width:325px;
-}
+#close-icon,#close-icon-left{
+  font-size:2em;
+  }

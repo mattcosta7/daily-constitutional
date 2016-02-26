@@ -1,21 +1,29 @@
 $(document).ready(function(){
   
+  //flash messages fade out on load
   $('#flash').fadeOut(1500);
-
+  
+  //hide signup initially
   $('#signin-swap-2').hide();
 
+  //show service status in modal on click, hide on close icon press
   $('.service-status').on('click',function(){
     $('#modal-content').html($(this).parent().parent().find('.train-delay-status').html())
         $('#modal').show();
         $('#close-icon').on('click',function(){
           $('#modal').hide();
         })
+        $('#close-icon-left').on('click',function(){
+          $('#modal').hide();
+        })
   })
 
+  //hide modals
   $('#modal').hide();
   $('#loading-modal').hide();
   $('#loader').hide();
 
+  //on click of line item, if not the star show the item, and hide on close icon clicks
   $('.entry-unhider').parent().on('click',function(e){
     if($(e.target).is('i')){
       return;
@@ -31,25 +39,29 @@ $(document).ready(function(){
     })
     $('#close-icon-left').on('click',function(){
       $('#modal').hide();
+      $('.mdl-list').show();
     })
   })
 
+  //on sign in, show modal loader, because it's slow
   $('.sign-in-button').on('click',function(){
     $('#loader').show();
     $('#loading-modal').show();
   })
 
+  //on new feed add button, show loader because it's slow
   $('#new-feed-button').on('click',function(){
     $('#loader').show();
     $('#loading-modal').show();
   })
 
-
+  //swap signin/signout 
   $('.swap-signin').on('click',function(){
     $('#signin-swap-2').toggle();
     $('#signin-swap-1').toggle();
   });
 
+  //on ajax successes, exchange full for empty star, and make db calls
   $('.main-content').on('ajax:success', '.un-star-button-link',function(){
     $(this).replaceWith("<a data-idNum='"+$(this).attr('data-idNum')+"'class='star-button-link' data-remote='true' rel='nofollow' data-method='post' href='/star/"+$(this).attr('data-idNum')+"'><i class='material-icons star-icon'>star_border</i></a>");
   })
@@ -58,6 +70,7 @@ $(document).ready(function(){
     $(this).replaceWith("<a data-idNum='"+$(this).attr('data-idNum')+"'class='un-star-button-link' data-remote='true' rel='nofollow' data-method='post' href='/unstar/"+$(this).attr('data-idNum')+"'><i class='material-icons star-icon'>star</i></a>");
   })
 
+  //on ajax successes, crossout todo items, and make db calls
   $('.drawer-cell-todo').on('ajax:success', '.complete-button', function(){
     $(this).parent('li').toggleClass('cross-out')
     $(this).replaceWith("<a data-idnum='"+$(this).attr('data-idNum')+"' class='un-complete-button' data-remote='true' rel='nofollow' data-method='post' href='/todos/"+$(this).attr('data-idNum')+"/uncomplete'><i class='material-icons circle'>radio_button_unchecked</i></a>");

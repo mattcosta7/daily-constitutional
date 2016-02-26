@@ -1,6 +1,7 @@
 class EntriesController < ApplicationController
   before_filter :validate
 
+  #place a star on an entry for a user if it isn't already
   def star
     @entry = Entry.find(params[:id])
     puts @entry
@@ -12,6 +13,7 @@ class EntriesController < ApplicationController
     end
   end
 
+  #removes the star from the entry if exists
   def unstar
     @entry = Entry.find(params[:id])
     if @entry.starred_by.include? current_user
@@ -22,6 +24,7 @@ class EntriesController < ApplicationController
     end
   end
 
+  #ensures a current user
   private 
   def validate
     if !current_user

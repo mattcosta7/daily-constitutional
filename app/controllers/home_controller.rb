@@ -4,4 +4,6 @@ class HomeController < ApplicationController
       redirect_to current_user
     end
   end
+
+  #if current user, redirect
 end

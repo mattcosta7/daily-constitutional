@@ -1,5 +1,8 @@
 class BlogsController < ApplicationController
+  before_filter :validate
 
+#new blogs can be created, parse the url, if error say so, otherwise make entries
+#if not a new blog, just find the blog in question and append to that user
   def create
     if !Blog.where(blog_params).first
       @blog = Blog.new(blog_params)
@@ -30,6 +33,12 @@ class BlogsController < ApplicationController
   end
   
   private
+
+  def validate!
+    if !current_user
+      redirect_to root_path
+    end
+  end
 
   def blog_params
     params.require(:blog).permit(:url)

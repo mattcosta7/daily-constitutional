@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
 
+#creates a session, checks to see if the weather has been updated recently for that user,
+#only after authenticating
   def create
     @user = User.find_by_email(params[:session][:email])
     if @user && @user.authenticate(params[:session][:password])
@@ -20,6 +22,7 @@ class SessionsController < ApplicationController
     end
   end
 
+#destroys a session, and clears cookies
   def destroy
     session.clear
     redirect_to root_path
