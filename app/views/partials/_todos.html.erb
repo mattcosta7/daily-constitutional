@@ -1,3 +1,4 @@
+<h6 class='category-title'><%=link_to "To Do", todos_path%></h6>
 <%=Time.now.strftime('%D')%><br>
   <ul>
   <%current_user.todos.each do |todo| %>
@@ -32,7 +33,7 @@
   </ul>
   <div id='todo-form'>
     <%=form_for @user.todos.build do |f|%>
-      <%= f.date_select :duedate%><br>
+      <%= f.date_field :duedate%><br>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <%=f.label :'Thing To Do', class: "mdl-textfield__label todo-entry"%>
         <%=f.text_field :description, class: "mdl-textfield__input todo-entry"%>

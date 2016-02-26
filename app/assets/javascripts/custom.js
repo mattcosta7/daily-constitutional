@@ -84,6 +84,19 @@ $(document).ready(function(){
     $(this).parent('li').toggleClass('cross-out')
     $(this).replaceWith("<a data-idnum='"+$(this).attr('data-idNum')+"' class='complete-button' data-remote='true' rel='nofollow' data-method='post' href='/todos/"+$(this).attr('data-idNum')+"/complete'><i class='material-icons circle'>radio_button_unchecked</i></a>");
   })
+
+  $('.to-do-list-item').on('ajax:success', '.complete-button', function(){
+    $(this).parent().parent().toggleClass('cross-out')
+    $($(this).find('.complete-button')[0]).replaceWith("<a data-idnum='"+$(this).attr('data-idNum')+"' class='un-complete-button' data-remote='true' rel='nofollow' data-method='post' href='/todos/"+$(this).attr('data-idNum')+"/uncomplete'><i class='material-icons circle'>radio_button_unchecked</i></a>");
+  })
+
+  $('.to-do-list-item').on('ajax:success', '.un-complete-button', function(){
+    $(this).parent().parent().toggleClass('cross-out')
+    $($(this).find('.un-complete-button')[0]).replaceWith("<a data-idnum='"+$(this).attr('data-idNum')+"' class='complete-button' data-remote='true' rel='nofollow' data-method='post' href='/todos/"+$(this).attr('data-idNum')+"/complete'><i class='material-icons circle'>radio_button_unchecked</i></a>");
+  })
+
+  
+
     
 
 })

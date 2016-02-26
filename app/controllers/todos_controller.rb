@@ -1,5 +1,23 @@
 class TodosController < ApplicationController
   before_filter :validate
+
+  def index
+    @title = "Feed"
+    @user = current_user
+    if ((Time.now - @user.weather.updated_at)/60 > 60)
+      @user.weather.update_attributes(Apis::Weather.getWeather)
+      @user.save
+    end
+    if @user.distance_to("New York City") < 50
+      @tStatus = Apis::Mta.getNyc
+    elsif @user.distance_to("Washington,DC") < 50
+      @tStatus = Apis::Mta.getWdc
+    elsif @user.distance_to("San Francisco") <50
+      @tStatus = [nil,nil,nil]
+    end
+    @todos = @user.todos.order(:duedate).reverse
+  end
+
   def create
     @todo = Todo.new(todo_params)
     if @todo.save
@@ -24,7 +42,7 @@ class TodosController < ApplicationController
     @todo = Todo.find(params[:id])
     if @todo.destroy
       flash[:notice]="Destroyed"
-      redirect_to @current_user
+      redirect_to :back
     else
       flash[:notice]="failed"
       redirect_to :back
