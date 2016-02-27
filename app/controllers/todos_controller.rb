@@ -15,7 +15,7 @@ class TodosController < ApplicationController
   def create
     @todo = Todo.new(todo_params)
     if @todo.save
-      redirect_to current_user
+      redirect_to root_path
     else
       redirect_to :back
     end
@@ -25,7 +25,7 @@ class TodosController < ApplicationController
     @todo = Todo.find(params[:id])
     if @todo.update_attributes(todo_params)
       flash[:notice]='Updated'
-      redirect_to @todo 
+      redirect_to root_path 
     else
       flash[:notice]='failed'
       redirect_to :back
@@ -50,9 +50,11 @@ class TodosController < ApplicationController
         redirect_to :back
       else
         flash[:notice]="error"
+        redirect_to :back
       end
     else
       flash[:notice]='wrong user'
+      redirect_to :back
     end
   end
 
@@ -63,9 +65,11 @@ class TodosController < ApplicationController
         redirect_to :back
       else
         flash[:notice]="error"
+        redirect_to :back
       end
     else
       flash[:notice]='wrong user'
+      redirect_to :back
     end
   end
 

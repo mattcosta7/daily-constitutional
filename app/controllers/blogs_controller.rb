@@ -31,7 +31,7 @@ class BlogsController < ApplicationController
         current_user.blogs << Blog.where(blog_params).first
       end
       flash[:notice]="Added Blog"
-      redirect_to current_user
+      redirect_to root_path
     end
   end
   

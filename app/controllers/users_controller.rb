@@ -13,7 +13,7 @@ class UsersController < ApplicationController
         @weather.update_attribute(:user_id,@user.id)
         flash[:notice]='works'
         session[:user_id]=@user.id
-        redirect_to @user
+        redirect_to root_path
       else
         flash[:notice]='fail'
         redirect_to :back
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:notice]='Updated'
-      redirect_to @user 
+      redirect_to root_path 
     else
       flash[:notice]='failed'
       redirect_to :back
