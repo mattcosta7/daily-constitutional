@@ -53,8 +53,10 @@ $(document).ready(function(){
 
   //on sign in, show modal loader, because it's slow
   $('.sign-in-button').on('click',function(){
-    $('#loader').show();
-    $('#loading-modal').show();
+    setTimeout(function(){
+      $('#loader').show();
+      $('#loading-modal').show();
+    },1000);
   })
 
   //on new feed add button, show loader because it's slow

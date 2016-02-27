@@ -11,13 +11,14 @@ class SessionsController < ApplicationController
           @user.weather.update_attributes(Apis::Weather.getWeather)
         end
         session[:user_id] = @user.id 
-        flash[:notice]="signed in"
+        flash[:notice]="Welcome Back!"
         redirect_to current_user
       else
-        flash[:notice]="sign in failed"
+        flash[:notice]="Something Went Horribly Wrong There"
         redirect_to :back
       end
     else
+      flash[:notice]="Something Went Horribly Wrong There"
       redirect_to :back
     end
   end

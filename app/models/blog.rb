@@ -3,6 +3,10 @@ class Blog < ActiveRecord::Base
   has_many :users, through: :reader_blogs
   has_many :entries, dependent: :destroy
 
+  #http://stackoverflow.com/questions/161738/what-is-the-best-regular-expression-to-check-if-a-string-is-a-valid-url
+  VALID_URL_REGEX = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/
+  validates :url, presence: true, format: { with: VALID_URL_REGEX },uniqueness:{ case_sensitive: false }
+
   def self.update_all_entries
     Blog.all.each do |blog|
       begin
@@ -34,7 +38,7 @@ class Blog < ActiveRecord::Base
 #https://www.alfajango.com/blog/create-a-printable-format-for-any-webpage-with-ruby-and-nokogiri/
   def self.contentCheck feed
     require 'open-uri'
-    doc = Nokogiri::XML(open(feed.url)) do |config|
+    doc = Nokogiri::HTML(open(feed.url)) do |config|
       config.noent.noblanks.noerror
     end
     doc.search("//script","//iframe","//object","//embed","//param","//form","//meta","//link","//title").remove
