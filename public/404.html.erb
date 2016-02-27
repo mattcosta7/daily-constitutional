@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <%= render 'layouts/head'%>
+  </head>
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <%= render 'layouts/navbar'%>
+      <%=render 'layouts/drawer'%>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <div class='main-content'>
+            <div class='mdl-grid'>
+              <div class='welcome-message'>
+                <h1>Daily Constitutional</h1>
+                <p id='intro-text'>
+                  The Content You Requested Doesn't Actually Exits
+                  <%=link_to "HOME", root_path%>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
+
