@@ -9,15 +9,15 @@
               <%= x[1] == "GOOD SERVICE" ? x[1] : link_to("#{x[1]}", "#", class: 'service-status')%>
             </span>
             <span class='train-delay-status'  style="display:none;">
-               <%=x[2].html_safe%>
+              <%=x[2].html_safe%>
             </span>
           </li>
         <%end%>
       </ul>
     </div>
   <%else%>
-    Shucks, we're not in your area yet, but we're working on it.
+    <span>Shucks, we're not in your area yet, but we're working on it.</span>
   <%end%>
 <%else%>
-  Location Could Not Be Determined.
+  <span>Location Could Not Be Determined.</span>
 <%end%>

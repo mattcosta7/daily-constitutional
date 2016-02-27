@@ -100,5 +100,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
       requestAnimationFrame(animateLoading);
     }
   }
-  //animateLoading();
+  // animateLoading();
 });

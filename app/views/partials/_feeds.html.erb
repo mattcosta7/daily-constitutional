@@ -1,11 +1,11 @@
 <ul>
-      <h5>Feeds</h5>
-        <%current_user.blogs.each do |blog|%>
-        <li>
-          <%=truncate(blog.url, length:35, omission:'...')%>
-          <%=link_to remove_feed_path(blog), method: :delete, data: {confirm: "Really, really?"} do %>
-            <i class="material-icons feed-delete">delete_forever</i>
-          <%end%>
-        </li>
-        <%end%> 
-    </ul>
+  <h5>Feeds</h5>
+    <%current_user.blogs.each do |blog|%>
+    <li>
+      <%=truncate(blog.url, length:35, omission:'...')%>
+      <%=link_to remove_feed_path(blog), method: :delete, data: {confirm: "Really, really?"} do %>
+        <i class="material-icons feed-delete">delete_forever</i>
+      <%end%>
+    </li>
+    <%end%> 
+</ul>

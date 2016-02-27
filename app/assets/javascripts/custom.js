@@ -17,13 +17,13 @@ $(document).ready(function(){
   //show service status in modal on click, hide on close icon press
   $('.service-status').on('click',function(){
     $('#modal-content').html($(this).parent().parent().find('.train-delay-status').html())
-        $('#modal').show();
-        $('#close-icon').on('click',function(){
-          $('#modal').hide();
-        })
-        $('#close-icon-left').on('click',function(){
-          $('#modal').hide();
-        })
+    $('#modal').show();
+    $('#close-icon').on('click',function(){
+      $('#modal').hide();
+    })
+    $('#close-icon-left').on('click',function(){
+      $('#modal').hide();
+    })
   })
 
   //hide modals
@@ -56,7 +56,7 @@ $(document).ready(function(){
     setTimeout(function(){
       $('#loader').show();
       $('#loading-modal').show();
-    },1000);
+    },500);
   })
 
   //on new feed add button, show loader because it's slow
@@ -109,17 +109,12 @@ $(document).ready(function(){
   })
 
   $('.to-do-list-item').on('ajax:success', '.complete-button', function(){
-    $(this).parent().parent().toggleClass('cross-out')
+    $(this).parent().toggleClass('cross-out')
     $($(this).find('.complete-button')[0]).replaceWith("<a data-idnum='"+$(this).attr('data-idNum')+"' class='un-complete-button' data-remote='true' rel='nofollow' data-method='post' href='/todos/"+$(this).attr('data-idNum')+"/uncomplete'><i class='material-icons circle'>radio_button_unchecked</i></a>");
   })
 
   $('.to-do-list-item').on('ajax:success', '.un-complete-button', function(){
-    $(this).parent().parent().toggleClass('cross-out')
+    $(this).parent().toggleClass('cross-out')
     $($(this).find('.un-complete-button')[0]).replaceWith("<a data-idnum='"+$(this).attr('data-idNum')+"' class='complete-button' data-remote='true' rel='nofollow' data-method='post' href='/todos/"+$(this).attr('data-idNum')+"/complete'><i class='material-icons circle'>radio_button_unchecked</i></a>");
   })
-
-  
-
-    
-
 })

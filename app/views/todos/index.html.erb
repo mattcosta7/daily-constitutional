@@ -1,33 +1,20 @@
 <div class='user-feeds'>
   <ul class='mdl-list'>
     <%@todos.each do |todo|%>
-      <%if !todo.is_completed%>
-      <li class='mdl-list__item to-do-list-item'> 
-      <%else%>
-      <li class='mdl-list__item cross-out to-do-list-item'>
-      <%end%>
-          <span class='mdl-list__item-primary-content article-title'>
-            <% if !todo.is_completed %> 
-              <%= link_to complete_path(todo), method: :post, remote: true, data:{idNum: todo.id}, class: 'complete-button'   do %>
-                <i class="material-icons circle2">
-                  radio_button_unchecked
-                </i>
-              <%end%>
-              <%="#{todo.description}"%> - <%=todo.duedate.strftime('%A, %D')%>
-              <%=link_to todo_path(todo), method: :delete do %>
-                <i class="material-icons feed-delete">delete_forever</i>
-              <%end%>
+      <li class='mdl-list__item mdl-list__item--two-line to-do-list-item'> 
+        <span class='mdl-list__item-primary-content article-title'>
+          <span>
+            <%=todo.duedate.strftime('%A, %D')%>
+          </span>
+          <% if !todo.is_completed %> 
+            <span class='mdl-list__item-sub-title '>
+              <%=render partial: 'todos/incomplete', locals: {todo: todo}%>
           <%else%>
-              <%= link_to uncomplete_path(todo), method: :post, remote: true, data:{idNum: todo.id}, class: 'un-complete-button'   do %>
-              <i class="material-icons circle2">
-                radio_button_unchecked
-              </i>
-              <%end%>
-              <%="#{todo.description}"%> - <%=todo.duedate.strftime('%A, %D')%>
-              <%=link_to todo_path(todo), method: :delete do %>
-                <i class="material-icons feed-delete">delete_forever</i>
-              <%end%>
+            <span class='mdl-list__item-sub-title cross-out'>
+              <%=render partial: 'todos/completed', locals: {todo: todo}%>
           <%end%>
+            </span>
+          </span>
         </span>
       </li>
     <%end%>
