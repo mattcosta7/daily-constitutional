@@ -1,0 +1,63 @@
+//edited from original found here - http://codepen.io/hoqqanen/pen/zvqGEG
+#page {
+  align-items: center;
+  background: #607d8b;
+  bottom: 10px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 50px;
+  transition: opacity 1s;
+  border-radius:10%;
+  max-width: 500px;
+  min-width: 400px; 
+}
+
+
+#phrase_box {  
+  display: flex;
+  flex-flow: column;
+  height: 250px;
+  overflow: hidden;
+  width: 400px;
+  position: relative;
+  top: 30px;
+}
+
+#phrases {
+  animation: slide-phrases-upward 30s;
+}
+
+@keyframes slide-phrases-upward {
+  @for $i from 0 through 30 {
+    #{$i * 5%} {
+      transform: translateY($i * -50px);
+    }
+  }
+}
+
+@for $i from 0 through 30 {
+  #loadingCheckCircleSVG-#{$i} {
+    animation: fill-to-white 5000ms;
+    animation-delay: ($i - 1.5) * 1.5s;
+    fill: #ffab40;
+    opacity: 0;
+  }
+}
+@keyframes fill-to-white {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@for $i from 0 through 30 {
+  #loadingCheckSVG-#{$i} {
+    animation: fill-to-coral 5000ms;
+    animation-delay: ($i - 1.5) * 1.5s;    
+  }
+}

@@ -24,4 +24,19 @@ class User < ActiveRecord::Base
     self.email = email.downcase
   end 
 
+  def self.getTrains(user)
+    if user.distance_to("New York City") == nil
+      return [nil,nil,nil]
+    elsif @user.distance_to("New York City") < 50
+      return Apis::Mta.getNyc
+    elsif @user.distance_to("Washington,DC") < 50
+      return Apis::Mta.getWdc
+    elsif @user.distance_to("Boston") < 50
+      return ["We Don't","Do Things", "In Boston, Yuck."]
+    elsif @user.distance_to("Chicago") < 50
+      return Apis::Mta.getChicago
+    else
+      return [nil,nil,nil]
+    end
+  end
 end

@@ -1,11 +1,15 @@
 $(document).ready(function(){
-  $('#flash').hide();
   //flash messages fade out on load
   if($('#flash').text() != ''){
     $('#flash').slideDown(500);
     $('#flash').on('click',function(){
       $(this).slideUp(500);
     })
+    if($('#flash').is(':visible')){
+      setTimeout(function(){
+        $('#flash').slideUp(500)
+        },2500);
+    }
   }
   //hide signup initially
   $('#signin-swap-2').hide();

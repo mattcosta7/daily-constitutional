@@ -30,17 +30,7 @@ class UsersController < ApplicationController
       @user.weather.update_attributes(Apis::Weather.getWeather)
       @user.save
     end
-    if @user.distance_to("New York City") < 50
-     @tStatus = Apis::Mta.getNyc
-    elsif @user.distance_to("Washington,DC") < 50
-     @tStatus = Apis::Mta.getWdc
-    elsif @user.distance_to("Boston") < 50
-     @tStatus = ["We Don't","Do Things", "In Boston, Yuck."]
-    elsif @user.distance_to("Chicago") < 50
-     @tStatus = Apis::Mta.getChicago
-    else
-       @tStatus = [nil,nil,nil]
-    end
+    @tStatus = User.getTrains(@user)
     @entries = @user.entries.order(:published).reverse.first(30)
   end
 
