@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
   root 'home#index'
-  resources :users 
+  resources :users, only: [:create,:destroy,:edit,:update] 
   resources :todos, only: [:index,:create,:destroy] 
-  scope '/blogs' do
-    post '/update_all_blogs' => 'blogs#update_all_blogs', as: :blogs_update_all_blogs
-    post '/:id/download_newest_entries' => 'blogs#download_newest_entries', as: :blog_download_newest_entries
-  end
-  resources :blogs, only: [:create,:new]
-  resources :entries, only: [:index, :show, :destroy]
+  resources :blogs, only: [:create]
+  resources :entries, only: [:destroy]
   post '/login' => 'sessions#create', as: :login
   delete '/login' => 'sessions#destroy'
   post '/star/:id' => 'entries#star', as: :star
