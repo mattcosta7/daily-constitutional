@@ -75,7 +75,7 @@ function easeInOut(t) {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  var phrases = shuffleArray(["Stealing Your IP Address", "Pulling your todo list items", "Selling Your Habits", "Laughing To The Bank", "Wandering Aimlessly", "How Long Does This Take?", "Rolling In A Meadow", "Who Is Behind You?", "Nice Haircut!", "Avg. Airspeed Velocity Of A Swallow?", "Hey Mom!", "Gettin' Yo Train Delays", "Hopefully You Aren't In Boston", "Doin' Stuff", "Servin' Dem Pages", "Bob Dole", "Frederick Douglass","Póg Mo Thóin", "Playing Super Mario Kart", "Eating Brunch"]);
+  var phrases = shuffleArray(["Stealing Your IP Address", "Pulling your todo list items", "Selling Your Habits", "Laughing To The Bank", "Wandering Aimlessly", "How Long Does This Take?", "Rolling In A Meadow", "Who Is Behind You?", "Nice Haircut!", "Avg. Airspeed Velocity Of A Swallow?", "Hey Mom!", "Gettin' Yo Train Delays", "Hopefully You Aren't In Boston", "Doin' Stuff", "Servin' Dem Pages", "Bob Dole", "Frederick Douglass","Póg Mo Thóin", "Playing Super Mario Kart", "Eating Brunch", "Folding Laundry","Writing A Story", "Dancing The Night Away","For Those About To Rock","Burning Down The House","MFDK", "Could You Pass The Ketchup?"]);
   addPhrasesToDocument(phrases);
   var start_time = new Date().getTime();
   var upward_moving_group = document.getElementById("phrases");

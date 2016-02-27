@@ -1,7 +1,7 @@
 <%if @user.coordinates[0] != nil && @user.coordinates[1] != nil %>
   <%if @tStatus%>
     <div>
-      <ul>
+      <ul class='mta'>
         <% @tStatus.each do |x|%>
           <li>
             <%=image_tag x[0] %>- 

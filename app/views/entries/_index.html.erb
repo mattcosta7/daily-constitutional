@@ -1,10 +1,14 @@
 <div class='user-feeds'>
   <ul class='mdl-list'>
     <%if @entries.length < 1%>
-        <li class='mdl-list__item'>
+        <li class='mdl-list__item  mdl-list__item--two-line to-do-list-item'>
           <div class='entry-unhider'>
             <span class='mdl-list__item-primary-content article-title'>
-              Add some RSS feeds, already
+              <% if @title != 'Stars'%>
+                Add Some RSS Feeds, Already
+              <%else%>
+                You Haven't Starred Any Articles Yet
+              <%end%>
             </span>
             <span class='blog-entry-content' style="display:none;">
               If you don't add feeds, you won't have anything to read, and I won't have data to sell so get on it already
@@ -13,25 +17,7 @@
         </li>
       <%else%>
         <%@entries.each do |entry|%>
-          <li class='mdl-list__item '>
-            <div class='star-button'>
-              <%=render partial: 'entries/star_button', locals: {entry: entry}%>
-            </div> 
-            <div class=' entry-unhider'>
-              <span>
-                <%=entry.published.strftime('%A, %D %l:%M %p') if entry.published%>
-              </span>
-              <span class='mdl-list__item-primary-content article-title'>
-                <%= entry.title %>
-              </span>
-              <span class='article-url mdl-list__item-secondary-content'>
-                <%= entry.blog.url %>
-              </span>
-              <span class='blog-entry-content' style="display:none;">
-                <%=entry.content.html_safe%>
-              </span>
-            </div>
-          </li>
+          <%=render partial: 'entries/entry_enumerator', locals: {entry: entry}%>
         <%end%>
       <%end%>
     </ul>

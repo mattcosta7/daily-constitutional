@@ -1,2 +1,9 @@
-Signed in as: <%=@user.email%><br>
-Located:<%=Geocoder::search(@user.coordinates)[0].city+", "+Geocoder::search(@user.coordinates)[0].state if @user.latitude if @user.coordinates%><br>
+<div class='user-show'>
+  <span>
+    Signed in as: <%=@user.email%>
+  </span><br>
+  <span>
+    Located:<%=Geocoder::search(@user.coordinates)[0].city+", "+Geocoder::search(@user.coordinates)[0].state if @user.latitude if @user.coordinates%>
+  </span><br>
+  <%=link_to "Edit", edit_user_path(current_user) if current_user && @user == current_user%>
+</div>

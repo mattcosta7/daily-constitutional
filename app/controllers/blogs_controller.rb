@@ -23,12 +23,14 @@ class BlogsController < ApplicationController
           redirect_to :back
         end
       else
+        flash[:notice]="Only valid RSS Feeds!<br><span id='spot2'><a href='mailto:matt+dailyC@mattc.io' target='_blank'>Favorite feed not working?</a></span>"
         redirect_to :back
       end
     else
       if !current_user.blogs.where(blog_params).first
         current_user.blogs << Blog.where(blog_params).first
       end
+      flash[:notice]="Added Blog"
       redirect_to current_user
     end
   end

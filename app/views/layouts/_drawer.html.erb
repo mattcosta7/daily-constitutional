@@ -1,17 +1,17 @@
 <div class="mdl-layout__drawer">
   <span class='site-title'>
     <%=link_to 'Daily Constitutional', root_path, class: 'mdl-layout-title' %>
+    <%=Time.now.strftime('%A, %B %e, %Y ')%>
   </span>
   <% if current_user %>
     <div class='drawer-cell'>
      <%=render 'partials/newfeed'%>
     </div>
-    <%=render @user if @user%>
-    <%=link_to "Edit", edit_user_path(current_user) if current_user && @user == current_user%>
     <div class='drawer-cell'>
+      <%=render @user if @user%>
       <%=render 'partials/weather'if @user%>
     </div>
-    <div class='drawer-cell'>
+    <div class='drawer-cell drawer-cell-mta'>
       <%=render 'partials/mta' if @tStatus %>
     </div>
     <div class='drawer-cell drawer-cell-todo'>
@@ -21,6 +21,10 @@
       <%=render 'partials/feeds' if current_user%>
     </div>
   <%else%>
-    <p>Sign In For All The Things</p>
+    <div class='drawer-cell'>
+      <p>
+        Sign In For All The Things
+      </p>
+    </div>
   <%end%>
 </div>

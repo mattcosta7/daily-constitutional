@@ -3,7 +3,9 @@
     radio_button_unchecked
   </i>
 <%end%>
-<%="#{todo.description}"%>
+<span>
+  <%=todo.description%>
+</span>
 <%=link_to todo_path(todo), method: :delete do %>
   <i class="material-icons feed-delete">delete_forever</i>
 <%end%>

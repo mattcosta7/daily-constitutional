@@ -1,3 +1,16 @@
+.site-title{
+  text-align: center;
+}
+.welcome-message{
+  width:100%;
+  text-align: center;
+  .home-form{
+    text-align: center;
+  }
+}
+.user-show{
+  text-align: center;
+}
 .mdl-layout__container{
   top:0px;
 }
@@ -79,6 +92,7 @@
 
 .drawer-cell{
   border-bottom: 1px solid #000;
+  text-align: center;
 }
 
 @media screen and (min-width: 1025px){
@@ -92,7 +106,9 @@
   }
   .welcome-message{
     position: relative;
-    left:-20px;
+    width: 100%;
+    text-align: center;
+    left: -75px;
   }
   .login-page-form{
     position: relative;
@@ -248,9 +264,6 @@
   text-decoration: none;
 }
 
-.mdl-button--accent.mdl-button--accent.mdl-button--raised{
-  margin-left:95px;
-}
 .drawer-cell{
   overflow:scroll;
 }
@@ -336,6 +349,8 @@
   transform: translateX(-50%);
   height:70px;
   width:300px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
   #flash-message{
       color: #feaa40;
       text-align:center;
@@ -348,6 +363,9 @@
 
 #todo-form .mdl-textfield{
   left:0;
+}
+.todo-entry{
+  text-align: center;
 }
 
 #spot2{
@@ -366,6 +384,11 @@ input[type="date"] {
   border:none;
 }
 
+.date-picker{
+  position: relative;
+  left:30px;
+}
+
 #intro-text{
   text-align: center;
   margin: 40px auto 0;
@@ -373,13 +396,6 @@ input[type="date"] {
   width: 80%;
   line-height: 1.6;
   max-width: 800px;
-}
-.welcome-message{
-  width:100%;
-  text-align: center;
-  .home-form{
-    text-align: center;
-  }
 }
 
 #to-do-link{
@@ -402,4 +418,8 @@ input[type="date"] {
 #delete-button{
   position: relative;
   left: -15px;
+}
+
+.mta{
+  text-align: left;
 }

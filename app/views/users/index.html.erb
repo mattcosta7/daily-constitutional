@@ -1,5 +1,0 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
-<% @users.each do |user| %>
-  <%="#{user.email}, #{user.location}, #{user.coordinates}"%> <%=link_to "Edit", edit_user_path(user)%> <%=link_to "Show", user_path(user)%> <%=link_to "Delete", user_path(user),method: :delete%><br>
-<%end%>
