@@ -61,6 +61,7 @@ $(document).ready(function(){
 
   //on new feed add button, show loader because it's slow
   $('#new-feed-button').on('click',function(){
+    $('#delete-form').hide();
     $('#loader').show();
     $('#loading-modal').show();
   })
@@ -75,6 +76,16 @@ $(document).ready(function(){
     $('#loader').show();
     $('svg').hide();
     $('#loading-modal').show();
+    $('#loading-modal').on('click',function(e){
+      if($(e.target).is('#loader,#page,#phrase_box,.mdl-textfield,.mdl-textfield__input')){
+        return;
+      }
+      else{
+        $('#loader').hide();
+        $('svg').show();
+        $('#loading-modal').hide();
+      }
+    })
   })
 
   //on ajax successes, exchange full for empty star, and make db calls

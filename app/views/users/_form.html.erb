@@ -12,7 +12,8 @@
     <%=f.password_field :password_confirmation, class: "mdl-textfield__input", pattern: "^[a-zA-Z0-9]{6,}$" %>
   </div>
   <br>
-  <%=f.submit (current_user ? :'Edit User' : :'Sign Up!'), class: "mdl-button mdl-js-button mdl-button--flat mdl-button--accent sign-in-button"%>
+  <%=f.submit (current_user ? :'Edit User' : :'Sign Up!'), class: "mdl-button mdl-js-button mdl-button--flat mdl-button--accent sign-in-button", data:{disable_with: 'loading...'}%><br>
+  <%=link_to 'Delete User', '#', class: "mdl-button mdl-js-button mdl-button--flat mdl-button--primary", id: 'delete-button' if current_user%>
 <%end%>
 
 

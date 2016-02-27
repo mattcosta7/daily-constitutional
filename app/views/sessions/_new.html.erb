@@ -10,6 +10,6 @@
       <%=f.label :password, class: "mdl-textfield__label" %>
       <%=f.password_field :password, class: "mdl-textfield__input", pattern: "^[a-zA-Z0-9]{6,}$" %>
     </div><br class='sep'>
-      <%=f.submit :'Sign In', class: "mdl-button mdl-js-button mdl-button--flat mdl-button--accent sign-in-button"%>
+      <%=f.submit :'Sign In', class: "mdl-button mdl-js-button mdl-button--flat mdl-button--accent sign-in-button", data:{disable_with: 'loading...'}%>
   <%end%>
 </div>
