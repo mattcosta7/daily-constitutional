@@ -185,7 +185,7 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 59</span>
+            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 53</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">authenticate</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:password</span>])
@@ -231,7 +231,7 @@
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 44</span>
+            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 38</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
   <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
 <span class="ruby-keyword">end</span></pre>
@@ -297,7 +297,7 @@
 
           
           <div class="method-source-code" id="removefeed-source">
-            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 76</span>
+            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 70</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">removefeed</span>
   <span class="ruby-ivar">@user</span> = <span class="ruby-identifier">current_user</span>
   <span class="ruby-ivar">@blog</span> = <span class="ruby-constant">Blog</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
@@ -343,20 +343,14 @@
             <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 26</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
   <span class="ruby-ivar">@title</span> = <span class="ruby-string">&quot;Feed&quot;</span>
-  <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@user</span> = <span class="ruby-identifier">current_user</span>
   <span class="ruby-keyword">if</span> ((<span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">weather</span>.<span class="ruby-identifier">updated_at</span>)<span class="ruby-operator">/</span><span class="ruby-value">60</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">60</span>)
     <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">weather</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-constant">Apis</span><span class="ruby-operator">::</span><span class="ruby-constant">Weather</span>.<span class="ruby-identifier">getWeather</span>)
     <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">save</span>
   <span class="ruby-keyword">end</span>
-  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">distance_to</span>(<span class="ruby-string">&quot;New York City&quot;</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-value">50</span>
-    <span class="ruby-ivar">@tStatus</span> = <span class="ruby-constant">Apis</span><span class="ruby-operator">::</span><span class="ruby-constant">Mta</span>.<span class="ruby-identifier">getNyc</span>
-  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">distance_to</span>(<span class="ruby-string">&quot;Washington,DC&quot;</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-value">50</span>
-    <span class="ruby-ivar">@tStatus</span> = <span class="ruby-constant">Apis</span><span class="ruby-operator">::</span><span class="ruby-constant">Mta</span>.<span class="ruby-identifier">getWdc</span>
-  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">distance_to</span>(<span class="ruby-string">&quot;San Francisco&quot;</span>) <span class="ruby-operator">&lt;</span><span class="ruby-value">50</span>
-    <span class="ruby-ivar">@tStatus</span> = [<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>]
-  <span class="ruby-keyword">end</span>
-    
+  <span class="ruby-ivar">@tStatus</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">getTrains</span>(<span class="ruby-ivar">@user</span>)
   <span class="ruby-ivar">@entries</span> = <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">entries</span>.<span class="ruby-identifier">order</span>(<span class="ruby-value">:published</span>).<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">first</span>(<span class="ruby-value">30</span>)
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">root_path</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -387,7 +381,7 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 48</span>
+            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 42</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">user_params</span>)

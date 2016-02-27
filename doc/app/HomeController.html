@@ -128,7 +128,16 @@
             <pre><span class="ruby-comment"># File app/controllers/home_controller.rb, line 2</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_user</span>
-    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">current_user</span>
+    <span class="ruby-ivar">@title</span> = <span class="ruby-string">&quot;Feed&quot;</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-identifier">current_user</span>
+    <span class="ruby-keyword">if</span> ((<span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">weather</span>.<span class="ruby-identifier">updated_at</span>)<span class="ruby-operator">/</span><span class="ruby-value">60</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">60</span>)
+      <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">weather</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-constant">Apis</span><span class="ruby-operator">::</span><span class="ruby-constant">Weather</span>.<span class="ruby-identifier">getWeather</span>)
+      <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">save</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@tStatus</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">getTrains</span>(<span class="ruby-ivar">@user</span>)
+    <span class="ruby-ivar">@entries</span> = <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">entries</span>.<span class="ruby-identifier">order</span>(<span class="ruby-value">:published</span>).<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">first</span>(<span class="ruby-value">30</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@title</span> = <span class="ruby-string">&quot;Sign In&quot;</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div>

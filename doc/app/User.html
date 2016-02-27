@@ -70,6 +70,8 @@
 
   <ul class="link-list" role="directory">
     
+    <li ><a href="#method-c-getTrains">::getTrains</a>
+    
     <li ><a href="#method-i-coordinates">#coordinates</a>
     
     <li ><a href="#method-i-downcase_email">#downcase_email</a>
@@ -116,6 +118,59 @@
     
 
     
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-getTrains" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getTrains</span><span
+            class="method-args">(user)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="getTrains-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">getTrains</span>(<span class="ruby-identifier">user</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">distance_to</span>(<span class="ruby-string">&quot;New York City&quot;</span>) <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">return</span> [<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>]
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">distance_to</span>(<span class="ruby-string">&quot;New York City&quot;</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-value">50</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">Apis</span><span class="ruby-operator">::</span><span class="ruby-constant">Mta</span>.<span class="ruby-identifier">getNyc</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">distance_to</span>(<span class="ruby-string">&quot;Washington,DC&quot;</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-value">50</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">Apis</span><span class="ruby-operator">::</span><span class="ruby-constant">Mta</span>.<span class="ruby-identifier">getWdc</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">distance_to</span>(<span class="ruby-string">&quot;Boston&quot;</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-value">50</span>
+    <span class="ruby-keyword">return</span> [<span class="ruby-string">&quot;We Don&#39;t&quot;</span>,<span class="ruby-string">&quot;Do Things&quot;</span>, <span class="ruby-string">&quot;In Boston, Yuck.&quot;</span>]
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">distance_to</span>(<span class="ruby-string">&quot;Chicago&quot;</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-value">50</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">Apis</span><span class="ruby-operator">::</span><span class="ruby-constant">Mta</span>.<span class="ruby-identifier">getChicago</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> [<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
      <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
        <header>
          <h3>Public Instance Methods</h3>

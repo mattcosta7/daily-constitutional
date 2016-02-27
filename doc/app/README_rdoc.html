@@ -69,33 +69,27 @@
 <main role="main" aria-label="Page README.rdoc">
 
 <h2 id="label-Daily+Constitutional">Daily Constitutional<span><a href="#label-Daily+Constitutional">&para;</a> <a href="#top">&uarr;</a></span></h2>
-
-<p>This <a href="README_rdoc.html">README</a> would normally document whatever
-steps are necessary to get the application up and running.</p>
-
-<p>Things you may want to cover:</p>
 <ul><li>
 <p>Ruby 2.2.3</p>
 </li><li>
 <p>System dependencies</p>
 </li><li>
-<p>Configuration</p>
+<p>Configuration bundle install</p>
 </li><li>
-<p>Database creation</p>
+<p>Database creation with postgres running rake db:create, rake db:migrate</p>
 </li><li>
-<p>Database initialization</p>
+<p>Services (job queues, cache servers, search engines, etc.) rake
+update_all_entries, locally updates blog entries</p>
 </li><li>
-<p>How to run the test suite</p>
-</li><li>
-<p>Services (job queues, cache servers, search engines, etc.)</p>
-</li><li>
-<p>Deployment instructions</p>
-</li><li>
-<p>…</p>
+<p>Designed to provide an easy interface for the morning routine.</p>
 </li></ul>
 
-<p>Please feel free to use a different markup language if you do not plan to
-run <code>rake doc:app</code>.</p>
+<p>**Weather and local train status is fetched by user IP **Users can create
+to do items, and cross off/remove as necessary **users can add rss feeds,
+that are auto-parsed, and returned as a list of recent articles, clicking
+on one opens a text-only version. **Feedjira and Nokogiri are used to parse
+RSS, HTML and XML files for the <a href="Weather.html">Weather</a>, Train
+and RSS Feeds.</p>
 </main>
 
 

@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
         end
         session[:user_id] = @user.id 
         flash[:notice]="Welcome Back!"
-        redirect_to current_user
+        redirect_to root_path
       else
         flash[:notice]="Something Went Horribly Wrong There"
         redirect_to :back

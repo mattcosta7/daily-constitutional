@@ -138,13 +138,14 @@ for that user, only after authenticating</p>
         <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">weather</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-constant">Apis</span><span class="ruby-operator">::</span><span class="ruby-constant">Weather</span>.<span class="ruby-identifier">getWeather</span>)
       <span class="ruby-keyword">end</span>
       <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">id</span> 
-      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>]=<span class="ruby-string">&quot;signed in&quot;</span>
-      <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">current_user</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>]=<span class="ruby-string">&quot;Welcome Back!&quot;</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">root_path</span>
     <span class="ruby-keyword">else</span>
-      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>]=<span class="ruby-string">&quot;sign in failed&quot;</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>]=<span class="ruby-string">&quot;Something Went Horribly Wrong There&quot;</span>
       <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:back</span>
     <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>]=<span class="ruby-string">&quot;Something Went Horribly Wrong There&quot;</span>
     <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:back</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
@@ -177,9 +178,10 @@ for that user, only after authenticating</p>
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 26</span>
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 27</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-identifier">session</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>]=<span class="ruby-string">&quot;COME BACK!!!&quot;</span>
   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">root_path</span>
 <span class="ruby-keyword">end</span></pre>
           </div>

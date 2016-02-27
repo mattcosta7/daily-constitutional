@@ -1,20 +1,14 @@
-<div class='mdl-grid'>
-  <div class='welcome-message'>
-    <h1>Daily Constitutional</h1>
-    <p id='intro-text'>
-      Welcome to the best source for today's news, in a no-nonsense, simple fashion. With up to date details on weather and transportation integrated, you'll have all of the personalized items necessary to start your day
-    </p>
-    <div id='signin-swap-1', class='home-form'>
-      <%=render 'sessions/new'%><br>
-      <button class='mdl-button mdl-js-button mdl-button--flat mdl-button--colored swap-signin'>
-        Not yet a user? Sign Up!
-      </button>
-    </div>
-    <div id='signin-swap-2'>
-      <%=render 'users/new'%><br>
-      <button class='mdl-button mdl-js-button mdl-button--flat mdl-button--colored swap-signin'>
-        Already a user? Sign in!
-      </button>
+<%if !current_user%>
+  <div class='mdl-grid'>
+    <div class='welcome-message'>
+      <h1>Daily Constitutional</h1>
+      <p id='intro-text'>
+        Welcome to the best source for today's news, in a no-nonsense, simple fashion. With up to date details on weather and transportation integrated, you'll have all of the personalized items necessary to start your day
+      </p>
+      <%=render 'home/sign_in_form'%>
+      <%=render 'home/sign_up_form'%>
     </div>
   </div>
-</div>
+<%else%>
+  <%= render 'users/show'%>
+<%end%>

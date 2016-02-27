@@ -70,6 +70,8 @@
 
   <ul class="link-list" role="directory">
     
+    <li ><a href="#method-c-getChicago">::getChicago</a>
+    
     <li ><a href="#method-c-getNyc">::getNyc</a>
     
     <li ><a href="#method-c-getWdc">::getWdc</a>
@@ -106,6 +108,52 @@
        <header>
          <h3>Public Class Methods</h3>
        </header>
+
+    
+      <div id="method-c-getChicago" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getChicago</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="getChicago-source">
+            <pre><span class="ruby-comment"># File lib/apis/mta.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">getChicago</span>
+  <span class="ruby-identifier">doc</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">open</span>(<span class="ruby-string">&#39;http://www.transitchicago.com/&#39;</span>))
+  <span class="ruby-ivar">@trainStatus</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-value">8</span>
+    <span class="ruby-ivar">@trainStatus</span>.<span class="ruby-identifier">push</span>([
+    <span class="ruby-comment">#image</span>
+    <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&#39;.tblsystatus&#39;</span>).<span class="ruby-identifier">children</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">*</span><span class="ruby-value">2</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>].<span class="ruby-identifier">children</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">text</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/[^0-9a-z]/i</span>, <span class="ruby-string">&#39;&#39;</span>)<span class="ruby-operator">+</span><span class="ruby-string">&#39;_chic.png&#39;</span>,
+    <span class="ruby-comment">#status</span>
+    <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&#39;.tblsystatus&#39;</span>).<span class="ruby-identifier">children</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">*</span><span class="ruby-value">2</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>].<span class="ruby-identifier">children</span>[<span class="ruby-value">3</span>].<span class="ruby-identifier">text</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/[^0-9a-z]/i</span>, <span class="ruby-string">&#39;&#39;</span>)  <span class="ruby-operator">==</span> <span class="ruby-string">&quot;NormalService&quot;</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;GOOD SERVICE&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;DELAYS&quot;</span>,
+    <span class="ruby-comment">#error</span>
+    <span class="ruby-string">&quot;Not yet available&quot;</span>
+    <span class="ruby-comment">#error</span>
+    ])
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@trainStatus</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
 
     
       <div id="method-c-getNyc" class="method-detail ">

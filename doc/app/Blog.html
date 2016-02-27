@@ -100,6 +100,21 @@
     
 
     
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+      
+        <dt id="VALID_URL_REGEX">VALID_URL_REGEX
+        
+        <dd><p><a
+href="http://stackoverflow.com/questions/161738/what-is-the-best-regular-expression-to-check-if-a-string-is-a-valid-url">stackoverflow.com/questions/161738/what-is-the-best-regular-expression-to-check-if-a-string-is-a-valid-url</a></p>
+        
+      
+      </dl>
+    </section>
+    
 
     
 
@@ -130,15 +145,16 @@ href="https://www.alfajango.com/blog/create-a-printable-format-for-any-webpage-w
 
           
           <div class="method-source-code" id="contentCheck-source">
-            <pre><span class="ruby-comment"># File app/models/blog.rb, line 35</span>
+            <pre><span class="ruby-comment"># File app/models/blog.rb, line 39</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contentCheck</span> <span class="ruby-identifier">feed</span>
   <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;open-uri&#39;</span>
   <span class="ruby-identifier">doc</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-identifier">open</span>(<span class="ruby-identifier">feed</span>.<span class="ruby-identifier">url</span>)) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">config</span><span class="ruby-operator">|</span>
     <span class="ruby-identifier">config</span>.<span class="ruby-identifier">noent</span>.<span class="ruby-identifier">noblanks</span>.<span class="ruby-identifier">noerror</span>
   <span class="ruby-keyword">end</span>
-  <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&quot;//script&quot;</span>,<span class="ruby-string">&quot;//img&quot;</span>,<span class="ruby-string">&quot;//iframe&quot;</span>,<span class="ruby-string">&quot;//object&quot;</span>,<span class="ruby-string">&quot;//embed&quot;</span>,<span class="ruby-string">&quot;//param&quot;</span>,<span class="ruby-string">&quot;//form&quot;</span>,<span class="ruby-string">&quot;//meta&quot;</span>,<span class="ruby-string">&quot;//link&quot;</span>,<span class="ruby-string">&quot;//title&quot;</span>).<span class="ruby-identifier">remove</span>
-  <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&quot;//div&quot;</span>,<span class="ruby-string">&quot;//p&quot;</span>,<span class="ruby-string">&quot;//span&quot;</span>,<span class="ruby-string">&quot;//a&quot;</span>,<span class="ruby-string">&quot;//h1&quot;</span>,<span class="ruby-string">&quot;//h2&quot;</span>,<span class="ruby-string">&quot;//h3&quot;</span>,<span class="ruby-string">&quot;//h4&quot;</span>,<span class="ruby-string">&quot;//h5&quot;</span>,<span class="ruby-string">&quot;//h6&quot;</span>,<span class="ruby-string">&quot;//ul&quot;</span>,<span class="ruby-string">&quot;//ol&quot;</span>).<span class="ruby-identifier">attr</span>(<span class="ruby-string">&#39;class&#39;</span>,<span class="ruby-string">&#39;&#39;</span>).<span class="ruby-identifier">attr</span>(<span class="ruby-string">&#39;id&#39;</span>,<span class="ruby-string">&#39;&#39;</span>).<span class="ruby-identifier">attr</span>(<span class="ruby-string">&#39;style&#39;</span>,<span class="ruby-string">&#39;&#39;</span>)
+  <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&quot;//script&quot;</span>,<span class="ruby-string">&quot;//iframe&quot;</span>,<span class="ruby-string">&quot;//object&quot;</span>,<span class="ruby-string">&quot;//embed&quot;</span>,<span class="ruby-string">&quot;//param&quot;</span>,<span class="ruby-string">&quot;//form&quot;</span>,<span class="ruby-string">&quot;//meta&quot;</span>,<span class="ruby-string">&quot;//link&quot;</span>,<span class="ruby-string">&quot;//title&quot;</span>).<span class="ruby-identifier">remove</span>
+  <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&quot;//div&quot;</span>,<span class="ruby-string">&quot;//img&quot;</span>,<span class="ruby-string">&quot;//p&quot;</span>,<span class="ruby-string">&quot;//span&quot;</span>,<span class="ruby-string">&quot;//a&quot;</span>,<span class="ruby-string">&quot;//h1&quot;</span>,<span class="ruby-string">&quot;//h2&quot;</span>,<span class="ruby-string">&quot;//h3&quot;</span>,<span class="ruby-string">&quot;//h4&quot;</span>,<span class="ruby-string">&quot;//h5&quot;</span>,<span class="ruby-string">&quot;//h6&quot;</span>,<span class="ruby-string">&quot;//ul&quot;</span>,<span class="ruby-string">&quot;//ol&quot;</span>).<span class="ruby-identifier">attr</span>(<span class="ruby-string">&#39;class&#39;</span>,<span class="ruby-string">&#39;&#39;</span>).<span class="ruby-identifier">attr</span>(<span class="ruby-string">&#39;id&#39;</span>,<span class="ruby-string">&#39;&#39;</span>).<span class="ruby-identifier">attr</span>(<span class="ruby-string">&#39;style&#39;</span>,<span class="ruby-string">&#39;&#39;</span>)
   <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&#39;//a&#39;</span>).<span class="ruby-identifier">attr</span>(<span class="ruby-string">&#39;target&#39;</span>,<span class="ruby-string">&#39;_blank&#39;</span>)
+  <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&#39;//img&#39;</span>).<span class="ruby-identifier">attr</span>(<span class="ruby-string">&#39;class&#39;</span>,<span class="ruby-string">&#39;article-image&#39;</span>)
   <span class="ruby-identifier">doc</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&quot;//p&quot;</span>).<span class="ruby-identifier">collect</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">parent</span> }.<span class="ruby-identifier">uniq</span>
   <span class="ruby-identifier">htmlReturn</span> = <span class="ruby-string">&#39;&#39;</span>
   <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
@@ -175,7 +191,7 @@ href="https://www.alfajango.com/blog/create-a-printable-format-for-any-webpage-w
 
           
           <div class="method-source-code" id="makeEntryHash-source">
-            <pre><span class="ruby-comment"># File app/models/blog.rb, line 22</span>
+            <pre><span class="ruby-comment"># File app/models/blog.rb, line 26</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">makeEntryHash</span> <span class="ruby-identifier">feed</span>, <span class="ruby-identifier">id</span>
   <span class="ruby-identifier">hash</span> = {
     <span class="ruby-identifier">title</span><span class="ruby-operator">:</span> <span class="ruby-identifier">feed</span>.<span class="ruby-identifier">title</span>,
@@ -216,7 +232,7 @@ href="https://www.alfajango.com/blog/create-a-printable-format-for-any-webpage-w
 
           
           <div class="method-source-code" id="update_all_entries-source">
-            <pre><span class="ruby-comment"># File app/models/blog.rb, line 6</span>
+            <pre><span class="ruby-comment"># File app/models/blog.rb, line 10</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">update_all_entries</span>
   <span class="ruby-constant">Blog</span>.<span class="ruby-identifier">all</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">blog</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">begin</span>

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   delete '/login' => 'sessions#destroy'
   post '/star/:id' => 'entries#star', as: :star
   post '/unstar/:id' => 'entries#unstar', as: :unstar
-  get '/favorites/:id' => 'userstars#index', as: :favorites
+  get '/favorites' => 'userstars#index', as: :favorites
   post '/todos/:id/complete' => 'todos#complete!', as: :complete
   post '/todos/:id/uncomplete' => 'todos#uncomplete!', as: :uncomplete
   delete '/users/remove_feed/:id' => 'users#removefeed', as: :remove_feed
