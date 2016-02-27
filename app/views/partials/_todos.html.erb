@@ -5,24 +5,24 @@
   <%if (todo.duedate + 5.hours).today? %>
     <% if !todo.is_completed %> 
       <li>
-        <%="#{todo.description}"%>
         <%= link_to complete_path(todo), method: :post, remote: true, data:{idNum: todo.id}, class: 'complete-button'   do %>
-        <i class="material-icons circle">
-          radio_button_unchecked
-        </i>
+          <i class="material-icons circle">
+            radio_button_unchecked
+          </i>
         <%end%>
+        <%="#{todo.description}"%>
         <%=link_to todo_path(todo), method: :delete do %>
           <i class="material-icons feed-delete">delete_forever</i>
         <%end%>
       </li>
     <%else%>
       <li class='cross-out'>
-        <%="#{todo.description}"%>
         <%= link_to uncomplete_path(todo), method: :post, remote: true, data:{idNum: todo.id}, class: 'un-complete-button'   do %>
-        <i class="material-icons circle">
-          radio_button_unchecked
-        </i>
+          <i class="material-icons circle">
+            radio_button_unchecked
+          </i>
         <%end%>
+        <%="#{todo.description}"%>
         <%=link_to todo_path(todo), method: :delete do %>
           <i class="material-icons feed-delete">delete_forever</i>
         <%end%>

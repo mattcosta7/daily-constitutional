@@ -87,6 +87,7 @@ class UsersController < ApplicationController
 
   def validate
     if !current_user
+      flash[:notice]="Sign In Already!"
       redirect_to root_path
     end
   end

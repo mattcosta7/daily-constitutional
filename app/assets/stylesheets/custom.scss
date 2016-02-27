@@ -64,6 +64,9 @@
   text-align: center;
   margin: 20px;
 }
+.mdl-layout-title:hover{
+  color: #ffab40
+}
 
 .mdl-layout__drawer{
   width:300px;
@@ -127,6 +130,11 @@
         }
       }
     }
+  }
+  #delete-form{
+    position: relative;
+    left: 300px;
+
   }
 }
 
@@ -376,7 +384,10 @@ input[type="date"] {
 
 #to-do-link{
   text-decoration: none;
-  color: black;
+  color: #607d8b;
+}
+#to-do-link:hover{
+  color: #ffab40
 }
 
 .mdl-button--accent.mdl-button--accent.mdl-button--raised{
@@ -386,4 +397,9 @@ input[type="date"] {
 .article-image{
   max-width: 250px;
   max-height: 250px;
+}
+
+#delete-button{
+  position: relative;
+  left: -15px;
 }

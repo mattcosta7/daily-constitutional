@@ -26,6 +26,7 @@ class SessionsController < ApplicationController
 #destroys a session, and clears cookies
   def destroy
     session.clear
+    flash[:notice]="Don't Go!"
     redirect_to root_path
   end
 

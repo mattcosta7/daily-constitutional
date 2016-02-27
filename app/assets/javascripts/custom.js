@@ -71,6 +71,12 @@ $(document).ready(function(){
     $('#signin-swap-1').toggle();
   });
 
+  $('#delete-button').on('click',function(){
+    $('#loader').show();
+    $('svg').hide();
+    $('#loading-modal').show();
+  })
+
   //on ajax successes, exchange full for empty star, and make db calls
   $('.main-content').on('ajax:success', '.un-star-button-link',function(){
     $(this).replaceWith("<a data-idNum='"+$(this).attr('data-idNum')+"'class='star-button-link' data-remote='true' rel='nofollow' data-method='post' href='/star/"+$(this).attr('data-idNum')+"'><i class='material-icons star-icon'>star_border</i></a>");

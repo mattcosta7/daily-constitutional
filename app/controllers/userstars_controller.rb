@@ -5,6 +5,7 @@ class UserstarsController < ApplicationController
       @user = current_user
       @entries = current_user.stars
     else
+      flash[:notice]="Sign In Already!"
       redirect_to root_path
     end
   end

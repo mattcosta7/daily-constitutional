@@ -11,9 +11,10 @@ class BlogsController < ApplicationController
         begin
           feed = Feedjira::Feed.fetch_and_parse @blog.url
           feed.entries.first(10).each do |new_entry|
-            a = Entry.new(Blog.makeEntryHash(new_entry, @blog.id))
-            a.save
+            db_entry = Entry.new(Blog.makeEntryHash(new_entry, @blog.id))
+            db_entry.save
           end
+          flash[:notice]="Added Blog"
           redirect_to :back
         rescue => ex
           flash[:notice]="Only valid RSS Feeds!<br><span id='spot2'><a href='mailto:matt+dailyC@mattc.io' target='_blank'>Favorite feed not working?</a></span>"
@@ -36,6 +37,7 @@ class BlogsController < ApplicationController
 
   def validate!
     if !current_user
+      flash[:notice]="Sign In Already!"
       redirect_to root_path
     end
   end

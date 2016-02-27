@@ -1,0 +1,13 @@
+<%=form_for current_user, url: user_path(current_user), method: :delete do |f|%>
+<br><br>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%=f.label :password, for: 'password', class: "mdl-textfield__label" %>
+    <%=f.password_field :password, class: "mdl-textfield__input", pattern: "^[a-zA-Z0-9]{6,}$" %>
+  </div><br>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%=f.label :'password_confirmation', for: 'password_confirmation', class: "mdl-textfield__label" %>
+    <%=f.password_field :password_confirmation, class: "mdl-textfield__input", pattern: "^[a-zA-Z0-9]{6,}$" %>
+  </div>
+  <br>
+  <%=f.submit 'Delete User', class: "mdl-button mdl-js-button mdl-button--flat mdl-button--accent sign-in-button"%>
+<%end%>  

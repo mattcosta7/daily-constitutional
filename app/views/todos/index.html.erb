@@ -7,13 +7,13 @@
       <li class='mdl-list__item cross-out to-do-list-item'>
       <%end%>
           <span class='mdl-list__item-primary-content article-title'>
-            <%="#{todo.description}"%> - <%=todo.duedate.strftime('%A, %D')%>
             <% if !todo.is_completed %> 
               <%= link_to complete_path(todo), method: :post, remote: true, data:{idNum: todo.id}, class: 'complete-button'   do %>
                 <i class="material-icons circle2">
                   radio_button_unchecked
                 </i>
               <%end%>
+              <%="#{todo.description}"%> - <%=todo.duedate.strftime('%A, %D')%>
               <%=link_to todo_path(todo), method: :delete do %>
                 <i class="material-icons feed-delete">delete_forever</i>
               <%end%>
@@ -23,6 +23,7 @@
                 radio_button_unchecked
               </i>
               <%end%>
+              <%="#{todo.description}"%> - <%=todo.duedate.strftime('%A, %D')%>
               <%=link_to todo_path(todo), method: :delete do %>
                 <i class="material-icons feed-delete">delete_forever</i>
               <%end%>
