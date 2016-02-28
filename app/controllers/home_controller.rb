@@ -7,7 +7,7 @@ class HomeController < ApplicationController
         @user.weather.update_attributes(Apis::Weather.getWeather)
         @user.save
       end
-      @geo = Geocoder::search(@user.location)[0]
+      @geo = Geocoder.search(@user.location)[0]
       @tStatus = User.getTrains(@user)
       @entries = @user.entries.order(:published).reverse.first(30)
     else
