@@ -35,7 +35,7 @@ class Blog < ActiveRecord::Base
     hash
   end
 
-#https://www.alfajango.com/blog/create-a-printable-format-for-any-webpage-with-ruby-and-nokogiri/
+#edited from https://www.alfajango.com/blog/create-a-printable-format-for-any-webpage-with-ruby-and-nokogiri/
   def self.contentCheck feed
     require 'open-uri'
     doc = Nokogiri::HTML(open(feed.url)) do |config|

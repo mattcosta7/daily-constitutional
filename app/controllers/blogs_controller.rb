@@ -7,7 +7,8 @@ class BlogsController < ApplicationController
     @user = current_user
     @blog = Blog.find(params[:id])
     if @user.blogs.include?(@blog)
-      @title = (/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n]+)/im.match(@blog.url))[0].to_s
+      #http://stackoverflow.com/questions/25703360/regular-expression-extract-subdomain-domain
+      @title = (/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n]+)/im.match(@blog.url))[1].to_s
       if ((Time.now - @user.weather.updated_at)/60 > 60)
         @user.weather.update_attributes(Apis::Weather.getWeather)
         @user.save

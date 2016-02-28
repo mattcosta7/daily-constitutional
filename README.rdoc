@@ -14,7 +14,11 @@
   rake update_all_entries, locally updates blog entries
 
 * Designed to provide an easy interface for the morning routine.
-**Weather and local train status is fetched by user IP
-**Users can create to do items, and cross off/remove as necessary
-**users can add rss feeds, that are auto-parsed, and returned as a list of recent articles, clicking on one opens a text-only version.
-**Feedjira and Nokogiri are used to parse RSS, HTML and XML files for the Weather, Train and RSS Feeds. 
+
+*Weather and local train status is fetched by user IP
+
+*Users can create to do items, and cross off/remove as necessary
+
+*users can add rss feeds, that are auto-parsed, and returned as a list of recent articles, clicking on one opens a text-only version.
+
+*Feedjira and Nokogiri are used to parse RSS, HTML and XML files for the Weather, Train and RSS Feeds. 
