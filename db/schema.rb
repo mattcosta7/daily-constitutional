@@ -11,13 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160222161027) do
+ActiveRecord::Schema.define(version: 20160228163922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "blogcategories", force: :cascade do |t|
+    t.integer  "category_id"
+    t.integer  "blog_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "blogcategories", ["blog_id"], name: "index_blogcategories_on_blog_id", using: :btree
+  add_index "blogcategories", ["category_id"], name: "index_blogcategories_on_category_id", using: :btree
+
   create_table "blogs", force: :cascade do |t|
     t.text     "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -91,6 +107,8 @@ ActiveRecord::Schema.define(version: 20160222161027) do
 
   add_index "weathers", ["user_id"], name: "index_weathers_on_user_id", using: :btree
 
+  add_foreign_key "blogcategories", "blogs"
+  add_foreign_key "blogcategories", "categories"
   add_foreign_key "entries", "blogs"
   add_foreign_key "reader_blogs", "users"
   add_foreign_key "todos", "users"

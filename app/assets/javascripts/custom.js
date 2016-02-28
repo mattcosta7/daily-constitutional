@@ -117,4 +117,15 @@ $(document).ready(function(){
     $(this).parent().toggleClass('cross-out')
     $($(this).find('.un-complete-button')[0]).replaceWith("<a data-idnum='"+$(this).attr('data-idNum')+"' class='complete-button' data-remote='true' rel='nofollow' data-method='post' href='/todos/"+$(this).attr('data-idNum')+"/complete'><i class='material-icons circle'>radio_button_unchecked</i></a>");
   })
+
+  $('.new-item').hide();
+  $('#cat_category_id').on('change',function(){
+    $('#new-category').val("");
+    if($('#cat_category_id').val() != ""){
+      $('.new-item').hide();
+    }
+    else{
+      $('.new-item').show();
+    }
+  })
 })

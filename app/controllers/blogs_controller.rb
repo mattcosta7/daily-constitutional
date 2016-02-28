@@ -25,34 +25,52 @@ class BlogsController < ApplicationController
 #new blogs can be created, parse the url, if error say so, otherwise make entries
 #if not a new blog, just find the blog in question and append to that user
   def create
-    if !Blog.where(blog_params).first
-      @blog = Blog.new(blog_params)
-      if @blog.save
-        current_user.blogs << @blog
-        begin
-          feed = Feedjira::Feed.fetch_and_parse @blog.url
-          feed.entries.first(10).each do |new_entry|
-            db_entry = Entry.new(Blog.makeEntryHash(new_entry, @blog.id))
-            db_entry.save
+    if params[:cat][:category_id] != "" || params[:cat][:category_name] != ""
+      if params[:cat][:category_id] == ""
+        if Category.all.include?(title: params[:cat][:category_name])
+          @category = Category.find_by_title(params[:cat][:category_name])
+        else
+          @category = Category.new(title: params[:cat][:category_name])
+          @category.save
+        end
+      else
+        @category = Category.find(params[:cat][:category_id])
+      end
+      if !Blog.where(blog_params).first
+        @blog = Blog.new(blog_params)
+        if @blog.save
+          current_user.blogs << @blog
+          begin
+            feed = Feedjira::Feed.fetch_and_parse @blog.url
+            feed.entries.first(10).each do |new_entry|
+              db_entry = Entry.new(Blog.makeEntryHash(new_entry, @blog.id))
+              db_entry.save
+            end
+            flash[:notice]="Added Blog"
+            Blogcategory.create(category_id: @category.id,blog_id:@blog.id)
+            redirect_to :back
+          rescue => ex
+            flash[:notice]="Only valid RSS Feeds!<br><span id='spot2'><a href='mailto:matt+dailyC@mattc.io' target='_blank'>Favorite feed not working?</a></span>"
+            current_user.blogs.last.destroy
+            logger.error ex.message
+            redirect_to :back
           end
-          flash[:notice]="Added Blog"
-          redirect_to :back
-        rescue => ex
+        else
           flash[:notice]="Only valid RSS Feeds!<br><span id='spot2'><a href='mailto:matt+dailyC@mattc.io' target='_blank'>Favorite feed not working?</a></span>"
-          current_user.blogs.last.destroy
-          logger.error ex.message
           redirect_to :back
         end
       else
-        flash[:notice]="Only valid RSS Feeds!<br><span id='spot2'><a href='mailto:matt+dailyC@mattc.io' target='_blank'>Favorite feed not working?</a></span>"
-        redirect_to :back
+        @blog = Blog.where(blog_params).first
+        if !current_user.blogs.where(blog_params).first
+          current_user.blogs << Blog.where(blog_params).first
+        end
+        Blogcategory.create(category_id:@category.id,blog_id:@blog.id) unless Blogcategory.where(category_id:@category.id,blog_id:@blog.id).first
+        flash[:notice]="Added Blog"
+        redirect_to root_path
       end
     else
-      if !current_user.blogs.where(blog_params).first
-        current_user.blogs << Blog.where(blog_params).first
-      end
-      flash[:notice]="Added Blog"
-      redirect_to root_path
+      flash[:notice]="Include a Category, Dude!"
+      redirect_to :back
     end
   end
   
