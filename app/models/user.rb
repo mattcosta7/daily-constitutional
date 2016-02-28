@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   has_many :stars, through: :user_stars, source: :entry
   has_many :entries, through: :blogs
   geocoded_by :location
-  after_validation :geocode
+  after_validation :geocode, :if => lambda{ |user| user.location_changed? }
   
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX },uniqueness:{ case_sensitive: false }
@@ -36,7 +36,7 @@ class User < ActiveRecord::Base
     elsif user.distance_to("Chicago") < 50
       return Apis::Mta.getChicago
     else
-      return [nil,nil,nil]
+      nil
     end
   end
 end

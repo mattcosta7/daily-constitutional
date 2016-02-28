@@ -32,7 +32,7 @@ gem 'geocoder'
 # gem 'capistrano-rails', group: :development
 gem 'feedjira'
 
-gem 'whenever'
+gem 'maxminddb'
 
 gem 'rails_12factor'
 group :development, :test do

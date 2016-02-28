@@ -9,7 +9,7 @@ Geocoder.configure(
   # api_key: nil,               # API key for geocoding service
   # cache: nil,                 # cache object (must respond to #[], #[]=, and #keys)
   # cache_prefix: 'geocoder:',  # prefix (string) to use for all cache keys
-
+  ip_lookup: :geoip2, geoip2: { file: File.join('lib', 'GeoLite2-City.mmdb') }
   # Exceptions that should not be rescued by default
   # (if you want to implement custom error handling);
   # supports SocketError and TimeoutError
