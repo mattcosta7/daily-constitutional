@@ -1,7 +1,7 @@
 <%=form_for :blog, url: blogs_path, method: :post  do |f|%>
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label new-item-holder">
-  <%=label_tag :'Feed Type'%>
-  <%=collection_select(:cat, :category_id, Category.order(:title) << Category.new(:title => "Add Your Own!"), :id, :title )%>
+    <%=label_tag :'Feed Type'%>
+    <%=collection_select(:cat, :category_id, Category.order(:title) << Category.new(:title => "Add Your Own!"), :id, :title )%>
     <div class='new-item'>
       <%=fields_for :cat do |x|%> 
         <%=x.label :category_name, class: "mdl-textfield__label rss-entry-label"%>
@@ -13,5 +13,5 @@
     <%=f.label :'RSS Feed URL', class: "mdl-textfield__label rss-entry-label"%>
     <%=f.text_field :url, value: nil, class: "mdl-textfield__input rss-entry-field"%>
   </div>
-    <%=f.submit :'Add Feed', class: "mdl-button mdl-js-button mdl-button--raised mdl-button--accent", id: 'new-feed-button'%>
+  <%=f.submit :'Add Feed', class: "mdl-button mdl-js-button mdl-button--raised mdl-button--accent", id: 'new-feed-button'%>
 <%end%>

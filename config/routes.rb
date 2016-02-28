@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post '/todos/:id/complete' => 'todos#complete!', as: :complete
   post '/todos/:id/uncomplete' => 'todos#uncomplete!', as: :uncomplete
   delete '/users/remove_feed/:id' => 'users#removefeed', as: :remove_feed
+  get '/stats' => 'stats#stats'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

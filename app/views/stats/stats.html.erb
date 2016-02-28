@@ -1,0 +1,22 @@
+<ul>
+<% @categories.order(:title).each do |category| %>
+  <li><%=category.title%></li>
+  <ul>
+      <li>Blogs in Category: <%=category.blogs.length%></li>
+      <li>Readers reading Category:
+      <%readers=[]%>
+      <%category.blogs.each do |blog|%>
+        <%blog.users.each do |user|%>
+          <%readers<<user.email%>
+        <%end%>
+      <%end%>
+      <%=readers.uniq.length%>
+      </li>
+  </ul>
+<%end%>
+</ul>
+
+<ul>
+<li>Number of blogs <%=@blogs.length%></li>
+<li>Number of users <%=@users.length%></li>
+</ul>
