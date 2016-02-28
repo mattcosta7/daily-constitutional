@@ -30,7 +30,8 @@ class UsersController < ApplicationController
       @user.weather.update_attributes(Apis::Weather.getWeather)
       @user.save
     end
-    @tStatus = User.getTrains(@user)
+    @geo = Geocoder::search(current_user.location)[0]
+    @tStatus = User.getTrains(current_user)
     @entries = @user.entries.order(:published).reverse.first(30)
     redirect_to root_path
   end

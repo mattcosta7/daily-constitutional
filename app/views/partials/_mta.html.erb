@@ -1,5 +1,5 @@
-<%if @user.coordinates[0] != nil && @user.coordinates[1] != nil %>
-  <%if @tStatus%>
+<%if @geo %>
+  <%if @tsStatus && @tStatus != nil%>
     <div>
       <ul class='mta'>
         <% @tStatus.each do |x|%>

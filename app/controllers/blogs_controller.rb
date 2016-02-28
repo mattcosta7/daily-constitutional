@@ -1,6 +1,26 @@
 class BlogsController < ApplicationController
   before_filter :validate!
 
+
+
+  def show
+    @user = current_user
+    @blog = Blog.find(params[:id])
+    if @user.blogs.include?(@blog)
+      @title = (/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n]+)/im.match(@blog.url))[0].to_s
+      if ((Time.now - @user.weather.updated_at)/60 > 60)
+        @user.weather.update_attributes(Apis::Weather.getWeather)
+        @user.save
+      end
+      @geo = Geocoder::search(@user.location)[0]
+      @tStatus = User.getTrains(@user)
+      @entries = @blog.entries.order(:published).reverse.first(30)
+    else
+      flash[:notice] = "That's not one of your feeds"
+      redirect_to root_path
+    end
+  end
+
 #new blogs can be created, parse the url, if error say so, otherwise make entries
 #if not a new blog, just find the blog in question and append to that user
   def create

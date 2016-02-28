@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :users, only: [:create,:destroy,:edit,:update] 
   resources :todos, only: [:index,:create,:destroy] 
-  resources :blogs, only: [:create]
+  resources :blogs, only: [:show,:create]
   resources :entries, only: [:destroy]
   post '/login' => 'sessions#create', as: :login
   delete '/login' => 'sessions#destroy'
