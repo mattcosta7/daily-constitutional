@@ -129,16 +129,16 @@ $(document).ready(function(){
     }
   })
 
-  // if($('.pagination').length) {
-  //   $('main').scroll(function() {
-  //     var nextPageUrl = $('.pagination .next_page').attr('href');
-  //     if (nextPageUrl && $('main').scrollTop() >= $(document).height() - $('main').height() - 50) {
-  //       $('.pagination').text("Fetching More Stuffs...");
-  //       return $.getScript(nextPageUrl);
-  //     }
-  //   });
-  //   return $(window).scroll();
-  // }
+  if($('.pagination').length) {
+    $('main').scroll(function() {
+      var nextPageUrl = $('.pagination .next_page').attr('href');
+      if (nextPageUrl && $('main').scrollTop() >= $(document).height() - $('main').height() - 50) {
+        $('.pagination').text("Fetching More Stuffs...");
+        return $.getScript(nextPageUrl);
+      }
+    });
+    return $(window).scroll();
+  }
 
 
 
