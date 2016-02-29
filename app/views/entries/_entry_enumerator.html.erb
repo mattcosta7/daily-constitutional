@@ -4,10 +4,10 @@
   </div> 
   <div class=' entry-unhider'>
     <span>
-      <%=entry.published.strftime('%A, %D %l:%M %p') if entry.published%>
+      <%=entry.blog.categories.map {|x| x.title}.join(', ') %> | <%=entry.published.strftime('%A, %D %l:%M %p') if entry.published%>
     </span>
     <span class='mdl-list__item-primary-content article-title'>
-      <%= entry.title %>
+      <%= entry.title %> : <%=entry.blog.categories.map {|x| x.title}.join(', ') %>
       <span class='article-url mdl-list__item-sub-title '>
         <%= entry.blog.url %>
       </span>

@@ -16,7 +16,7 @@ class BlogsController < ApplicationController
       end
       @geo = Geocoder::search(@user.location)[0]
       @tStatus = User.getTrains(@user)
-      @entries = @blog.entries.order(:published).reverse.paginate(page: params[:page], per_page: 15)
+      @entries = @blog.entries.order(:published).reverse.paginate(page: params[:page], per_page: 30)
       if @scroll == true
         respond_to do |format|
           format.html
