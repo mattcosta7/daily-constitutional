@@ -32,7 +32,7 @@ $(document).ready(function(){
   $('#loader').hide();
 
   //on click of line item, if not the star show the item, and hide on close icon clicks
-  $('.entry-unhider').parent().on('click',function(e){
+  $('main').on('click','li',function(e){
     if($(e.target).is('i')){
       return;
     }

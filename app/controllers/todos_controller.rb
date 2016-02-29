@@ -8,6 +8,7 @@ class TodosController < ApplicationController
       @user.weather.update_attributes(Apis::Weather.getWeather)
       @user.save
     end
+    @geo = Geocoder::search(@user.location)[0]
     @tStatus = User.getTrains(@user)
     @todos = @user.todos.where("duedate >= ?", Time.now-24.hours).order(:duedate).reverse 
   end
