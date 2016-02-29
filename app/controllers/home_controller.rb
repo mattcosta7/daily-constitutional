@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  require 'will_paginate/array'
   def index
     if current_user
       @title = "Feed"
@@ -9,7 +10,7 @@ class HomeController < ApplicationController
       end
       @geo = Geocoder.search(@user.location)[0]
       @tStatus = User.getTrains(@user)
-      @entries = @user.entries.order(:published).reverse.first(30)
+      @entries = @user.entries.order(:published).reverse.paginate(page: params[:page], per_page: 15)
     else
       @title = "Sign In"
     end
