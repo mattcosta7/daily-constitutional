@@ -1,7 +1,7 @@
 <div id='todo-form'>
   <%=form_for @user.todos.build do |f|%>
-    <%=f.label :'Date', class: 'date-picker'%>
-    <%= f.date_field :duedate, :value => Time.now.strftime('%Y-%m-%d'), class: 'date-picker'%>
+    <%=f.label :'Date', id: 'date_label',class: 'date-picker'%>
+    <%= f.date_field :duedate, :value => Time.now.strftime('%Y-%m-%d'), class: 'date-picker date-picker-date'%>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
       <%=f.label :'Thing To Do', class: "mdl-textfield__label todo-entry"%>
       <%=f.text_field :description, class: "mdl-textfield__input todo-entry"%>

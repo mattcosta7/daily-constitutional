@@ -380,12 +380,24 @@ input[type="date"] {
   font-family: "Helvetica","Arial",sans-serif;
   border:none;
 }
-
 .date-picker{
   position: relative;
   left:30px;
+  color: #b9b9b9;
+  font-size: 1.1em;
 }
-
+.date-picker:focus{
+  color: #607d8b;
+}
+.date-picker-date{
+  font-size: 1.1em;
+}
+.date-picker-date:focus{
+  color: black
+}
+.focused{
+  color: #607d8b;
+}
 #intro-text{
   text-align: center;
   margin: 40px auto 0;
@@ -426,8 +438,6 @@ input[type="date"] {
   left:0;
 }
 select{
-  // background: #fafafaurl('https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-128.png') no-repeat;
-  // border: none;
     font-size: 1em;
     height: 35px;
     margin: 8px 0;

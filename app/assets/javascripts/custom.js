@@ -140,6 +140,13 @@ $(document).ready(function(){
     return $(window).scroll();
   }
 
-
+  $('#todo_duedate').on('focus',function(){
+    console.log('who');
+    $('#date_label').css('color','#607d8b');
+  })
+  $('#todo_duedate').on('blur',function(){
+    console.log('who');
+    $('#date_label').css('color','#b9b9b9');
+  })
 
 })
