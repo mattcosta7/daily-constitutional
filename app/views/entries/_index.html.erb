@@ -20,6 +20,7 @@
           <%=render partial: 'entries/entry_enumerator', locals: {entry: entry}%>
         <%end%>
       <%end%>
+      <%=will_paginate @entries%>
     </ul>
 </div>
 

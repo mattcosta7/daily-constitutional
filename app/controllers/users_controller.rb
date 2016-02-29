@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_filter :validate, except: [:new,:create]
+  require 'will_paginate/array' 
+  
   def new
     @user = User.new
   end
@@ -32,7 +34,7 @@ class UsersController < ApplicationController
     end
     @geo = Geocoder::search(current_user.location)[0]
     @tStatus = User.getTrains(current_user)
-    @entries = @user.entries.order(:published).reverse.first(30)
+    @entries = @user.entries.order(:published).reverse.page(page: params[:page], per_page: 15)
     redirect_to root_path
   end
 
