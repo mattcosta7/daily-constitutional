@@ -1,0 +1,9 @@
+<%if @scroll %>
+  $('.add-posts-here').append("<%= j render 'entries/index' %>");
+  <% if @entries.next_page %>
+    $('.pagination').replaceWith('<%= j will_paginate @entries %>');
+  <% else %>
+    $(window).off('scroll');
+    $('.pagination').remove();
+  <% end %>
+<%end%>

@@ -1,9 +1,10 @@
 class BlogsController < ApplicationController
   before_filter :validate!
-
+  require 'will_paginate/array'
 
 
   def show
+    @scroll = params[:scroll]
     @user = current_user
     @blog = Blog.find(params[:id])
     if @user.blogs.include?(@blog)
@@ -15,7 +16,13 @@ class BlogsController < ApplicationController
       end
       @geo = Geocoder::search(@user.location)[0]
       @tStatus = User.getTrains(@user)
-      @entries = @blog.entries.order(:published).reverse.first(30)
+      @entries = @blog.entries.order(:published).reverse.paginate(page: params[:page], per_page: 15)
+      if @scroll == true
+        respond_to do |format|
+          format.html
+          format.js
+        end
+      end
     else
       flash[:notice] = "That's not one of your feeds"
       redirect_to root_path

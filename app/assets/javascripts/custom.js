@@ -128,4 +128,15 @@ $(document).ready(function(){
       $('.new-item').show();
     }
   })
+
+  if($('.pagination').length){
+    $('main').scroll(function() {
+      var nextPageUrl = $('.pagination .next_page').attr('href');
+        if (nextPageUrl && $('main').scrollTop() >= $(document).height() - $('main').height() - 50) {
+          $('.pagination').text("Fetching More Stuffs...");
+            return $.getScript(nextPageUrl+"&scroll=true");
+        }
+    });
+    return $(window).scroll();
+  }
 })
