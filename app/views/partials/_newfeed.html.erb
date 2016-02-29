@@ -1,6 +1,6 @@
 <%=form_for :blog, url: blogs_path, method: :post  do |f|%>
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label new-item-holder">
-    <%=label_tag :'Feed Type'%>
+    <%=label_tag :'Feed Type', nil,{class: 'category-label'}%>
     <%=collection_select(:cat, :category_id, Category.order(:title) << Category.new(:title => "Add Your Own!"), :id, :title )%>
     <div class='new-item'>
       <%=fields_for :cat do |x|%> 
