@@ -1,22 +1,14 @@
-<ul>
-<% @categories.order(:title).each do |category| %>
-  <li><%=category.title%></li>
-  <ul>
-      <li>Blogs in Category: <%=category.blogs.length%></li>
-      <li>Readers reading Category:
-      <%readers=[]%>
-      <%category.blogs.each do |blog|%>
-        <%blog.users.each do |user|%>
-          <%readers<<user.email%>
-        <%end%>
-      <%end%>
-      <%=readers.uniq.length%>
-      </li>
-  </ul>
-<%end%>
-</ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src='javascripts/script.js'></script>
+MAP HERE
 
-<ul>
-<li>Number of blogs <%=@blogs.length%></li>
-<li>Number of users <%=@users.length%></li>
-</ul>
+<%=collection_select :category, :category_id, Category.order(:title), :id, :title, {prompt: 'Select A Category'},id: 'map-select' %>
+<% if @category %>
+  <%readers=[]%>
+  <%@category.blogs.each do |blog|%>
+    <%blog.users.each do |user|%>
+     <%readers<<user.email%>
+    <%end%>
+  <%end%>
+<%=readers.uniq.length%>
+<%end%>

@@ -1,7 +1,7 @@
 class StatsController < ApplicationController
   def stats
     @users = User.all
-    @categories = Category.all
+    @category = params[:category]
     @blogs = Blog.all
     render layout: false
   end
