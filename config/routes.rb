@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :todos, only: [:index,:create,:destroy] 
   resources :blogs, only: [:show,:create]
   resources :entries, only: [:destroy]
+  resources :category, only: [:show]
   post '/login' => 'sessions#create', as: :login
   delete '/login' => 'sessions#destroy'
   post '/star/:id' => 'entries#star', as: :star
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
   post '/todos/:id/uncomplete' => 'todos#uncomplete!', as: :uncomplete
   delete '/users/remove_feed/:id' => 'users#removefeed', as: :remove_feed
   get '/stats' => 'stats#stats'
+  post '/stats/:id' => 'stats#stats'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

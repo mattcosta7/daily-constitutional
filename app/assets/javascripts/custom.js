@@ -11,6 +11,12 @@ $(document).ready(function(){
         },20500);
     }
   }
+
+  $('#category_selector_category_id').on('change',function(){
+    if($('#category_selector_category_id').val()!=""){
+      window.location = '/category/'+ $('#category_selector_category_id').val();
+    }
+  })
   //hide signup initially
   $('#signin-swap-2').hide();
 
@@ -140,4 +146,22 @@ $(document).ready(function(){
     return $(window).scroll();
   }
 
+
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
