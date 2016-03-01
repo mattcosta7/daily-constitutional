@@ -1,7 +1,7 @@
 <h6 class='category-title'>
   <%=link_to "To Do", todos_path, id: 'to-do-link'%>
 </h6>
-<ul>
+<ul id='today-todo-list'>
 <%current_user.todos.each do |todo| %>
   <%if (todo.duedate + 5.hours).today? %>
     <% if !todo.is_completed %> 
