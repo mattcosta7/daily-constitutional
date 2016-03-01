@@ -1,5 +1,5 @@
 <div id='todo-form'>
-  <%=form_for @user.todos.build, remote: true do |f|%>
+  <%=form_for @user.todos.build do |f|%>
     <%=f.label :'Date', class: 'date-picker'%>
     <%= f.date_field :duedate, :value => Time.now.strftime('%Y-%m-%d'), class: 'date-picker'%>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">

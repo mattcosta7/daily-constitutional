@@ -146,18 +146,5 @@ $(document).ready(function(){
     return $(window).scroll();
   }
 
-  // $('#new_todo').on('ajax:success',function(){
-  //   $that = $(this);
-  //   if($('#todo_description').val() == ''){
-  //     return '';
-  //   }
-  //   var today = new Date()
-  //   var todayString = today.getFullYear() + '-' + ('0' + (today.getMonth()+1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2)
-  //   if(todayString == $('#todo_duedate').val()){
-  //     $($that).parent().parent().find('ul').append($('#todo_description').val());
-  //     $('#todo_description').val('')
-  //   }
-  // })
-
 
 })
