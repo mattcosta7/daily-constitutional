@@ -2,16 +2,18 @@
   <div class='star-button'>
     <%=render partial: 'entries/star_button', locals: {entry: entry}%>
   </div> 
-  <div class=' entry-unhider'>
-    <span>
-      <%=entry.blog.categories.first(3).map {|x| x.title}.join(', ') %> | <%=entry.published.strftime('%A, %D %l:%M %p') if entry.published%>
-    </span>
-    <span class='mdl-list__item-primary-content article-title'>
-      <%= entry.title %>
-      <span class='article-url mdl-list__item-sub-title '>
-        <%= entry.blog.url %>
+  <div class='entry-unhider'>
+    <div class='entry-description-all'>
+      <span class='mdl-list__item-primary-content article-title'>
+        <%=truncate(entry.title, length:75, omission:'...')%>
+        <span class='article-url mdl-list__item-sub-title '>
+          <%=entry.blog.categories.first(3).map {|x| x.title}.join(', ') %>: <%= entry.blog.url %>
+        </span>
       </span>
-    </span>
+      <span class='article-published'>
+        <%=entry.published.strftime('%A, %D %l:%M %p') if entry.published%>
+      </span>
+    </div>
     <span class='blog-entry-content' style="display:none;">
       <%=entry.content.html_safe%>
     </span>
