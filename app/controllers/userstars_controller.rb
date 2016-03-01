@@ -5,7 +5,7 @@ class UserstarsController < ApplicationController
       @scroll = params[:scroll]
       @title = "Stars"
       @user = current_user
-      @entries = current_user.stars.paginate(page: params[:page], per_page: 15)
+      @entries = current_user.stars.reverse.paginate(page: params[:page], per_page: 15)
       if ((Time.now - @user.weather.updated_at)/60 > 60)
         @user.weather.update_attributes(Apis::Weather.getWeather)
         @user.save

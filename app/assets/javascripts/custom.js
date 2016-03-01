@@ -138,7 +138,7 @@ $(document).ready(function(){
   if($('.pagination').length){
     $('.mdl-layout__content').scroll(function() {
       var nextPageUrl = $('.pagination .next_page').attr('href');
-        if (nextPageUrl && $('.mdl-layout__content').scrollTop() > $(document).height() - $('.mdl-layout__content').height() - 50) {
+        if (nextPageUrl && $('.mdl-layout__content').scrollTop() > $(document).height() - $('.mdl-layout__content').height() + 90 ) {
           $('.pagination').text("Fetching More Stuffs...");
             return $.getScript(nextPageUrl+"&scroll=true");
         }

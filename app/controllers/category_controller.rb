@@ -24,7 +24,7 @@ class CategoryController < ApplicationController
       end
       @geo = Geocoder::search(@user.location)[0]
       @tStatus = User.getTrains(@user) 
-      @entries = @entries.paginate(page: params[:page], per_page: 15)   
+      @entries = @entries.reverse.paginate(page: params[:page], per_page: 15)   
       if @scroll == true
         respond_to do |format|
           format.html
