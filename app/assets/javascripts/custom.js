@@ -146,5 +146,7 @@ $(document).ready(function(){
     return $(window).scroll();
   }
 
-
+  $('.delete-todo').on('ajax:send', function(){
+    $(this).parent()[0].remove();
+  })
 })

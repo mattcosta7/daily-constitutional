@@ -6,6 +6,6 @@
 <span>
   <%=todo.description%>
 </span>
-<%=link_to todo_path(todo), method: :delete do %>
+<%=link_to todo_path(todo), method: :delete, class: 'delete-todo', remote: true do %>
   <i class="material-icons feed-delete">delete_forever</i>
 <%end%>
