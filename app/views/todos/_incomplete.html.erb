@@ -6,6 +6,4 @@
 <span>
   <%=todo.description%>
 </span>
-<%=link_to todo_path(todo), method: :delete, class: 'delete-todo' do %>
-  <i class="material-icons feed-delete">delete_forever</i>
-<%end%>
+<%=render partial: 'todos/delete', locals: {todo: todo}%>

@@ -39,8 +39,12 @@ class TodosController < ApplicationController
   def destroy
     @todo = Todo.find(params[:id])
     if @todo.destroy
-      flash[:notice]="Destroyed"
-      redirect_to :back
+      # flash[:notice]="Destroyed"
+      # redirect_to :back
+      respond_to do |format|
+        format.js {render todo: @todo}
+        format.html
+      end
     else
       flash[:notice]="failed"
       redirect_to :back

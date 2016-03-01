@@ -3,13 +3,13 @@
 </h6>
 <ul id='today-todo-list'>
 <%current_user.todos.each do |todo| %>
-  <%if (todo.duedate + 5.hours).today? %>
+  <%if (todo.duedate - (Time.now.utc - Time.now.localtime)).today? %>
     <% if !todo.is_completed %> 
-      <li>
+      <li id='todo-id-<%=todo.id%>'>
       <%=render partial: 'todos/incomplete', locals: {todo: todo}%>
       </li>
     <%else%>
-      <li class='cross-out'>
+      <li id='todo-id-<%=todo.id%>' class='cross-out'>
       <%=render partial: 'todos/completed', locals: {todo: todo}%>
       </li>
     <%end%>

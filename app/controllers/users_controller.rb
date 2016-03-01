@@ -11,9 +11,9 @@ class UsersController < ApplicationController
       @weather = Weather.new(Apis::Weather.getWeather)
       if @weather.save
         @weather.update_attribute(:user_id,@user.id)
-        flash[:notice]='works'
+        flash[:notice]='Sign Up Completed'
         session[:user_id]=@user.id
-        redirect_to root_path
+        redirect_to suggestions_path
       else
         flash[:notice]='fail'
         redirect_to :back

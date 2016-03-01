@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'suggestions/index'
+
   root 'home#index'
   resources :users, only: [:create,:destroy,:edit,:update] 
   resources :todos, only: [:index,:create,:destroy] 
@@ -15,6 +17,7 @@ Rails.application.routes.draw do
   delete '/users/remove_feed/:id' => 'users#removefeed', as: :remove_feed
   get '/stats' => 'stats#stats'
   post '/stats/:id' => 'stats#stats'
+  get '/suggestions' => 'suggestions#index', as: :suggestions
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
