@@ -136,9 +136,9 @@ $(document).ready(function(){
   })
 
   if($('.pagination').length){
-    $('.mdl-layout__content').scroll(function() {
+    $('.mdl-layout__content').scroll(function(e) {
       var nextPageUrl = $('.pagination .next_page').attr('href');
-        if (nextPageUrl && $('.mdl-layout__content').scrollTop() > $(document).height() - $('.mdl-layout__content').height() + 90 ) {
+        if (nextPageUrl && $('.mdl-layout__content').scrollTop() + $('.mdl-layout__content').height()  >= $('.mdl-layout__content').prop('scrollHeight')) {
           $('.pagination').text("Fetching More Stuffs...");
             return $.getScript(nextPageUrl+"&scroll=true");
         }
