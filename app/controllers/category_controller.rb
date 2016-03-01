@@ -46,8 +46,4 @@ class CategoryController < ApplicationController
     end
   end
 
-  def blog_params
-    params.require(:blog).permit(:url)
-  end
-
 end

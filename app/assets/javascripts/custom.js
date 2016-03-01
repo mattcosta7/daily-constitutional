@@ -148,20 +148,3 @@ $(document).ready(function(){
 
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
