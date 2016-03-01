@@ -10,7 +10,7 @@ class TodosController < ApplicationController
     end
     @geo = Geocoder::search(@user.location)[0]
     @tStatus = User.getTrains(@user)
-    @todos = @user.todos.where("duedate >= ?", Time.now-24.hours).order(:duedate).paginate(page:params[:page], per_page: 30) 
+    @todos = @user.todos.where("duedate >= ?", Time.now-24.hours).order(:duedate).reverse.paginate(page:params[:page], per_page: 30) 
   end
 
   def create

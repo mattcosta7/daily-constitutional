@@ -2,5 +2,5 @@ today = new Date()
 todayString = today.getFullYear() + '-' + ('0' + (today.getMonth()+1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2)
 if($('#todo_duedate').val() == todayString){
   $('#today-todo-list').append("<li><%= j render partial: 'todos/incomplete', locals: {todo: @todo}%></li>")
-  $('#todo_description').val(null)
 }
+$('#todo_description').val(null)
