@@ -8,7 +8,7 @@ $(document).ready(function(){
     if($('#flash').is(':visible')){
       setTimeout(function(){
         $('#flash').slideUp(500)
-        },20500);
+        },3000);
     }
   }
 

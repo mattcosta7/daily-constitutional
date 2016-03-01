@@ -20,7 +20,5 @@
     <%end%>
   </div>
 <%end%>
-<div id="infinite-scrolling">
-  <%=will_paginate @entries, :previous_label => "<i class='material-icons'>arrow_back</i>".html_safe, :next_label => "<i class='material-icons'>arrow_forward</i>".html_safe %>
-</div>
+  <%= render partial: 'partials/paginate', locals: {entries: @entries}%>
 
