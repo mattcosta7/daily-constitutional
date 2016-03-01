@@ -39,7 +39,19 @@ $(document).ready(function(){
 
   //on click of line item, if not the star show the item, and hide on close icon clicks
   $('main').on('click','li',function(e){
-    if($(e.target).is('i')){
+    if($(e.target).is('i') ){
+      return;
+    }
+    if($(e.target).is('.select2-selection__choice')){
+      return;
+    }
+    if($(e.target).is('.select2-search')){
+      return;
+    }
+    if($(e.target).is('.select2-search--inline')){
+      return;
+    }
+    if($(e.target).is('.select2-search__field')){
       return;
     }
     $('#modal-content').html($(this).find('.blog-entry-content').html())

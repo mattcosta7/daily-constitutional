@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get '/stats' => 'stats#stats'
   post '/stats/:id' => 'stats#stats'
   get '/suggestions' => 'suggestions#index', as: :suggestions
+  post '/addblog/:id' => 'readerblogs#create', as: :addblog
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
