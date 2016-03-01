@@ -33,12 +33,12 @@ if Category.all.length == 0
   end
 end
 
-if User.all.length < 10
-  100.times do |guy|
-    user = User.new(email: Faker::Internet.email, password:'123456', password_digest: '123456', location: Faker::Internet.ip_v4_address)
-    user.save
-  end
-end
+# if User.all.length < 10
+#   100.times do |guy|
+#     user = User.new(email: Faker::Internet.email, password:'123456', password_digest: '123456', location: Faker::Internet.ip_v4_address)
+#     user.save
+#   end
+# end
 
 
 # for i in 3...User.all.length
