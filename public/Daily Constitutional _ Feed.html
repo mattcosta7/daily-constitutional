@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html class="mdl-js" hola_ext_inject="disabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Daily Constitutional | Feed</title>
+<link rel="stylesheet" href="./Daily Constitutional _ Feed_files/icon">
+<link rel="stylesheet" href="./Daily Constitutional _ Feed_files/material.blue_grey-orange.min.css">
+<script defer="" src="./Daily Constitutional _ Feed_files/material.min.js"></script>
+<script src="./Daily Constitutional _ Feed_files/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js"></script>
+<script src="./Daily Constitutional _ Feed_files/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js"></script>
+<script src="./Daily Constitutional _ Feed_files/custom.self-d56a7631d572be6c09934d8a85d5f37e3937996702b6e00953aabb9717c00cba.js"></script>
+<script src="./Daily Constitutional _ Feed_files/loader.self-5e1c628d34c2e3bf770045008c3538143ef48b642d3120d6fba7124de86846d4.js"></script>
+<script src="./Daily Constitutional _ Feed_files/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js"></script>
+<link rel="stylesheet" media="all" href="./Daily Constitutional _ Feed_files/custom.self-1173e1a3ff58c4e88c2d04d0b75c3d886d48a6b06d176e2929a235a45e58fdfb.css">
+<link rel="stylesheet" media="all" href="./Daily Constitutional _ Feed_files/loader.self-ea5cab8ee09485fda0de161c19a7501f85e9bf7814d492646a0e9a6c89761350.css">
+<link rel="stylesheet" media="all" href="./Daily Constitutional _ Feed_files/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="vDLt7XWfR6sMMK/sjdd3AUVEe/MWl3TzZkh2p2o1610m8aG2i5N2HRpHDkzUK7lyasn0L2lWqA1U4N8TryM6yA==">
+<link rel="stylesheet" href="./Daily Constitutional _ Feed_files/jquery-ui.css">
+<script src="./Daily Constitutional _ Feed_files/jquery-ui.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=.6">
+  </head>
+  <body>
+    <div class="mdl-layout__container"><div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header has-drawer is-small-screen is-upgraded" data-upgraded=",MaterialLayout">
+      <header class="mdl-layout__header is-casting-shadow"><div aria-expanded="true" role="button" tabindex="0" class="mdl-layout__drawer-button"><i class="material-icons"></i></div>
+  <div class="mdl-layout__header-row">
+    <div class="mdl-layout-spacer"></div>
+    <nav>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--align-left" data-upgraded=",MaterialTextfield">
+        <a class="nav-link" href="http://localhost:3000/">Feed</a>
+        <a class="nav-link" href="http://localhost:3000/favorites">Starred</a>
+        <a class="nav-link" data-confirm="Don&#39;t Go!" rel="nofollow" data-method="delete" href="http://localhost:3000/login">Sign Out</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+      <div class="mdl-layout__drawer is-visible" aria-hidden="false">
+  <span class="site-title">
+    <a class="mdl-layout-title" href="http://localhost:3000/">Daily Constitutional</a>
+    Tuesday, March  1, 2016 
+  </span>
+    <div class="drawer-cell">
+     <form action="http://localhost:3000/blogs" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="vDLt7XWfR6sMMK/sjdd3AUVEe/MWl3TzZkh2p2o1610m8aG2i5N2HRpHDkzUK7lyasn0L2lWqA1U4N8TryM6yA==">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label new-item-holder is-upgraded" data-upgraded=",MaterialTextfield">
+    <label class="category-label" for="Feed_Type">Feed type</label>
+    <select name="cat[category_id]" id="cat_category_id"><option value="1">Art</option>
+<option value="9">Beer</option>
+<option value="14">Business</option>
+<option value="4">Career</option>
+<option value="2">Economics</option>
+<option value="26">Entertainment</option>
+<option value="25">Europe</option>
+<option value="5">Finance</option>
+<option value="6">Gaming</option>
+<option value="27">Images for erin</option>
+<option value="16">Law</option>
+<option value="28">Living</option>
+<option value="10">Medicine</option>
+<option value="19">Music</option>
+<option value="24">NEWS YO</option>
+<option value="7">Nature</option>
+<option value="22">News</option>
+<option value="20">Other</option>
+<option value="3">Parenting</option>
+<option value="15">Photography</option>
+<option value="21">Rails</option>
+<option value="12">Science</option>
+<option value="11">Sports</option>
+<option value="13">Technology</option>
+<option value="18">Travel</option>
+<option value="17">Wedding</option>
+<option value="8">Wine</option>
+<option value="23">World</option>
+<option value="29">new category</option>
+<option value="">Add Your Own!</option></select><br>
+    <div class="new-item" style="display: none;">
+       
+        <label class="mdl-textfield__label rss-entry-label" for="cat_category_name">Category name</label>
+        <input id="new-category" class="mdl-textfield__input rss-entry-field" type="text" name="cat[category_name]">
+    </div>
+  </div>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded" data-upgraded=",MaterialTextfield">
+    <label class="mdl-textfield__label rss-entry-label" for="blog_RSS Feed URL">Rss feed url</label>
+    <input class="mdl-textfield__input rss-entry-field" type="text" name="blog[url]" id="blog_url">
+  </div>
+  <input type="submit" name="commit" value="Add Feed" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" id="new-feed-button" data-upgraded=",MaterialButton">
+</form>
+    </div>
+    <div class="drawer-cell">
+      <div class="user-show">
+  <span>
+    Signed in as: matt@mattc.io
+  </span><br>
+  <span>
+    Located:Astoria, New York
+  </span><br>
+  <a href="http://localhost:3000/users/1/edit">Edit</a>
+</div>
+      <ul>
+  <li><img src="./Daily Constitutional _ Feed_files/partlycloudy.gif" alt="Partlycloudy">Partly Cloudy</li>
+  <li>High: 47, Low: 43</li>
+  <li>Chance of Precipitation 0</li>
+  <li>Some clouds this morning will give way to generally sunny skies for the afternoon. High 47F. Winds E at 10 to 15 mph.</li>
+</ul>
+    </div>
+    <div class="drawer-cell drawer-cell-mta">
+          <div>
+      <ul class="mta">
+          <li>
+            <img src="./Daily Constitutional _ Feed_files/123-f327d2ab616a43a238293ad1844b8c4e4f00f5e527144d27428b6871fddf8f06.gif" alt="123 f327d2ab616a43a238293ad1844b8c4e4f00f5e527144d27428b6871fddf8f06">- 
+            <span>
+              GOOD SERVICE
+            </span>
+            <span class="train-delay-status" style="display:none;">
+              
+            </span>
+          </li>
+          <li>
+            <img src="./Daily Constitutional _ Feed_files/456-5f752f743c64f141e9b833d866abf398698b40e961671c6570ce0d1c6647d5e6.gif" alt="456 5f752f743c64f141e9b833d866abf398698b40e961671c6570ce0d1c6647d5e6">- 
+            <span>
+              GOOD SERVICE
+            </span>
+            <span class="train-delay-status" style="display:none;">
+              
+            </span>
+          </li>
+          <li>
+            <img src="./Daily Constitutional _ Feed_files/7-eabbf3010fd2f23c3cd409b8caa73be81cce700ee228d96b78ae2b02805fc1e9.gif" alt="7 eabbf3010fd2f23c3cd409b8caa73be81cce700ee228d96b78ae2b02805fc1e9">- 
+            <span>
+              GOOD SERVICE
+            </span>
+            <span class="train-delay-status" style="display:none;">
+              
+            </span>
+          </li>
+          <li>
+            <img src="./Daily Constitutional _ Feed_files/ACE-2b09625008ffec0e21983e601ff533321aebc613996a6cf3a797fc761c7f3e64.gif" alt="Ace 2b09625008ffec0e21983e601ff533321aebc613996a6cf3a797fc761c7f3e64">- 
+            <span>
+              GOOD SERVICE
+            </span>
+            <span class="train-delay-status" style="display:none;">
+              
+            </span>
+          </li>
+          <li>
+            <img src="./Daily Constitutional _ Feed_files/BDFM-0103e65088275050a1b07fddcfdcee4a929080a7782e501aedb59f984f7d45ef.gif" alt="Bdfm 0103e65088275050a1b07fddcfdcee4a929080a7782e501aedb59f984f7d45ef">- 
+            <span>
+              GOOD SERVICE
+            </span>
+            <span class="train-delay-status" style="display:none;">
+              
+            </span>
+          </li>
+          <li>
+            <img src="./Daily Constitutional _ Feed_files/G-95e71d78fd8e3fd26b4ae179f468656b4ef5cd5de20a3731bf8e85ac92470e06.gif" alt="G 95e71d78fd8e3fd26b4ae179f468656b4ef5cd5de20a3731bf8e85ac92470e06">- 
+            <span>
+              GOOD SERVICE
+            </span>
+            <span class="train-delay-status" style="display:none;">
+              
+            </span>
+          </li>
+          <li>
+            <img src="./Daily Constitutional _ Feed_files/JZ-a213c60fd6ada6b4cf3be13014c59e44118f95791c2e4d53f079f3ac9bc1fb85.gif" alt="Jz a213c60fd6ada6b4cf3be13014c59e44118f95791c2e4d53f079f3ac9bc1fb85">- 
+            <span>
+              GOOD SERVICE
+            </span>
+            <span class="train-delay-status" style="display:none;">
+              
+            </span>
+          </li>
+          <li>
+            <img src="./Daily Constitutional _ Feed_files/L-d449fbf6a59eec29b8200752394d89622168063316646eea8f443d2e7ff7787c.gif" alt="L d449fbf6a59eec29b8200752394d89622168063316646eea8f443d2e7ff7787c">- 
+            <span>
+              GOOD SERVICE
+            </span>
+            <span class="train-delay-status" style="display:none;">
+              
+            </span>
+          </li>
+          <li>
+            <img src="./Daily Constitutional _ Feed_files/NQR-3f2714b5fedfb4d616e4bfd72069933145c5fb60aa9a822dacd93c3ad0ad72e7.gif" alt="Nqr 3f2714b5fedfb4d616e4bfd72069933145c5fb60aa9a822dacd93c3ad0ad72e7">- 
+            <span>
+              <a class="service-status" href="http://localhost:3000/#">PLANNED WORK</a>
+            </span>
+            <span class="train-delay-status" style="display:none;">
+              
+                    <span class="TitlePlannedWork">Planned Work</span>
+                    <br>
+                  <a class="plannedWorkDetailLink" onclick="ShowHide(117482);">
+<b>[Q] No trains between 57 St-7 Av and Ditmars Blvd<br clear="left">[N] trains provide alternate service
+</b></a><b><br><br></b><div id="117482" class="plannedWorkDetail"><b></b>Days, 10 AM to 3 PM, Tue to Fri, Mar 1 - 4
+<br>
+<br>[Q] service operates between <b>Stillwell Av</b> and <b>57 St-7 Av</b>.
+<br>
+<br>• Transfer between [N] and [Q] trains at Times Sq-42 St (across the platform).
+<br>
+<br><i>*Please review [N] advisories for additional information that may affect your trip.
+<br>
+<br><b>Alternate travel note:
+<br></b></i>[R] service is also available at 5 Av/59 St and Lexington Av/59 St. 
+<br>Transfer between [Q] and [R] at 57 St-7 Av.
+<br><b>
+<br></b></div><br>
+                <br><br>
+              
+                    <span class="TitlePlannedWork">Planned Work</span>
+                    <br>
+                  <a class="plannedWorkDetailLink" onclick="ShowHide(117479);">
+<b>[N] Astoria-bound trains skip 39 Av, 36 Av, Broadway and 30 Av
+</b></a><b><br><br></b><div id="117479" class="plannedWorkDetail"><b></b>Days, 10:15 AM to 3 PM, Tue to Fri, Mar 1 - 4
+<br>
+<br>For service<i> to</i> these stations, take the [N] to Astoria Blvd and transfer to a
+<br>Coney Island-bound [N].
+<br>
+<br>For service<i> from </i>these stations, take the [N] to Queensboro Plaza and transfer
+<br>to an Astoria-bound [N].
+<br>
+<br><b>Note:</b> No [Q] service at these stations during this time.
+<br><b>
+<br></b></div><br>
+                <br><br>
+              
+            </span>
+          </li>
+      </ul>
+    </div>
+
+    </div>
+    <div class="drawer-cell drawer-cell-todo">
+     <h6 class="category-title">
+  <a id="to-do-link" href="http://localhost:3000/todos">To Do</a>
+</h6>
+<ul>
+      <li>
+      <a data-idnum="6" class="complete-button" data-remote="true" rel="nofollow" data-method="post" href="http://localhost:3000/todos/6/complete">
+  <i class="material-icons circle">
+    radio_button_unchecked
+  </i>
+</a><span>
+  thing 1
+</span>
+<a rel="nofollow" data-method="delete" href="http://localhost:3000/todos/6">
+  <i class="material-icons feed-delete">delete_forever</i>
+</a>
+      </li>
+      <li>
+      <a data-idnum="7" class="complete-button" data-remote="true" rel="nofollow" data-method="post" href="http://localhost:3000/todos/7/complete">
+  <i class="material-icons circle">
+    radio_button_unchecked
+  </i>
+</a><span>
+  stuff
+</span>
+<a rel="nofollow" data-method="delete" href="http://localhost:3000/todos/7">
+  <i class="material-icons feed-delete">delete_forever</i>
+</a>
+      </li>
+</ul>
+<div id="todo-form">
+  <form class="new_todo" id="new_todo" action="http://localhost:3000/todos" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓">
+    <label class="date-picker" for="todo_Date">Date</label>
+    <input value="2016-03-01" class="date-picker" type="date" name="todo[duedate]" id="todo_duedate">
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded is-dirty is-focused" data-upgraded=",MaterialTextfield">
+      <label class="mdl-textfield__label todo-entry" for="todo_Thing To Do">Thing to do</label>
+      <input class="mdl-textfield__input todo-entry" type="text" name="todo[description]" id="todo_description">
+    </div>
+    <input type="submit" name="commit" value="Add ToDo" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" id="new-feed-button" data-upgraded=",MaterialButton">
+</form></div>
+
+    </div>
+    <div class="drawer-cell">
+      <ul>
+  <h5>Feeds </h5><select name="category_selector[category_id]" id="category_selector_category_id"><option value="">Filter By Category</option>
+<option value="1">Art</option>
+<option value="9">Beer</option>
+<option value="14">Business</option>
+<option value="4">Career</option>
+<option value="2">Economics</option>
+<option value="26">Entertainment</option>
+<option value="25">Europe</option>
+<option value="5">Finance</option>
+<option value="6">Gaming</option>
+<option value="27">Images for erin</option>
+<option value="16">Law</option>
+<option value="28">Living</option>
+<option value="10">Medicine</option>
+<option value="19">Music</option>
+<option value="24">NEWS YO</option>
+<option value="7">Nature</option>
+<option value="22">News</option>
+<option value="20">Other</option>
+<option value="3">Parenting</option>
+<option value="15">Photography</option>
+<option value="21">Rails</option>
+<option value="12">Science</option>
+<option value="11">Sports</option>
+<option value="13">Technology</option>
+<option value="18">Travel</option>
+<option value="17">Wedding</option>
+<option value="8">Wine</option>
+<option value="23">World</option>
+<option value="29">new category</option></select>
+    <li>
+      <a href="http://localhost:3000/blogs/1">https://medium.com/feed/@dhh</a>
+      <a data-confirm="Really, really?" rel="nofollow" data-method="delete" href="http://localhost:3000/users/remove_feed/1">
+        <i class="material-icons feed-delete">delete_forever</i>
+</a>    </li>
+</ul>
+
+
+
+    </div>
+</div>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <div class="main-content">
+               <div class="user-feeds">
+  <ul class="mdl-list">
+      <div class="add-posts-here">
+      <li class="mdl-list__item mdl-list__item--two-line to-do-list-item">
+  <div class="star-button">
+     
+<a data-idnum="102" class="star-button-link" data-remote="true" rel="nofollow" data-method="post" href="http://localhost:3000/star/102"><i class="material-icons star-icon">star_border</i></a>
+  </div> 
+  <div class=" entry-unhider">
+    <span>
+      Technology, Rails | Monday, 02/29/16  5:02 PM
+    </span>
+    <span class="mdl-list__item-primary-content article-title">
+      Gave a whole talk on the topic of REWRITE: http://businessofsoftware.org/2015/10/david-heinemeier…
+      <span class="article-url mdl-list__item-sub-title ">
+        https://medium.com/feed/@dhh
+      </span>
+    </span>
+    <span class="blog-entry-content" style="display:none;">
+      <div class="" id="" style="">
+  <p name="4cf3" id="" class="" style="">Gave a whole talk on the topic of REWRITE: <a href="http://businessofsoftware.org/2015/10/david-heinemeier-hansson-rewrite-basecamp-business-of-software-conference-video-dhh-bos2015/" data-href="http://businessofsoftware.org/2015/10/david-heinemeier-hansson-rewrite-basecamp-business-of-software-conference-video-dhh-bos2015/" class="" rel="nofollow" id="" style="" target="_blank">http://businessofsoftware.org/2015/10/david-heinemeier-hansson-rewrite-basecamp-business-of-software-conference-video-dhh-bos2015/</a></p>
+  <p name="d722" id="" class="" style="">I don’t think pulling apart a monolith into services is going to be worth the effort, in most cases.</p>
+</div><div class="" id="" style="">
+  <h3 class="" id="" style="">
+    <a class="" href="https://medium.com/@dhh" property="cc:attributionName" title="Go to the profile of DHH" aria-label="Go to the profile of DHH" rel="author cc:attributionUrl" data-user-id="54bcbf647830" dir="auto" id="" style="" target="_blank">DHH</a>
+  </h3>
+  <p class="" id="" style="">Creator of Ruby on Rails, Founder &amp; CTO at Basecamp (formerly 37signals), NYT Best-selling author of REWORK and REMOTE, and Le Mans class-winning racing driver.</p>
+</div>
+    </span>
+  </div>
+</li>
+      <li class="mdl-list__item mdl-list__item--two-line to-do-list-item">
+  <div class="star-button">
+    <a data-idnum="21" class="un-star-button-link" data-remote="true" rel="nofollow" data-method="post" href="http://localhost:3000/unstar/21"><i class="material-icons star-icon">star</i></a> 
+
+  </div> 
+  <div class=" entry-unhider">
+    <span>
+      Technology, Rails | Monday, 02/29/16  2:45 PM
+    </span>
+    <span class="mdl-list__item-primary-content article-title">
+      "The Majestic Monolith" in Signal v. Noise
+      <span class="article-url mdl-list__item-sub-title ">
+        https://medium.com/feed/@dhh
+      </span>
+    </span>
+    <span class="blog-entry-content" style="display:none;">
+      <div class="" id="" style="">
+  <h3 name="be4f" id="" class="" style="">The Majestic Monolith</h3>
+  <p name="9f5e" id="" class="" style="">Some patterns are just about the code. If your code looks like this, and you need it to do that, here’s what to do. You’d do well to <a href="http://www.amazon.com/Smalltalk-Best-Practice-Patterns-Kent/dp/013476904X" data-href="http://www.amazon.com/Smalltalk-Best-Practice-Patterns-Kent/dp/013476904X" class="" id="" style="" target="_blank">study</a> <a href="http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672" data-href="http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672" class="" id="" style="" target="_blank">such</a> <a href="http://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/" data-href="http://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/" class="" id="" style="" target="_blank">patterns</a>, as they give you a deep repertoire of solutions ready to apply and make your code better every time you hit their context.</p>
+  <p name="3232" id="" class="" style="">Then there are other patterns that are less about the code and more about how the code is being written, by whom, and within which organization. The Majestic Monolith is one of those patterns. But before we dive into all its glory, let’s first examine its opposite pattern: Micro/services oriented architecture.</p>
+  <p name="e6c2" id="" class="" style="">M/SOA is a prescription to break down an application into many smaller parts, run each of these parts as their own application, and then let the constellation solve the grand problem you really care about.</p>
+  <p name="5894" id="" class="" style="">This is a great pattern. No, really. Not being sarcastic here. If you’re Amazon or Google or any other software organization with thousands of developers, it’s a wonderful way to parallelize opportunities for improvement. Each service can be its own team with its own timeline, staff, and objectives. It can evolve independently, at least somewhat, of whatever else the rest of the constellation is doing.</p>
+  <p name="e904" id="" class="" style="">When you reach a certain scale, there simply is no other reasonable way to make coordination of effort happen. Otherwise everyone will step on each other’s feet, and you’ll have to deal with endless merge conflicts. (Well, at least in theory, I hear Facebook is having a great time with a monolith, whether it’s majestic or not is a different discussion).</p>
+  <p name="ff02" id="" class="" style="">In other words, M/SOA fits the organizational shape of very large corporations. So far so good!</p>
+  <p name="7696" id="" class="" style="">Where things go astray is when people look at, say, Amazon or Google or whoever else might be commanding a fleet of services, and think, hey it works for The Most Successful, I’m sure it’ll work for me too. Bzzzzzzzzt!! Wrong!</p>
+  <p name="63dc" id="" class="" style="">The patterns that make sense for organizations orders of magnitude larger than yours, is often the exact opposite ones that’ll make sense for you. It’s the essence of cargo culting. If I dance like these behemoths, surely I too will grow into one. I’m sorry, but that’s just not how the tango goes.</p>
+  <p name="16aa" id="" class="" style="">This is true of not just technical patterns, but general organizational approaches too. But that you shouldn’t run HR like a 50,000-person company when you have 50 seems obvious to most though (with some exceptions).</p>
+  <p name="40eb" id="" class="" style="">The problem with prematurely turning your application into a range of services is chiefly that it violates the #1 rule of distribute computing: Don’t distribute your computing! At least if you can in any way avoid it.</p>
+  <p name="6e8c" id="" class="" style="">Every time you extract a collaboration between objects to a collaboration between systems, you’re accepting a world of hurt with a myriad of liabilities and failure states. What to do when services are down, how to migrate in concert, and all the pain of running many services in the first place.</p>
+  <p name="2df8" id="" class="" style="">As I said, all that pain is worth it when you have no choice. But most people do have a choice, and they do have an alternative. So allow me to present just one such choice: The Majestic Monolith!</p>
+  <p name="010e" id="" class="" style="">Having your system described as “monolithic” is usually a point of derision. Them be fighting words amongst many programmers! I say don’t just turn the other cheek, but embrace the monolith with pride and a salute! Don’t just accidentally waltz your system into a monolithic design, do so with intent and with your head held high. Any monolith worth erecting is worth making majestic!</p>
+  <p name="de22" id="" class="" style="">So what is a majestic monolith exactly? It’s an integrated system that collapses as many unnecessary conceptual models as possible. Eliminates as much needless abstraction as you can swing a hammer at. It’s a big fat no to distributing your system lest it truly prevents you from doing what really needs to be done.</p>
+  <h4 name="d97c" id="" class="" style="">Enter the case study: Basecamp</h4>
+  <p name="87fd" id="" class="" style="">I’ve been writing Basecamp as a majestic monolith since 2003. The latest iteration, version 3, takes this pattern to new heights and renders under its domain not just the web, but all of our native platforms as well.</p>
+  <p name="b168" id="" class="" style="">Basecamp 3 is available via the web, as native mobile apps on iOS and Android, as native desktop apps on Windows and Mac, and through email as well. That’s a lot of platforms to juggle concurrently! And I believe the only possible way to do so with a small team of ~12 programmers is do explicitly choose and commit to The Majestic Monolith, in all its controversial glory.</p>
+  <p name="7273" id="" class="" style="">In summary, the pressures that drove us to embrace this pattern are as follows:</p>
+  <p name="83b9" id="" class="" style=""><strong class="markup--strong markup--p-strong">Basecamp is a large application</strong>. There are literally hundreds of screens of various kinds under its domain. We have 200 controllers with a total of 900 methods! This combined with a model of 190 classes with some 1473 methods. And that’s just what’s directly inside app/*, not to talk about our front-end, like the Trix text editor.</p>
+  <p name="b21f" id="" class="" style=""><strong class="markup--strong markup--p-strong">Basecamp is a small team</strong>. As I mentioned, we have just 12 programmers, and many of those are busy keeping the systems we’ve been creating over the last decade operational. In addition, we have just 7 designers (counting Jason, my partner and our CEO).</p>
+  <p name="4b20" id="" class="" style=""><strong class="markup--strong markup--p-strong">Basecamp is available on 6 platforms</strong>: Web + iOS + Android + Mac + Windows + Email.</p>
+  <p name="46b7" id="" class="" style=""><strong class="markup--strong markup--p-strong">Basecamp has millions of users and a back catalogue</strong> of many apps we’ve committed to maintaining until The End of the Internet.</p>
+  <p name="dcbb" id="" class="" style="">So a very broad scope, deep commitments, and a very small budget, all comparably speaking. The necessity of this situation simply isn’t compatible with a highly labour intensive pattern like M/SOA. It’s not compatible with writing 100% native apps, but it fits the <a href="https://signalvnoise.com/posts/3743-hybrid-sweet-spot-native-navigation-web-content" data-href="https://signalvnoise.com/posts/3743-hybrid-sweet-spot-native-navigation-web-content" class="" id="" style="" target="_blank">hybrid application model</a> like a glove.</p>
+  <p name="b442" id="" class="" style="">In addition to these formal constraints is the mission to write beautiful, understandable, and succinct code. Code that not only makes us smile while we write it, but also when we later have to extend or patch it. Such a mission is simply not compatible with an accidental monolith. It just gotta be majestic.</p>
+  <p name="a5d7" id="" class="" style="">One of the benefits to the majestic monolith is that it basically presumes that the people who work on it also understand it. It’s much easier to silo knowledge and responsibilities with a proliferation of smaller systems. We’ve had that happen for the few external, shared services we do have, like Basecamp ID (shared authentication for all generations of the Basecamp app). “Oh, you gotta talk to Jeff about that”.</p>
+  <p name="44da" id="" class="" style="">This in turn puts immense pressure on making the application understandable and changeable by individuals, not teams. Which in turn again forces you to take the time to <a href="http://www.goodreads.com/quotes/21422-i-didn-t-have-time-to-write-a-short-letter-so" data-href="http://www.goodreads.com/quotes/21422-i-didn-t-have-time-to-write-a-short-letter-so" class="" id="" style="" target="_blank">turn a long letter into a short one</a>. If your standards are slipping, you’re not just pissing in your own corner, you’re pissing all over that majestic monolith we all have to polish every day. Don’t do that!</p>
+  <p name="9614" id="" class="" style="">In many ways, this goes right to the essence of Ruby and Rails’ perception of programmers. That given the right incentives and nudges, most will rise to the occasion and write beautiful code. That our systems should be a red carpet invitation to become a better, more productive programmer. Who cares if those who aren’t invested in walking that path use the tools and patterns to screw themselves over? Maybe everyone needs to do that once or twice before appreciating the ropes that guides you into the gala premiere.</p>
+  <p name="f258" id="" class="" style="">The Majestic Monolith doesn’t pretend to provide a failsafe architectural road to glory. That’s a fool’s errand. Many programmers suffering under many oppressive influences will turn any architecture made with any tool into a big pile of mud. So worrying too much about how to save those who’s likely out of reach anyway isn’t a productive use of energy. And it takes all the ones who do care down the wrong path.</p>
+  <p name="2349" id="" class="" style="">TL;DR: Run a small team, not a tech behemoth? Embrace the monolith and make it majestic. You Deserve It!</p>
+</div><div class="" id="" style="">
+  <h3 class="" id="" style="">
+    <a class="" href="https://medium.com/@dhh" property="cc:attributionName" title="Go to the profile of DHH" aria-label="Go to the profile of DHH" rel="author cc:attributionUrl" data-user-id="54bcbf647830" dir="auto" id="" style="" target="_blank">DHH</a>
+  </h3>
+  <p class="" id="" style="">Creator of Ruby on Rails, Founder &amp; CTO at Basecamp (formerly 37signals), NYT Best-selling author of REWORK and REMOTE, and Le Mans class-winning racing driver.</p>
+</div><div class="" id="" style="">
+  <h3 class="" id="" style="">
+    <a class="" href="https://m.signalvnoise.com/?source=footer_card" rel="collection" data-action-source="footer_card" id="" style="" target="_blank">Signal v. Noise</a>
+  </h3>
+  <p class="" id="" style="">Strong opinions and shared thoughts on design, business, and technology. Since 1999. Work together the easy way with our all-new version 3 at <a rel="nofollow" href="https://basecamp.com/" class="" id="" style="" target="_blank">https://basecamp.com</a></p>
+  <div class="" id="" style=""></div>
+</div>
+    </span>
+  </div>
+</li>
+      <li class="mdl-list__item mdl-list__item--two-line to-do-list-item">
+  <div class="star-button">
+    <a data-idnum="1" class="un-star-button-link" data-remote="true" rel="nofollow" data-method="post" href="http://localhost:3000/unstar/1"><i class="material-icons star-icon">star</i></a> 
+
+  </div> 
+  <div class=" entry-unhider">
+    <span>
+      Technology, Rails | Monday, 02/15/16  4:27 PM
+    </span>
+    <span class="mdl-list__item-primary-content article-title">
+      "Make losses affordable" in Signal v. Noise
+      <span class="article-url mdl-list__item-sub-title ">
+        https://medium.com/feed/@dhh
+      </span>
+    </span>
+    <span class="blog-entry-content" style="display:none;">
+      <div class="" id="" style="">
+  <h3 name="9058" id="" class="" style="">Make losses affordable</h3>
+  <p name="6a7e" id="" class="" style="">People do crazy things when they can’t afford to lose. Being dealt a bad hand, which invariably happens at some point, becomes an existential threat, the brain shuts off rational analysis, the primal mode of survival kicks in. It’s when morals and spines are broken.</p>
+  <p name="f5ca" id="" class="" style=""><strong class="markup--strong markup--p-strong">Let’s say your business is reliant on just a few big customers</strong>. Now any one of them has the power to make you sweat, or worse, by threatening to pull the plug. If you absolutely need their business, you will absolutely do what they say — even when it’s the wrong answer or direction to the overall mission. When your business has been over-tuned for these few edge cases, your dependency deepens, leaving you less open to new customers (and profits).</p>
+  <p name="fa9f" id="" class="" style="">This is why acting on customers’ requests, rather than on their behalf, is generally a bad idea. Customers know what’s right for them, in singular. It’s your job to listen but then act on the aggregate sense of what most customers would want most of the time. That’s very hard to do if you can’t afford to say no to a single customer.</p>
+  <p name="9143" id="" class="" style=""><strong class="markup--strong markup--p-strong">The same is true with vendors</strong>. If you’re relying on a service so much that they can dictate your existence, well, then they can dictate your existence! That’s the recurrent threat and theme of building on other people’s platforms. Or relying on a particular algorithm for search results in, say, Google. Companies make choices based on what’s right for them, not what’s right for you.</p>
+  <p name="57a7" id="" class="" style=""><strong class="markup--strong markup--p-strong">Finally, the hardest part is when this is true of employees</strong>. If your magic wizard of server mountain is a complete asshole, but only they hold the knowledge of how to keep your business in the air, whatcha gonna do? You’re going to eat their bullshit, that’s what. And that bullshit is going to seep through the whole organization until it has stained it completely.</p>
+  <p name="33ed" id="" class="" style="">The easiest way to get yourself out of a bad situation is to avoid it in the first place. Harder said than done, but not impossible if you maintain a healthy dose of skepticism when <em class="markup--em markup--p-em">Golden Opportunities</em> present themselves.</p>
+  <p name="d948" id="" class="" style="">Like when that big prospective client is dangling a huge check that could grow your business by 20%, but the alarm bells are already ringing red on their list of “requests” to make that happen. Is growing by 20% in one jump worth it if it’s off the ledge?</p>
+  <p name="adcf" id="" class="" style="">When the vendor offers you a too-good-to-be-true deal if you’d just climb inside their fortress with towering barriers of exit, well, then maybe the power of that social graph should get another thought.</p>
+  <p name="f424" id="" class="" style="">Or when that impressive candidate who’s willing to take a below-market salary radiates contempt for anyone beneath their ninja chops. Is having one superhero on the team worth a toxic environment for everyone else?</p>
+  <p name="34b7" id="" class="" style="">Don’t make any of your dependencies too big to fail. Whatever advantage you gain in the short term by saying yes is dread and misery later when you can’t say no.</p>
+</div><div class="" id="" style="">
+  <p name="cb26" id="" class="" style="">
+    <em class="markup--em markup--p-em">We designed </em>
+    <a href="https://basecamp.com/?source=svn" data-href="https://basecamp.com/?source=svn" class="" id="" style="" target="_blank">
+      <em class="markup--em markup--p-em">Basecamp</em>
+    </a>
+    <em class="markup--em markup--p-em"> from the beginning to capable of taking individual losses. Most customers only pay us around $50/month. We built an audience and technology base that wasn’t beholden to any existing corporate platform or vendor. Those choices are part of the reason we’re still around after 12 years.</em>
+  </p>
+</div><div class="" id="" style="">
+  <h3 class="" id="" style="">
+    <a class="" href="https://medium.com/@dhh" property="cc:attributionName" title="Go to the profile of DHH" aria-label="Go to the profile of DHH" rel="author cc:attributionUrl" data-user-id="54bcbf647830" dir="auto" id="" style="" target="_blank">DHH</a>
+  </h3>
+  <p class="" id="" style="">Creator of Ruby on Rails, Founder &amp; CTO at Basecamp (formerly 37signals), NYT Best-selling author of REWORK and REMOTE, and Le Mans class-winning racing driver.</p>
+</div><div class="" id="" style="">
+  <h3 class="" id="" style="">
+    <a class="" href="https://m.signalvnoise.com/?source=footer_card" rel="collection" data-action-source="footer_card" id="" style="" target="_blank">Signal v. Noise</a>
+  </h3>
+  <p class="" id="" style="">Strong opinions and shared thoughts on design, business, and technology. Since 1999. Work together the easy way with our all-new version 3 at <a rel="nofollow" href="https://basecamp.com/" class="" id="" style="" target="_blank">https://basecamp.com</a></p>
+  <div class="" id="" style=""></div>
+</div>
+    </span>
+  </div>
+</li>
+      <li class="mdl-list__item mdl-list__item--two-line to-do-list-item">
+  <div class="star-button">
+    <a data-idnum="2" class="un-star-button-link" data-remote="true" rel="nofollow" data-method="post" href="http://localhost:3000/unstar/2"><i class="material-icons star-icon">star</i></a> 
+
+  </div> 
+  <div class=" entry-unhider">
+    <span>
+      Technology, Rails | Monday, 01/18/16  5:42 PM
+    </span>
+    <span class="mdl-list__item-primary-content article-title">
+      "Try harder to be someone else" in Signal v. Noise
+      <span class="article-url mdl-list__item-sub-title ">
+        https://medium.com/feed/@dhh
+      </span>
+    </span>
+    <span class="blog-entry-content" style="display:none;">
+      <div class="" id="" style="">
+  <h3 name="8aab" id="" class="" style="">Try harder to be someone else</h3>
+  <p name="fb3b" id="" class="" style="">“Just be yourself!” is commonly served as encouragement for people facing challenges in life. Whether that be in personal relationships or job hunts or speaking at a conference. If you’re already the perfect person, that’s sound advice. If not, it’s worth closer examination.</p>
+  <p name="d0cc" id="" class="" style="">Whoever you happen to be right now, at this very moment, is highly unlikely to be the person you ultimately want to be. Maybe you occasionally have a short temper. Maybe you don’t know as much about programming or speaking at conferences as you’d like to. Maybe you procrastinate too much.</p>
+  <p name="f756" id="" class="" style="">Whatever it is, you could probably stand to be more like other people in a bunch of areas. Being content merely being “you”, and whatever incremental iteration on that concept you can scrape together, is a sigh of resignation.</p>
+  <p name="ddb8" id="" class="" style="">This is where the power of envy comes in. As emotions go, envy doesn’t exactly have much popular support. I mean, when you make it onto the list of the seven deadly sins, it’s probably best something to steer clear of, right? I say wrong.</p>
+  <p name="9d27" id="" class="" style="">Envy is a useful jolt of motivation to be more like someone else. Better, smarter, wiser, hell, even prettier and richer (oh, the horror 💀!). All attributes that can be refined through your own actions. You can learn new skills, you can read more, you can work out, you can save money.</p>
+  <p name="1080" id="" class="" style="">I’m not the same person I was 20 years ago. Thankfully! I decided early that there was nothing so special about this happenstance of personality traits, skills, and knowledge I had acquired by age 16. Not only that, I reveled in the fact that there were lots of people that were downright better than me at all sorts of things. Things I wanted to be better at. They provided a clear template to first emulate, then adopt from. In other words, I was envious.</p>
+  <p name="385d" id="" class="" style="">I remember attending <a href="http://jaoo.dk/jaoo2003/" data-href="http://jaoo.dk/jaoo2003/" class="" id="" style="" target="_blank">JAOO 2003</a>, a programming conference in Denmark, and seeing Kent Beck talk about <a href="http://www.amazon.com/Extreme-Programming-Explained-Embrace-Edition/dp/0321278658/ref=pd_sim_sbs_14_2?ie=UTF8&amp;dpID=51FL897hirL&amp;dpSrc=sims&amp;preST=_AC_UL160_SR128%2C160_&amp;refRID=04JEB9FPMYK2766MQ1NR" data-href="http://www.amazon.com/Extreme-Programming-Explained-Embrace-Edition/dp/0321278658/ref=pd_sim_sbs_14_2?ie=UTF8&amp;dpID=51FL897hirL&amp;dpSrc=sims&amp;preST=_AC_UL160_SR128%2C160_&amp;refRID=04JEB9FPMYK2766MQ1NR" class="" id="" style="" target="_blank">Extreme Programming</a>. Not only was the subject matter interesting, but even more so the manner Kent delivered it. I felt deeply envious at his excellent delivery and vowed to be more like Kent. To study and emulate him until I had become more Kent than me (at that time) at delivering a convincing argument on stage.</p>
+  <p name="fde4" id="" class="" style="">Same thing happened when I discovered the writings of <a href="http://www.geraldmweinberg.com/Site/Home.html" data-href="http://www.geraldmweinberg.com/Site/Home.html" class="" id="" style="" target="_blank">Gerald M. Weinberg</a>. I devoured <a href="http://www.amazon.com/Secrets-Consulting-Giving-Getting-Successfully/dp/0932633013/ref=sr_1_1?ie=UTF8&amp;qid=1453138177&amp;sr=8-1&amp;keywords=Secrets+of+Consulting" data-href="http://www.amazon.com/Secrets-Consulting-Giving-Getting-Successfully/dp/0932633013/ref=sr_1_1?ie=UTF8&amp;qid=1453138177&amp;sr=8-1&amp;keywords=Secrets+of+Consulting" class="" id="" style="" target="_blank">Secrets of Consulting</a>, <a href="http://www.amazon.com/Are-Your-Lights-Figure-Problem/dp/0932633161/ref=sr_1_1?ie=UTF8&amp;qid=1453138216&amp;sr=8-1&amp;keywords=Are+Your+Lights+On%3F" data-href="http://www.amazon.com/Are-Your-Lights-Figure-Problem/dp/0932633161/ref=sr_1_1?ie=UTF8&amp;qid=1453138216&amp;sr=8-1&amp;keywords=Are+Your+Lights+On%3F" class="" id="" style="" target="_blank">Are Your Lights On?</a>, <a href="http://www.amazon.com/Psychology-Computer-Programming-Silver-Anniversary/dp/0932633420/ref=sr_1_1?ie=UTF8&amp;qid=1453138233&amp;sr=8-1&amp;keywords=The+Psychology+of+Computer+Programming" data-href="http://www.amazon.com/Psychology-Computer-Programming-Silver-Anniversary/dp/0932633420/ref=sr_1_1?ie=UTF8&amp;qid=1453138233&amp;sr=8-1&amp;keywords=The+Psychology+of+Computer+Programming" class="" id="" style="" target="_blank">The Psychology of Computer Programming</a>, <a href="http://www.amazon.com/Introduction-General-Systems-Thinking-Anniversary/dp/0932633498/ref=sr_1_1?ie=UTF8&amp;qid=1453138254&amp;sr=8-1&amp;keywords=An+Introduction+to+General+Systems+Thinking" data-href="http://www.amazon.com/Introduction-General-Systems-Thinking-Anniversary/dp/0932633498/ref=sr_1_1?ie=UTF8&amp;qid=1453138254&amp;sr=8-1&amp;keywords=An+Introduction+to+General+Systems+Thinking" class="" id="" style="" target="_blank">An Introduction to General Systems Thinking</a>, and his <a href="http://www.amazon.com/Quality-Software-Management-Systems-Thinking/dp/0932633226/ref=sr_1_1?ie=UTF8&amp;qid=1453138277&amp;sr=8-1&amp;keywords=Quality+Software+Management" data-href="http://www.amazon.com/Quality-Software-Management-Systems-Thinking/dp/0932633226/ref=sr_1_1?ie=UTF8&amp;qid=1453138277&amp;sr=8-1&amp;keywords=Quality+Software+Management" class="" id="" style="" target="_blank">Quality Software Management</a> series. I got deeply envious of not only Gerald’s stellar writing skills, but his profound insights. I set about to notice and ponder the world of programming and teams like he had. To be more like Gerald than I was myself at the time.</p>
+  <p name="e27c" id="" class="" style="">I could go on and on about this. I’ve had similar pangs of envy watching the onboard videos of <a href="http://patricklong.com/" data-href="http://patricklong.com" class="" id="" style="" target="_blank">Patrick Long</a> driving my race car in 2010. Of reading <a href="http://headrush.typepad.com/" data-href="http://headrush.typepad.com" class="" id="" style="" target="_blank">Kathy Sierra’s insights on making users kick ass</a>. Of the tranquil state of mind and techniques employed by <a href="http://www.amazon.com/Meditations-Thrift-Editions-Marcus-Aurelius/dp/048629823X/ref=sr_1_1?ie=UTF8&amp;qid=1453139067&amp;sr=8-1&amp;keywords=Marcus+Aurelius" data-href="http://www.amazon.com/Meditations-Thrift-Editions-Marcus-Aurelius/dp/048629823X/ref=sr_1_1?ie=UTF8&amp;qid=1453139067&amp;sr=8-1&amp;keywords=Marcus+Aurelius" class="" id="" style="" target="_blank">Marcus Aurelius</a> and <a href="http://www.amazon.com/Shortness-Life-Penguin-Great-Ideas/dp/0143036327/ref=sr_1_1?ie=UTF8&amp;qid=1453139077&amp;sr=8-1&amp;keywords=seneca" data-href="http://www.amazon.com/Shortness-Life-Penguin-Great-Ideas/dp/0143036327/ref=sr_1_1?ie=UTF8&amp;qid=1453139077&amp;sr=8-1&amp;keywords=seneca" class="" id="" style="" target="_blank">Seneca</a>. I’ve wanted to change myself so many times to be like so many other people, and I think I’m far better off for it.</p>
+  <p name="2c6d" id="" class="" style="">So don’t be so quick to fall in love with who you are right now. Allow yourself to imagine being more like someone else than yourself. Then make it happen through envy and emulation.</p>
+</div><div class="" id="" style="">
+  <h3 class="" id="" style="">
+    <a class="" href="https://medium.com/@dhh" property="cc:attributionName" title="Go to the profile of DHH" aria-label="Go to the profile of DHH" rel="author cc:attributionUrl" data-user-id="54bcbf647830" dir="auto" id="" style="" target="_blank">DHH</a>
+  </h3>
+  <p class="" id="" style="">Creator of Ruby on Rails, Founder &amp; CTO at Basecamp (formerly 37signals), NYT Best-selling author of REWORK and REMOTE, and Le Mans class-winning racing driver.</p>
+</div><div class="" id="" style="">
+  <h3 class="" id="" style="">
+    <a class="" href="https://m.signalvnoise.com/?source=footer_card" rel="collection" data-action-source="footer_card" id="" style="" target="_blank">Signal v. Noise</a>
+  </h3>
+  <p class="" id="" style="">Strong opinions and shared thoughts on design, business, and technology. Since 1999. Work together the easy way with our all-new version 3 at <a rel="nofollow" href="https://basecamp.com/" class="" id="" style="" target="_blank">https://basecamp.com</a></p>
+  <div class="" id="" style=""></div>
+</div>
+    </span>
+  </div>
+</li>
+      <li class="mdl-list__item mdl-list__item--two-line to-do-list-item">
+  <div class="star-button">
+    <a data-idnum="3" class="un-star-button-link" data-remote="true" rel="nofollow" data-method="post" href="http://localhost:3000/unstar/3"><i class="material-icons star-icon">star</i></a> 
+
+  </div> 
+  <div class=" entry-unhider">
+    <span>
+      Technology, Rails | Tuesday, 12/29/15  5:03 PM
+    </span>
+    <span class="mdl-list__item-primary-content article-title">
+      "Manufacturing quality time" in Signal v. Noise
+      <span class="article-url mdl-list__item-sub-title ">
+        https://medium.com/feed/@dhh
+      </span>
+    </span>
+    <span class="blog-entry-content" style="display:none;">
+      <div class="" id="" style="">
+  <figure name="646a" id="646a" class="graf--figure graf--first">
+    <div class="" style="" id="">
+      <div class="" style="" id=""></div>
+      <img class="article-image" data-image-id="1*CkIwzLUcH3v3g9wDk7qyvQ.jpeg" data-width="920" data-height="820" data-action="zoom" data-action-value="1*CkIwzLUcH3v3g9wDk7qyvQ.jpeg" src="./Daily Constitutional _ Feed_files/1-CkIwzLUcH3v3g9wDk7qyvQ.jpeg" id="" style="">
+    </div>
+  </figure>
+  <h3 name="db72" id="" class="" style="">Manufacturing quality time</h3>
+  <p name="a65a" id="" class="" style="">“How do you juggle it all?” is a question I’m asked regularly. Usually with an undertone that I must have some secret. A trick. Is it sleeping just 5 hours per night? Is it working 12 hour days for months on end? What is it!?!</p>
+  <p name="cf65" id="" class="" style="">The common lore of <em class="markup--em markup--p-em">Highly Productive People</em> is that they just work harder. Often superhumanly so. They have a singular focus that turns their drive to 11. The media loves to recount these feats of marvelous stamina and determination.</p>
+  <p name="042f" id="" class="" style="">I don’t fit that mold. I usually sleep a good 8.5 to 9 hours every night. I take pride in making work fit the traditional 40 hour/week constraint. I have no drive for more, more, more.</p>
+  <p name="67c3" id="" class="" style="">If I have a trick, it’s a focus on the quality of each individual hour. That doesn’t mean Time Management, in the 1990s sense of the term, slicing each hour to the last minute, and squeezing it for every last second of peak productivity. But it does cover a realization that all hours are not created or spent equal.</p>
+  <p name="9a11" id="" class="" style="">An hour haunted by stress, interruption, <a href="https://signalvnoise.com/posts/1006-sleep-deprivation-is-not-a-badge-of-honor" data-href="https://signalvnoise.com/posts/1006-sleep-deprivation-is-not-a-badge-of-honor" class="" id="" style="" target="_blank">sleep deprivation</a>, or frazzle is not worth the sixty minutes its allotted. It’s a low quality hour. You’d be foolish to expect that you can turn such dirty input into clear accomplishments. Garbage in, garbage out.</p>
+  <p name="f803" id="" class="" style="">40 hours of work every week is a king’s keep. I contend that almost anything can be accomplished with such a glorious budget. But not if you <a href="http://s3.amazonaws.com/37assets/svn/Rework-by-Jason-Fried-and-David-Heinemeier-Hansson-Excerpts.pdf" data-href="http://s3.amazonaws.com/37assets/svn/Rework-by-Jason-Fried-and-David-Heinemeier-Hansson-Excerpts.pdf" class="" id="" style="" target="_blank">squander it on meetings</a>, multitasking, or poorly defined problems. There’s no limit to the amount of time that can be wasted like that.</p>
+  <p name="4682" id="" class="" style="">Well, there’s a physical limit. And I suppose that’s where many people find refuge. I gave it everything! You can’t blame me, and I can’t blame myself, for failing to accomplish when every second was spent. I left nothing for myself, so have mercy, they rationalize.</p>
+  <p name="659e" id="" class="" style="">Covering your ass to yourself or others might give you some temporary comfort, but it won’t cover the deficit of ambition in the long run. Resignation is a coping mechanism for the beaten.</p>
+  <p name="6cfd" id="" class="" style="">What you need is a set of refinement techniques. You need to actively work on increasing the purity and quality of your hours. Here are a few that I use:</p>
+  <h4 name="ee17" id="" class="" style="">Do I really need to be involved in this?</h4>
+  <p name="adef" id="" class="" style="">Gluttonous curiosity is the siren song that seeks to loop you into all manners of discussions, decisions, and events that you’re likely not a necessary or even important component.</p>
+  <p name="ecb1" id="" class="" style="">It’s hard to accept that while your insight or experience <em class="markup--em markup--p-em">might</em> be useful to other people, it equally might not be nearly useful enough to offset the cost of yet another head at the table.</p>
+  <p name="7420" id="" class="" style="">The value of just skimming that email, turning down that meeting invitation, not depositing your two cents in that chat seems abstract in the moment. But diligently refraining from chiming in and collaborating is what gives room for making more important progress on fewer things.</p>
+  <h4 name="9b38" id="" class="" style="">Could this wait?</h4>
+  <p name="128d" id="" class="" style="">Some problems need to be dealt with today, lest they compound tomorrow. Best deal with those right away. But they’re in the minority. Most problems and opportunities are just as valuably addressed a day or a week or a month from now.</p>
+  <p name="2537" id="" class="" style="">Putting something on the back burner means it might well have dissipated by the time you give it a second look. Wonderful! That was work that then didn’t need to get done. Or just appeared more important than it really was when you first thought about it.</p>
+  <p name="c7a1" id="" class="" style="">The longer you delay solving a problem, the more you’ll know about it. Lots of pains just go away by adding idle time.</p>
+  <h4 name="ec94" id="" class="" style="">Can I bail on this?</h4>
+  <p name="5a32" id="" class="" style="">The road to a day wasted is paved with heroic attempts of throwing good hours after bad. Mistaking the depth of a problem is a reliable error of working life.</p>
+  <p name="ac38" id="" class="" style="">The crime comes when you continue digging after realizing the hole needed is thrice as deep as you anticipated, without confirming that the solution is also worth thrice the effort originally budgeted.</p>
+  <p name="8113" id="" class="" style="">Learning to give up is a critical skill for making your remaining hours count. Sunk cost is a sucker’s bet.</p>
+  <h4 name="ee1b" id="" class="" style="">Am I ready for this?</h4>
+  <p name="aa1f" id="" class="" style="">Sometimes it’s the problem that needs more time to ripen, and sometimes it’s you. We are not equally capable or fit to tackle all problems at all times.</p>
+  <p name="c95c" id="" class="" style="">If my head is in tune for writing this week, it’s a good time to complete the copy for the new website, but it’s probably a bad time to organize the work for the next quarter. If my fingers are itching to code, then let’s solve that bug that’s irked me for a month, not try to redirect the passion to doing 1–1 interviews that week.</p>
+  <p name="052f" id="" class="" style="">Our motivations ebb and flow. Swimming with the tide instead of against it is just so much easier. And as detailed above, most things can wait until the water that needs to carry them comes back up.</p>
+</div><div class="" id="" style="">
+  <p name="5d7f" id="" class="" style="">Even with a strong repertoire of techniques for making each hour count for more, you will still fail regularly. Maybe all the work that needs doing this week just doesn’t include anything you can muster the motivation for. So it slides and you feel shit.</p>
+  <p name="c1d7" id="" class="" style="">But there’s great comfort in knowing that this happens to everyone. With far more often than most are willing to admit. Despite a finely-honed perception for high quality hours, I still churn through junk frequently. Leaving me with much less than what I had hoped. So it goes!</p>
+  <p name="addf" id="" class="" style="">What matters is increasing the aggregate quality of your hours over the long term. Not to stress when you fail to turn out a perfect batch.</p>
+  <p name="e068" id="" class="" style="">Once you’ve built an awareness and appreciation of quality time, I doubt you’ll feel the same pull to keep chasing more, more, more. The difference between an uninterrupted string of four quality hours versus a few days of crap hours is a revelation.</p>
+  <p name="c0c1" id="" class="" style="">Even if you squeeze and squeeze to get more hours, maybe you’ll get another 20–50%? Refine the ones you already have and you might get 200–500% more value. That’s the true 10x.</p>
+  <p name="34b3" id="" class="" style="">The trick to juggling it all is to stop juggling.</p>
+</div><div class="" id="" style="">
+  <p name="f930" id="" class="" style="">
+    <em class="markup--em markup--p-em">I spend most of my quality work hours building </em>
+    <a href="https://basecamp.com/?source=svn-quality=time" data-href="https://basecamp.com/?source=svn-quality=time" class="" id="" style="" target="_blank">
+      <em class="markup--em markup--p-em">Basecamp</em>
+    </a>
+    <em class="markup--em markup--p-em">. We just released a </em>
+    <a href="https://basecamp.com/?source=svn-quality=time" data-href="https://basecamp.com/?source=svn-quality=time" class="" id="" style="" target="_blank">
+      <em class="markup--em markup--p-em">brand-new version 3</em>
+    </a>
+    <em class="markup--em markup--p-em">, which has a special </em>
+    <a href="https://m.signalvnoise.com/basecamp-3-work-can-wait-4adfb285c84b#.s8j8wv11r" data-href="https://m.signalvnoise.com/basecamp-3-work-can-wait-4adfb285c84b#.s8j8wv11r" class="" id="" style="" target="_blank">
+      <em class="markup--em markup--p-em">Work Can Wait</em>
+    </a>
+    <em class="markup--em markup--p-em"> feature designed specifically to increase the quality of your working hours by avoiding interruptions. Give it a try!</em>
+  </p>
+</div><div class="" id="" style="">
+  <h3 class="" id="" style="">
+    <a class="" href="https://medium.com/@dhh" property="cc:attributionName" title="Go to the profile of DHH" aria-label="Go to the profile of DHH" rel="author cc:attributionUrl" data-user-id="54bcbf647830" dir="auto" id="" style="" target="_blank">DHH</a>
+  </h3>
+  <p class="" id="" style="">Creator of Ruby on Rails, Founder &amp; CTO at Basecamp (formerly 37signals), NYT Best-selling author of REWORK and REMOTE, and Le Mans class-winning racing driver.</p>
+</div><div class="" id="" style="">
+  <h3 class="" id="" style="">
+    <a class="" href="https://m.signalvnoise.com/?source=footer_card" rel="collection" data-action-source="footer_card" id="" style="" target="_blank">Signal v. Noise</a>
+  </h3>
+  <p class="" id="" style="">Strong opinions and shared thoughts on design, business, and technology. Since 1999. Work together the easy way with our all-new version 3 at <a rel="nofollow" href="https://basecamp.com/" class="" id="" style="" target="_blank">https://basecamp.com</a></p>
+  <div class="" id="" style=""></div>
+</div>
+    </span>
+  </div>
+</li>
+      <li class="mdl-list__item mdl-list__item--two-line to-do-list-item">
+  <div class="star-button">
+    <a data-idnum="4" class="un-star-button-link" data-remote="true" rel="nofollow" data-method="post" href="http://localhost:3000/unstar/4"><i class="material-icons star-icon">star</i></a> 
+
+  </div> 
+  <div class=" entry-unhider">
+    <span>
+      Technology, Rails | Monday, 12/21/15  1:57 PM
+    </span>
+    <span class="mdl-list__item-primary-content article-title">
+      Rails 5: Action Cable Demo
+      <span class="article-url mdl-list__item-sub-title ">
+        https://medium.com/feed/@dhh
+      </span>
+    </span>
+    <span class="blog-entry-content" style="display:none;">
+      <div class="" id="" style="">
+  <h3 name="9b52" id="" class="" style="">Rails 5: Action Cable Demo</h3>
+  <p name="4cba" id="" class="" style="">Action Cable is the highlight feature of Rails 5. It makes it very easy to work with WebSockets in Rails. You have access to your full domain model and everything is neatly abstracted on both the server and client side.</p>
+  <p name="5f4d" id="" class="" style="">Action Cable is what drives the chat, notification, and other live features in Basecamp 3. It was extracted directly from that use.</p>
+  <p name="0855" id="" class="" style="">I made a brief tutorial showing how it works. Enjoy!</p>
+  <figure name="f79c" id="f79c" class="graf--figure graf--iframe graf-after--p graf--last">
+    <div class="" id="" style=""></div>
+  </figure>
+</div><div class="" id="" style="">
+  <h3 class="" id="" style="">
+    <a class="" href="https://medium.com/@dhh" property="cc:attributionName" title="Go to the profile of DHH" aria-label="Go to the profile of DHH" rel="author cc:attributionUrl" data-user-id="54bcbf647830" dir="auto" id="" style="" target="_blank">DHH</a>
+  </h3>
+  <p class="" id="" style="">Creator of Ruby on Rails, Founder &amp; CTO at Basecamp (formerly 37signals), NYT Best-selling author of REWORK and REMOTE, and Le Mans class-winning racing driver.</p>
+</div>
+    </span>
+  </div>
+</li>
+      <li class="mdl-list__item mdl-list__item--two-line to-do-list-item">
+  <div class="star-button">
+     
+<a data-idnum="5" class="star-button-link" data-remote="true" rel="nofollow" data-method="post" href="http://localhost:3000/star/5"><i class="material-icons star-icon">star_border</i></a>
+  </div> 
+  <div class=" entry-unhider">
+    <span>
+      Technology, Rails | Tuesday, 12/15/15  5:34 PM
+    </span>
+    <span class="mdl-list__item-primary-content article-title">
+      Massimo, our bet is far more hedged than “Medium is here to stay”.
+      <span class="article-url mdl-list__item-sub-title ">
+        https://medium.com/feed/@dhh
+      </span>
+    </span>
+    <span class="blog-entry-content" style="display:none;">
+      <div class="" id="" style="">
+  <p name="1caf" id="" class="" style="">Massimo, our bet is far more hedged than “Medium is here to stay”. That’s why we’re continuing to host SvN on our own subdomain. Should Medium’s VC time bomb explode before they can defuse it in an orderly fashion, we have our exits clearly marked. So there really is very little risk to this setup.</p>
+  <p name="8c24" id="" class="" style="">What we’re saying is that, today, right now, Medium is a better choice for SvN than maintaining our own blogging software.</p>
+</div><div class="" id="" style="">
+  <h3 class="" id="" style="">
+    <a class="" href="https://medium.com/@dhh" property="cc:attributionName" title="Go to the profile of DHH" aria-label="Go to the profile of DHH" rel="author cc:attributionUrl" data-user-id="54bcbf647830" dir="auto" id="" style="" target="_blank">DHH</a>
+  </h3>
+  <p class="" id="" style="">Creator of Ruby on Rails, Founder &amp; CTO at Basecamp (formerly 37signals), NYT Best-selling author of REWORK and REMOTE, and Le Mans class-winning racing driver.</p>
+</div>
+    </span>
+  </div>
+</li>
+      <li class="mdl-list__item mdl-list__item--two-line to-do-list-item">
+  <div class="star-button">
+     
+<a data-idnum="6" class="star-button-link" data-remote="true" rel="nofollow" data-method="post" href="http://localhost:3000/star/6"><i class="material-icons star-icon">star_border</i></a>
+  </div> 
+  <div class=" entry-unhider">
+    <span>
+      Technology, Rails | Sunday, 12/13/15 12:12 PM
+    </span>
+    <span class="mdl-list__item-primary-content article-title">
+      Medium is apparently working on a way to import your archives, but we don’t need that.
+      <span class="article-url mdl-list__item-sub-title ">
+        https://medium.com/feed/@dhh
+      </span>
+    </span>
+    <span class="blog-entry-content" style="display:none;">
+      <div class="" id="" style="">
+  <p name="5421" id="" class="" style="">Medium is apparently working on a way to import your archives, but we don’t need that. We keep our archives on a different subdomain. They’re all availabe at <a href="https://signalvnoise.com/archives." data-href="https://signalvnoise.com/archives." class="" rel="nofollow" id="" style="" target="_blank">https://signalvnoise.com/archives.</a> Should we ever want or need to move from Medium, we can export all the stories and host them at the same URLs on our own servers. So all exits are clearly marked.</p>
+</div><div class="" id="" style="">
+  <h3 class="" id="" style="">
+    <a class="" href="https://medium.com/@dhh" property="cc:attributionName" title="Go to the profile of DHH" aria-label="Go to the profile of DHH" rel="author cc:attributionUrl" data-user-id="54bcbf647830" dir="auto" id="" style="" target="_blank">DHH</a>
+  </h3>
+  <p class="" id="" style="">Creator of Ruby on Rails, Founder &amp; CTO at Basecamp (formerly 37signals), NYT Best-selling author of REWORK and REMOTE, and Le Mans class-winning racing driver.</p>
+</div>
+    </span>
+  </div>
+</li>
+      <li class="mdl-list__item mdl-list__item--two-line to-do-list-item">
+  <div class="star-button">
+     
+<a data-idnum="7" class="star-button-link" data-remote="true" rel="nofollow" data-method="post" href="http://localhost:3000/star/7"><i class="material-icons star-icon">star_border</i></a>
+  </div> 
+  <div class=" entry-unhider">
+    <span>
+      Technology, Rails | Sunday, 12/13/15 12:10 PM
+    </span>
+    <span class="mdl-list__item-primary-content article-title">
+      I think it’s completely typical.
+      <span class="article-url mdl-list__item-sub-title ">
+        https://medium.com/feed/@dhh
+      </span>
+    </span>
+    <span class="blog-entry-content" style="display:none;">
+      <div class="" id="" style="">
+  <p name="672c" id="" class="" style="">I think it’s completely typical. There’s never been a better time for individuals or small companies to bootstrap a new internet business, if they have maker skills. The market is screaming for talent and consulting services.</p>
+  <p name="1dc8" id="" class="" style="">Now whether someone <em class="markup--em markup--p-em">wants</em> to do this is a different matter entirely. Not everyone would want to give up 1/3 of their potential earning power by spending time building something on the side.</p>
+  <p name="998b" id="" class="" style="">But to position this approach, bootstrapping, as the a-typical path vs venture capital is folly and plays right into the myth that’s so gainful for the founding-to-funding pipeline.</p>
+</div><div class="" id="" style="">
+  <h3 class="" id="" style="">
+    <a class="" href="https://medium.com/@dhh" property="cc:attributionName" title="Go to the profile of DHH" aria-label="Go to the profile of DHH" rel="author cc:attributionUrl" data-user-id="54bcbf647830" dir="auto" id="" style="" target="_blank">DHH</a>
+  </h3>
+  <p class="" id="" style="">Creator of Ruby on Rails, Founder &amp; CTO at Basecamp (formerly 37signals), NYT Best-selling author of REWORK and REMOTE, and Le Mans class-winning racing driver.</p>
+</div>
+    </span>
+  </div>
+</li>
+      <li class="mdl-list__item mdl-list__item--two-line to-do-list-item">
+  <div class="star-button">
+     
+<a data-idnum="8" class="star-button-link" data-remote="true" rel="nofollow" data-method="post" href="http://localhost:3000/star/8"><i class="material-icons star-icon">star_border</i></a>
+  </div> 
+  <div class=" entry-unhider">
+    <span>
+      Technology, Rails | Friday, 12/11/15 11:19 AM
+    </span>
+    <span class="mdl-list__item-primary-content article-title">
+      "How to build a company you wouldn’t sell" in Signal v. Noise
+      <span class="article-url mdl-list__item-sub-title ">
+        https://medium.com/feed/@dhh
+      </span>
+    </span>
+    <span class="blog-entry-content" style="display:none;">
+      <div class="" id="" style="">
+  <h3 name="2aab" id="" class="" style="">How to build a company you wouldn’t sell</h3>
+  <p name="edc5" id="" class="" style="">I spoke with Laurence McCahill from <a href="http://www.thehappystartupschool.com/home" data-href="http://www.thehappystartupschool.com/home" class="" id="" style="" target="_blank">Happy Startup School</a> about my inspirations and role models, elaborating on <a href="https://m.signalvnoise.com/reconsider-41adf356857f" data-href="https://m.signalvnoise.com/reconsider-41adf356857f" class="" id="" style="" target="_blank">RECONSIDER</a>, enjoying building a company I wouldn’t sell, and other related topics.</p>
+  <figure name="df47" id="df47" class="graf--figure graf--iframe graf-after--p graf--last">
+    <div class="" id="" style=""></div>
+  </figure>
+</div><div class="" id="" style="">
+  <p name="8216" id="" class="" style="">
+    <em class="markup--em markup--p-em">That company I wouldn’t sell? </em>
+    <a href="https://basecamp.com/?source=svn" data-href="https://basecamp.com/?source=svn" class="" id="" style="" target="_blank">
+      <em class="markup--em markup--p-em">Basecamp</em>
+    </a>
+    <em class="markup--em markup--p-em">. I’ve been working on it for the past twelve years. Here’s to another twenty!</em>
+  </p>
+</div><div class="" id="" style="">
+  <h3 class="" id="" style="">
+    <a class="" href="https://medium.com/@dhh" property="cc:attributionName" title="Go to the profile of DHH" aria-label="Go to the profile of DHH" rel="author cc:attributionUrl" data-user-id="54bcbf647830" dir="auto" id="" style="" target="_blank">DHH</a>
+  </h3>
+  <p class="" id="" style="">Creator of Ruby on Rails, Founder &amp; CTO at Basecamp (formerly 37signals), NYT Best-selling author of REWORK and REMOTE, and Le Mans class-winning racing driver.</p>
+</div><div class="" id="" style="">
+  <h3 class="" id="" style="">
+    <a class="" href="https://m.signalvnoise.com/?source=footer_card" rel="collection" data-action-source="footer_card" id="" style="" target="_blank">Signal v. Noise</a>
+  </h3>
+  <p class="" id="" style="">Strong opinions and shared thoughts on design, business, and technology. Since 1999. Work together the easy way with our all-new version 3 at <a rel="nofollow" href="https://basecamp.com/" class="" id="" style="" target="_blank">https://basecamp.com</a></p>
+  <div class="" id="" style=""></div>
+</div>
+    </span>
+  </div>
+</li>
+      <li class="mdl-list__item mdl-list__item--two-line to-do-list-item">
+  <div class="star-button">
+     
+<a data-idnum="9" class="star-button-link" data-remote="true" rel="nofollow" data-method="post" href="http://localhost:3000/star/9"><i class="material-icons star-icon">star_border</i></a>
+  </div> 
+  <div class=" entry-unhider">
+    <span>
+      Technology, Rails | Friday, 12/11/15 11:11 AM
+    </span>
+    <span class="mdl-list__item-primary-content article-title">
+      Ollie, the vast majority of businesses in the world are not started with angel/venture capital on…
+      <span class="article-url mdl-list__item-sub-title ">
+        https://medium.com/feed/@dhh
+      </span>
+    </span>
+    <span class="blog-entry-content" style="display:none;">
+      <div class="" id="" style="">
+  <p name="7eaa" id="" class="" style="">Ollie, the vast majority of businesses in the world are not started with angel/venture capital on the San Franciscan model. Starting a business off savings, or as a part-time endeavor, or by — GASP — borrowing some money in the bank, is a completely realistic alternative.</p>
+  <p name="4960" id="" class="" style="">It’s never been cheaper or easier to start an internet business IF its done by makers. People who can predominately invest their own time and get off the ground using that. Yes, if you have to hire a team at market rates, you’re going to need a lot of money. So don’t do that. Build it yourself.</p>
+  <p name="4f5f" id="" class="" style="">We <em class="markup--em markup--p-em">didn’t</em> save for 4–5 years to fund the product development of Basecamp. We treated Basecamp as a 3rd or a 4th client. So the development was funded by ongoing client work. We didn’t even go full time on Basecamp until more than a year after it was launched!</p>
+  <p name="da09" id="" class="" style="">That’s a very realistic alternative path. Start it on the side.</p>
+</div><div class="" id="" style="">
+  <h3 class="" id="" style="">
+    <a class="" href="https://medium.com/@dhh" property="cc:attributionName" title="Go to the profile of DHH" aria-label="Go to the profile of DHH" rel="author cc:attributionUrl" data-user-id="54bcbf647830" dir="auto" id="" style="" target="_blank">DHH</a>
+  </h3>
+  <p class="" id="" style="">Creator of Ruby on Rails, Founder &amp; CTO at Basecamp (formerly 37signals), NYT Best-selling author of REWORK and REMOTE, and Le Mans class-winning racing driver.</p>
+</div>
+    </span>
+  </div>
+</li>
+      <li class="mdl-list__item mdl-list__item--two-line to-do-list-item">
+  <div class="star-button">
+     
+<a data-idnum="10" class="star-button-link" data-remote="true" rel="nofollow" data-method="post" href="http://localhost:3000/star/10"><i class="material-icons star-icon">star_border</i></a>
+  </div> 
+  <div class=" entry-unhider">
+    <span>
+      Technology, Rails | Tuesday, 12/08/15  9:00 PM
+    </span>
+    <span class="mdl-list__item-primary-content article-title">
+      We didn’t migrate any content over.
+      <span class="article-url mdl-list__item-sub-title ">
+        https://medium.com/feed/@dhh
+      </span>
+    </span>
+    <span class="blog-entry-content" style="display:none;">
+      <div class="" id="" style="">
+  <p name="9b56" id="" class="" style="">We didn’t migrate any content over. Everything stays at the permalinks that its at. You can see the full archives at <a href="https://signalvnoise.com/archives" data-href="https://signalvnoise.com/archives" class="" rel="nofollow" id="" style="" target="_blank">https://signalvnoise.com/archives</a>.</p>
+</div><div class="" id="" style="">
+  <h3 class="" id="" style="">
+    <a class="" href="https://medium.com/@dhh" property="cc:attributionName" title="Go to the profile of DHH" aria-label="Go to the profile of DHH" rel="author cc:attributionUrl" data-user-id="54bcbf647830" dir="auto" id="" style="" target="_blank">DHH</a>
+  </h3>
+  <p class="" id="" style="">Creator of Ruby on Rails, Founder &amp; CTO at Basecamp (formerly 37signals), NYT Best-selling author of REWORK and REMOTE, and Le Mans class-winning racing driver.</p>
+</div>
+    </span>
+  </div>
+</li>
+  </div>
+  <div id="infinite-scrolling">
+  
+</div>
+
+
+  </ul>
+</div>
+
+            <div id="modal" style="display: none;">
+  <div class="closer-icon-holder">
+    <i id="close-icon" class="material-icons">  
+      close
+    </i>
+    <i id="close-icon-left" class="material-icons">  
+      close
+    </i>
+  </div>
+  <div id="modal-content">
+    </div>
+  </div>
+</div>
+            <footer>
+</footer>
+          </div>
+        </main><div class="mdl-layout__obfuscator is-visible"></div></div></div>
+      
+      <div id="loading-modal" style="display: none;">
+  <div id="loader" style="display: none;">
+    <div id="page">
+      <div id="phrase_box">
+        <svg width="100%" height="100%">
+          <defs>
+            <mask id="mask" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
+              <lineargradient id="linearGradient" gradientUnits="objectBoundingBox" x2="0" y2="1">
+                <stop stop-color="white" stop-opacity="0" offset="0%"></stop>
+                <stop stop-color="white" stop-opacity="1" offset="30%"></stop>
+                <stop stop-color="white" stop-opacity="1" offset="70%"></stop>
+                <stop stop-color="white" stop-opacity="0" offset="100%"></stop>
+              </lineargradient>
+              <rect width="100%" height="100%" fill="url(#linearGradient)"></rect>
+            </mask>
+          </defs>
+          <g width="100%" height="100%" style="mask: url(#mask);">
+            <g id="phrases"><text fill="black" x="50" y="30" font-size="18" font-family="Helvetica, Arial sans-serif">Burning Down The House...</text><g transform="translate(10 10) scale(.9)"><circle id="loadingCheckCircleSVG-0" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-0"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="80" font-size="18" font-family="Helvetica, Arial sans-serif">Could You Pass The Ketchup?...</text><g transform="translate(10 60) scale(.9)"><circle id="loadingCheckCircleSVG-1" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-1"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="130" font-size="18" font-family="Helvetica, Arial sans-serif">Póg Mo Thóin...</text><g transform="translate(10 110) scale(.9)"><circle id="loadingCheckCircleSVG-2" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-2"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="180" font-size="18" font-family="Helvetica, Arial sans-serif">Selling Your Habits...</text><g transform="translate(10 160) scale(.9)"><circle id="loadingCheckCircleSVG-3" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-3"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="230" font-size="18" font-family="Helvetica, Arial sans-serif">Wandering Aimlessly...</text><g transform="translate(10 210) scale(.9)"><circle id="loadingCheckCircleSVG-4" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-4"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="280" font-size="18" font-family="Helvetica, Arial sans-serif">Rolling In A Meadow...</text><g transform="translate(10 260) scale(.9)"><circle id="loadingCheckCircleSVG-5" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-5"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="330" font-size="18" font-family="Helvetica, Arial sans-serif">MFDK...</text><g transform="translate(10 310) scale(.9)"><circle id="loadingCheckCircleSVG-6" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-6"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="380" font-size="18" font-family="Helvetica, Arial sans-serif">For Those About To Rock...</text><g transform="translate(10 360) scale(.9)"><circle id="loadingCheckCircleSVG-7" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-7"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="430" font-size="18" font-family="Helvetica, Arial sans-serif">Who Is Behind You?...</text><g transform="translate(10 410) scale(.9)"><circle id="loadingCheckCircleSVG-8" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-8"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="480" font-size="18" font-family="Helvetica, Arial sans-serif">Bob Dole...</text><g transform="translate(10 460) scale(.9)"><circle id="loadingCheckCircleSVG-9" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-9"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="530" font-size="18" font-family="Helvetica, Arial sans-serif">Avg. Airspeed Velocity Of A Swallow?...</text><g transform="translate(10 510) scale(.9)"><circle id="loadingCheckCircleSVG-10" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-10"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="580" font-size="18" font-family="Helvetica, Arial sans-serif">Hey Mom!...</text><g transform="translate(10 560) scale(.9)"><circle id="loadingCheckCircleSVG-11" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-11"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="630" font-size="18" font-family="Helvetica, Arial sans-serif">Doin' Stuff...</text><g transform="translate(10 610) scale(.9)"><circle id="loadingCheckCircleSVG-12" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-12"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="680" font-size="18" font-family="Helvetica, Arial sans-serif">Servin' Dem Pages...</text><g transform="translate(10 660) scale(.9)"><circle id="loadingCheckCircleSVG-13" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-13"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="730" font-size="18" font-family="Helvetica, Arial sans-serif">Dancing The Night Away...</text><g transform="translate(10 710) scale(.9)"><circle id="loadingCheckCircleSVG-14" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-14"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="780" font-size="18" font-family="Helvetica, Arial sans-serif">Frederick Douglass...</text><g transform="translate(10 760) scale(.9)"><circle id="loadingCheckCircleSVG-15" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-15"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="830" font-size="18" font-family="Helvetica, Arial sans-serif">Gettin' Yo Train Delays...</text><g transform="translate(10 810) scale(.9)"><circle id="loadingCheckCircleSVG-16" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-16"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="880" font-size="18" font-family="Helvetica, Arial sans-serif">Laughing To The Bank...</text><g transform="translate(10 860) scale(.9)"><circle id="loadingCheckCircleSVG-17" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-17"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="930" font-size="18" font-family="Helvetica, Arial sans-serif">Stealing Your IP Address...</text><g transform="translate(10 910) scale(.9)"><circle id="loadingCheckCircleSVG-18" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-18"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="980" font-size="18" font-family="Helvetica, Arial sans-serif">Playing Super Mario Kart...</text><g transform="translate(10 960) scale(.9)"><circle id="loadingCheckCircleSVG-19" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-19"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="1030" font-size="18" font-family="Helvetica, Arial sans-serif">Hopefully You Aren't In Boston...</text><g transform="translate(10 1010) scale(.9)"><circle id="loadingCheckCircleSVG-20" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-20"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="1080" font-size="18" font-family="Helvetica, Arial sans-serif">Nice Haircut!...</text><g transform="translate(10 1060) scale(.9)"><circle id="loadingCheckCircleSVG-21" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-21"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="1130" font-size="18" font-family="Helvetica, Arial sans-serif">Eating Brunch...</text><g transform="translate(10 1110) scale(.9)"><circle id="loadingCheckCircleSVG-22" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-22"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="1180" font-size="18" font-family="Helvetica, Arial sans-serif">Folding Laundry...</text><g transform="translate(10 1160) scale(.9)"><circle id="loadingCheckCircleSVG-23" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-23"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="1230" font-size="18" font-family="Helvetica, Arial sans-serif">Writing A Story...</text><g transform="translate(10 1210) scale(.9)"><circle id="loadingCheckCircleSVG-24" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-24"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="1280" font-size="18" font-family="Helvetica, Arial sans-serif">Pulling your todo list items...</text><g transform="translate(10 1260) scale(.9)"><circle id="loadingCheckCircleSVG-25" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-25"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g><text fill="black" x="50" y="1330" font-size="18" font-family="Helvetica, Arial sans-serif">How Long Does This Take?...</text><g transform="translate(10 1310) scale(.9)"><circle id="loadingCheckCircleSVG-26" fill="rgba(255,255,255,0)" cx="16" cy="16" r="15"></circle><polygon points="21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 " fill="rgba(0,0,0,1)" id="loadingCheckSVG-26"></polygon><path d="M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z" fill="black"></path></g></g>
+          </g>
+        </svg>
+        <div id="delete-form">
+          <form class="edit_user" id="edit_user_1" action="http://localhost:3000/users/1" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="delete"><input type="hidden" name="authenticity_token" value="vDLt7XWfR6sMMK/sjdd3AUVEe/MWl3TzZkh2p2o1610m8aG2i5N2HRpHDkzUK7lyasn0L2lWqA1U4N8TryM6yA==">
+<br><br>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded" data-upgraded=",MaterialTextfield">
+    <label for="password" class="mdl-textfield__label">Password</label>
+    <input class="mdl-textfield__input" pattern="^[a-zA-Z0-9]{6,}$" type="password" name="user[password]" id="user_password">
+  </div><br>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded" data-upgraded=",MaterialTextfield">
+    <label for="password_confirmation" class="mdl-textfield__label">Password confirmation</label>
+    <input class="mdl-textfield__input" pattern="^[a-zA-Z0-9]{6,}$" type="password" name="user[password_confirmation]" id="user_password_confirmation">
+  </div>
+  <br>
+  <input type="submit" name="commit" value="Delete User" class="mdl-button mdl-js-button mdl-button--flat mdl-button--accent sign-in-button" data-upgraded=",MaterialButton">
+</form>  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+
+
+</body></html>

@@ -7,7 +7,7 @@ class CategoryController < ApplicationController
   def show
     @scroll = params[:scroll]
     @user = current_user
-    @category = Category.find(params[:id])
+    @category = Category.find_by_title(params[:id])
     @entries = []
     @category.blogs.each do |blog|
       if current_user.blogs.include?(blog)

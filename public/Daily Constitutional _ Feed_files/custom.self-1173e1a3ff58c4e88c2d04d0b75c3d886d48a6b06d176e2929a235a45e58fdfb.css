@@ -1,0 +1,613 @@
+/* line 1, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.site-title {
+  text-align: center;
+}
+
+/* line 4, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.welcome-message {
+  width: 100%;
+  text-align: center;
+}
+/* line 7, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.welcome-message .home-form {
+  text-align: center;
+}
+
+/* line 11, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.user-show {
+  text-align: center;
+}
+
+/* line 14, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.mdl-layout__container {
+  top: 0px;
+}
+
+/* line 17, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.mdl-layout__drawer {
+  height: 100vh;
+  width: 300px;
+}
+/* line 20, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.mdl-layout__drawer ul {
+  list-style-type: none;
+  position: relative;
+  left: -20px;
+}
+
+/* line 26, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.welcome-message {
+  width: 100%;
+  text-align: center;
+}
+/* line 29, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.welcome-message .home-form {
+  text-align: center;
+}
+
+/* line 33, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#modal {
+  position: fixed;
+  top: 65px;
+  background-color: #fff;
+  height: calc(100vh-100px);
+  overflow: scroll;
+  width: 100%;
+  background-color: #F7F9F7;
+}
+/* line 41, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#modal #modal-content {
+  z-index: 8;
+  width: -webkit-calc(100% - 350px);
+  width: -moz-calc(100% - 350px);
+  width: calc(100% - 350px);
+  height: calc(100vh - 90px);
+  min-width: 530px;
+  position: relative;
+  top: 35px;
+  left: 20px;
+  background-color: #F7F9F7;
+}
+
+/* line 56, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#loading-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 30;
+}
+
+/* line 63, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#loader {
+  position: fixed;
+  margin: 0 auto;
+  left: 50%;
+  z-index: 31;
+  top: 33%;
+  transform: translate(-50%, -50%);
+  height: 34%;
+  width: 57%;
+}
+
+/* line 73, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.bold {
+  font-weight: bolder;
+}
+
+/* line 77, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.mdl-layout-title {
+  text-align: center;
+  margin: 20px;
+}
+
+/* line 81, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.mdl-layout-title:hover {
+  color: #ffab40;
+}
+
+/* line 85, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.mdl-layout__drawer {
+  width: 300px;
+}
+/* line 87, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.mdl-layout__drawer ul {
+  list-style-type: none;
+  position: relative;
+  left: -20px;
+}
+
+/* line 94, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.drawer-cell {
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+
+@media screen and (min-width: 1025px) {
+  /* line 100, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  .main-content {
+    height: 100%;
+    overflow: scroll;
+    position: relative;
+    left: 60px;
+    top: -10px;
+    width: 100%;
+  }
+
+  /* line 108, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  .new-item {
+    position: relative;
+    left: -270px;
+  }
+
+  /* line 112, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  .welcome-message {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    left: -75px;
+  }
+
+  /* line 118, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  .login-page-form {
+    position: relative;
+    left: 274px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  /* line 124, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  .mdl-textfield {
+    left: -270px;
+  }
+
+  /* line 127, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  .rss-entry-label {
+    position: relative;
+    left: 370px;
+  }
+
+  /* line 131, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  .rss-entry-field {
+    position: relative;
+    left: 270px;
+  }
+
+  /* line 135, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  .sign-in-button {
+    position: relative;
+    left: -287px;
+  }
+
+  /* line 139, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  nav {
+    width: -webkit-calc(100% - 350px);
+    width: -moz-calc(100% - 350px);
+    width: calc(100% - 350px);
+  }
+  /* line 143, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  nav ul {
+    list-style-type: none;
+    position: relative;
+    left: -335px;
+  }
+  /* line 147, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  nav ul li {
+    display: inline;
+  }
+  /* line 149, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  nav ul li form {
+    display: inline;
+  }
+
+  /* line 155, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  #delete-form {
+    position: relative;
+    left: 300px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  /* line 163, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  .main-content {
+    height: 100%;
+    overflow: scroll;
+    position: relative;
+    left: 0px;
+    top: -10px;
+    width: 100%;
+  }
+
+  /* line 171, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  .login-page-form {
+    text-align: center;
+    display: inline-block;
+  }
+
+  /* line 175, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  .mdl-layout__drawer {
+    left: -200px;
+  }
+
+  /* line 178, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  .mdl-layout__drawer.is-visible {
+    left: 0px;
+  }
+
+  /* line 181, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  #modal-content {
+    width: -webkit-calc(100% - 50px);
+    width: -moz-calc(100% - 50px);
+    width: calc(100% - 50px);
+    height: calc(100vh - 90px);
+    min-width: 530px;
+    background-color: #F7F9F7;
+  }
+
+  /* line 189, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  .rss-entry-label {
+    position: relative;
+    left: 100px;
+  }
+
+  /* line 193, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  .sign-in-button {
+    position: relative;
+    left: -15px;
+  }
+
+  /* line 197, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  nav {
+    width: 100%;
+    left: 50px;
+  }
+  /* line 200, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  nav ul {
+    list-style-type: none;
+    position: relative;
+    left: 0px;
+  }
+  /* line 204, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  nav ul li {
+    display: inline;
+  }
+  /* line 206, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+  nav ul li form {
+    display: inline;
+  }
+}
+/* line 214, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.cross-out {
+  text-decoration: line-through;
+}
+
+/* line 218, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.circle {
+  font-size: 10px;
+  z-index: 30px;
+}
+
+/* line 223, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.circle2 {
+  font-size: 10px;
+  z-index: 30px;
+}
+
+/* line 228, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.star-button {
+  text-align: top;
+}
+
+/* line 232, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.star-icon:hover {
+  z-index: 20;
+  color: grey;
+}
+
+/* line 236, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.star-icon:active {
+  box-shadow: 1px 1px 5px #555 inset;
+  color: grey;
+}
+
+/* line 241, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.mdl-list__item .mdl-list__item-secondary-content {
+  align-items: flex-start;
+}
+
+/* line 246, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.user-feeds .mdl-list {
+  margin-top: 2px;
+}
+/* line 248, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.user-feeds .mdl-list .mdl-list__item {
+  border: 1px solid grey;
+  background-color: #E6E8E6;
+  border-bottom: none;
+}
+/* line 253, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.user-feeds .mdl-list .mdl-list__item:nth-child(odd) {
+  background-color: #F7F9F7;
+}
+/* line 256, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.user-feeds .mdl-list .mdl-list__item:last-child {
+  border-bottom: 1px solid grey;
+}
+/* line 259, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.user-feeds .mdl-list .mdl-list__item:hover {
+  box-shadow: 1px 1px 5px #555 inset;
+}
+/* line 262, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.user-feeds .mdl-list .mdl-list__item:active {
+  background-color: #feaa40;
+}
+
+/* line 268, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.mdl-layout-title {
+  color: #607d8b;
+  text-decoration: none;
+}
+
+/* line 273, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.drawer-cell {
+  overflow: scroll;
+}
+
+/* line 278, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.closer-icon-holder {
+  position: fixed;
+  background: white;
+  width: 100%;
+  z-index: 20;
+  background-color: #F7F9F7;
+}
+
+/* line 285, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.close-icon {
+  line-height: 3;
+}
+
+/* line 289, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#loader-image {
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+/* line 294, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.nav-link {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.3em;
+  width: 100px;
+  padding: 20px 0;
+}
+
+/* line 303, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.nav-link:hover {
+  box-shadow: 1px 1px 5px #555 inset;
+}
+
+/* line 307, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.nav-link:active {
+  background-color: #F7F9F7;
+}
+
+/* line 312, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.mdl-textfield--align-left {
+  width: 325px;
+}
+
+/* line 316, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#modal * {
+  font-size: 1em;
+  font-weight: normal;
+  font-style: none;
+}
+
+/* line 323, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#close-icon-left {
+  position: fixed;
+  right: 10px;
+  top: 64px;
+  background-color: #F7F9F7;
+}
+
+/* line 330, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#close-icon, #close-icon-left {
+  font-size: 2em;
+}
+
+/* line 334, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#close-icon:hover, #close-icon-left:hover {
+  box-shadow: 1px 1px 5px #555 inset;
+}
+
+/* line 338, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#close-icon:active, #close-icon-left:active {
+  background-color: #feaa40;
+}
+
+/* line 342, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#flash {
+  position: fixed;
+  bottom: 0px;
+  background-color: black;
+  z-index: 9999;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 70px;
+  width: 300px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+/* line 353, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#flash #flash-message {
+  color: #feaa40;
+  text-align: center;
+}
+
+/* line 359, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.sep {
+  line-height: 110px;
+}
+
+/* line 363, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#todo-form .mdl-textfield {
+  left: 0;
+}
+
+/* line 366, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.todo-entry {
+  text-align: center;
+}
+
+/* line 370, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#spot2 {
+  font-size: .8em;
+}
+
+/* line 374, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.category-title {
+  text-align: center;
+  margin: 0;
+}
+
+/* line 379, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+input[type="date"] {
+  background-color: #fafafa;
+  display: -webkit-inline-flex;
+  font-family: "Helvetica","Arial",sans-serif;
+  border: none;
+}
+
+/* line 386, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.date-picker {
+  position: relative;
+  left: 30px;
+}
+
+/* line 391, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#intro-text {
+  text-align: center;
+  margin: 40px auto 0;
+  font-size: 1.4em;
+  width: 80%;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+/* line 400, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#to-do-link {
+  text-decoration: none;
+  color: #607d8b;
+}
+
+/* line 404, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#to-do-link:hover {
+  color: #ffab40;
+}
+
+/* line 408, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.mdl-button--accent.mdl-button--accent.mdl-button--raised {
+  top: -20px;
+}
+
+/* line 412, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.article-image {
+  max-width: 250px;
+  max-height: 250px;
+}
+
+/* line 417, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#delete-button {
+  position: relative;
+  left: -15px;
+}
+
+/* line 422, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.mta {
+  text-align: left;
+}
+
+/* line 426, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.new-item-holder {
+  padding-bottom: 0;
+  left: 0;
+}
+
+/* line 430, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+select {
+  font-size: 1em;
+  height: 35px;
+  margin: 8px 0;
+  border: 0;
+  border: .5px solid #e6e8e6;
+  border-top: 2px solid #e6e8e6;
+  background: #fafafa url("https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-128.png") no-repeat;
+  background-size: 20px;
+  background-position: right 10px center;
+  font-family: 'Arial';
+  padding-left: 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 451, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.category-label {
+  color: #b9b9b9;
+}
+
+/* line 455, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+#infinite-scrolling {
+  text-align: center;
+}
+
+/* line 458, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.pagination {
+  background: #607d8b;
+  color: #e6e8e6;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 1em;
+  cursor: default;
+}
+/* line 465, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.pagination a, .pagination span {
+  padding: 0.2em 0.3em;
+}
+/* line 468, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.pagination .disabled {
+  color: #aaaaaa;
+}
+/* line 471, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  color: #000;
+  background-color: #ffab40;
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  line-height: 1.5;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  font-size: 1.6em;
+}
+/* line 485, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.pagination a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.6em;
+}
+/* line 490, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.pagination:hover, .pagination:focus {
+  color: #fafafa;
+}
+/* line 493, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/custom.scss */
+.pagination .next_page {
+  font-size: 2.2em;
+}

@@ -1,0 +1,572 @@
+/* line 2, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#page {
+  align-items: center;
+  background: #607d8b;
+  bottom: 10px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 50px;
+  transition: opacity 1s;
+  border-radius: 10%;
+  max-width: 500px;
+  min-width: 400px;
+  min-height: 290px;
+  margin: 0 auto;
+}
+
+/* line 19, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#phrase_box {
+  display: flex;
+  flex-flow: column;
+  height: 250px;
+  overflow: hidden;
+  width: 400px;
+  position: relative;
+  top: 30px;
+}
+
+/* line 29, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#phrases {
+  animation: slide-phrases-upward 30s;
+}
+
+@keyframes slide-phrases-upward {
+  0% {
+    transform: translateY(0px);
+  }
+  5% {
+    transform: translateY(-50px);
+  }
+  10% {
+    transform: translateY(-100px);
+  }
+  15% {
+    transform: translateY(-150px);
+  }
+  20% {
+    transform: translateY(-200px);
+  }
+  25% {
+    transform: translateY(-250px);
+  }
+  30% {
+    transform: translateY(-300px);
+  }
+  35% {
+    transform: translateY(-350px);
+  }
+  40% {
+    transform: translateY(-400px);
+  }
+  45% {
+    transform: translateY(-450px);
+  }
+  50% {
+    transform: translateY(-500px);
+  }
+  55% {
+    transform: translateY(-550px);
+  }
+  60% {
+    transform: translateY(-600px);
+  }
+  65% {
+    transform: translateY(-650px);
+  }
+  70% {
+    transform: translateY(-700px);
+  }
+  75% {
+    transform: translateY(-750px);
+  }
+  80% {
+    transform: translateY(-800px);
+  }
+  85% {
+    transform: translateY(-850px);
+  }
+  90% {
+    transform: translateY(-900px);
+  }
+  95% {
+    transform: translateY(-950px);
+  }
+  100% {
+    transform: translateY(-1000px);
+  }
+  105% {
+    transform: translateY(-1050px);
+  }
+  110% {
+    transform: translateY(-1100px);
+  }
+  115% {
+    transform: translateY(-1150px);
+  }
+  120% {
+    transform: translateY(-1200px);
+  }
+  125% {
+    transform: translateY(-1250px);
+  }
+  130% {
+    transform: translateY(-1300px);
+  }
+  135% {
+    transform: translateY(-1350px);
+  }
+  140% {
+    transform: translateY(-1400px);
+  }
+  145% {
+    transform: translateY(-1450px);
+  }
+  150% {
+    transform: translateY(-1500px);
+  }
+}
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-0 {
+  animation: fill-to-white 5000ms;
+  animation-delay: -2.25s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-1 {
+  animation: fill-to-white 5000ms;
+  animation-delay: -0.75s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-2 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 0.75s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-3 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 2.25s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-4 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 3.75s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-5 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 5.25s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-6 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 6.75s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-7 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 8.25s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-8 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 9.75s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-9 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 11.25s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-10 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 12.75s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-11 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 14.25s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-12 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 15.75s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-13 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 17.25s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-14 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 18.75s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-15 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 20.25s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-16 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 21.75s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-17 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 23.25s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-18 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 24.75s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-19 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 26.25s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-20 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 27.75s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-21 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 29.25s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-22 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 30.75s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-23 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 32.25s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-24 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 33.75s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-25 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 35.25s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-26 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 36.75s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-27 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 38.25s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-28 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 39.75s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-29 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 41.25s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+/* line 42, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckCircleSVG-30 {
+  animation: fill-to-white 5000ms;
+  animation-delay: 42.75s;
+  fill: #ffab40;
+  opacity: 0;
+}
+
+@keyframes fill-to-white {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-0 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: -2.25s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-1 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: -0.75s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-2 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 0.75s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-3 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 2.25s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-4 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 3.75s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-5 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 5.25s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-6 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 6.75s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-7 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 8.25s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-8 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 9.75s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-9 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 11.25s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-10 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 12.75s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-11 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 14.25s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-12 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 15.75s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-13 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 17.25s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-14 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 18.75s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-15 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 20.25s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-16 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 21.75s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-17 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 23.25s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-18 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 24.75s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-19 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 26.25s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-20 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 27.75s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-21 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 29.25s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-22 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 30.75s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-23 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 32.25s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-24 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 33.75s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-25 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 35.25s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-26 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 36.75s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-27 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 38.25s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-28 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 39.75s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-29 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 41.25s;
+}
+
+/* line 61, /Users/matthewcostabile/NYCDA-WDI/Course/FINAL/v3/app/assets/stylesheets/loader.scss */
+#loadingCheckSVG-30 {
+  animation: fill-to-coral 5000ms;
+  animation-delay: 42.75s;
+}
