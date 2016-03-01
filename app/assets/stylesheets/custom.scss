@@ -34,7 +34,7 @@
   position:fixed;
   top:65px;
   background-color: #fff;
-  height: 100vh;
+  height: calc(100vh-100px);
   overflow: scroll;
   width: 100%;
   background-color: #F7F9F7;
@@ -43,6 +43,7 @@
     width: -webkit-calc(100% - 350px);
     width:    -moz-calc(100% - 350px);
     width:         calc(100% - 350px);
+    height: calc(100vh - 90px);
     min-width: 530px;
     position: relative;
     top: 35px; 
@@ -181,6 +182,7 @@
     width: -webkit-calc(100% - 50px);
     width:    -moz-calc(100% - 50px);
     width:         calc(100% - 50px);
+    height: calc(100vh - 90px);
     min-width: 530px;
     background-color: #F7F9F7;
   }
