@@ -1,5 +1,9 @@
 $(document).ready(function(){
   //flash messages fade out on load or on click
+    $('#category_selector_category_id').select2();
+  $('#blog_selector_blog_id').select2();
+  $('#cat_category_id').select2();
+  
   if($('#flash').text() != ''){
     $('#flash').slideDown(500);
     $('#flash').on('click',function(){
@@ -198,7 +202,6 @@ $(document).ready(function(){
     })
   }
 
-  $('#category_selector_category_id').select2();
-  $('#blog_selector_blog_id').select2();
-  $('#cat_category_id').select2();
+
+
 })
