@@ -3,7 +3,7 @@ class SuggestionsController < ApplicationController
 
   def index
     @scroll = params[:scroll]
-    @title = "Feed"
+    @title = "Top Feeds"
     @user = current_user
     if ((Time.now - @user.weather.updated_at)/60 > 60)
      @user.weather.update_attributes(Apis::Weather.getWeather)

@@ -17,9 +17,11 @@
     <div class='drawer-cell drawer-cell-todo'>
      <%=render 'partials/todos' if current_user%>
     </div>
-    <div class='drawer-cell'>
-      <%=render 'partials/feeds' if current_user%>
-    </div>
+    <%if current_user.blogs.length > 0 %>
+      <div class='drawer-cell'>
+        <%=render 'partials/feeds' if current_user%>
+      </div>
+    <%end%>
     <div class='drawer-cell'>
       <%=link_to 'Sign Out', login_path, method: :delete, class: 'nav-link', data: {confirm: "Don't Go!"}  if current_user %>
     </div>

@@ -82,7 +82,7 @@ class UsersController < ApplicationController
     if @user.blogs.include?(@blog)
       if @user.reader_blogs.find_by_blog_id(params[:id]).destroy
         flash[:notice]="demolished that suckka"
-        redirect_to :back
+        redirect_to root_path
       else
         flash[:notice]="couldn't get it done"
         redirect_to :back

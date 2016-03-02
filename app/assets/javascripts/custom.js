@@ -197,4 +197,8 @@ $(document).ready(function(){
       }
     })
   }
+
+  $('#category_selector_category_id').select2();
+  $('#blog_selector_blog_id').select2();
+  $('#cat_category_id').select2();
 })
