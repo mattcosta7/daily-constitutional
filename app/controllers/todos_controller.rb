@@ -1,5 +1,5 @@
 class TodosController < ApplicationController
-  before_filter :validate
+  before_filter :validate!
 
   def index
     @title = "Feed"
@@ -87,7 +87,7 @@ class TodosController < ApplicationController
     params.require(:todo).permit(:duedate,:description).merge(user_id: current_user.id)
   end
 
-  def validate
+  def validate!
     if !current_user
       flash[:notice]="Sign In Already!"
       redirect_to root_path

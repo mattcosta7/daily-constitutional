@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-  before_filter :validate
+  before_filter :validate!
 
   #place a star on an entry for a user if it isn't already
   def star
@@ -26,7 +26,7 @@ class EntriesController < ApplicationController
 
   #ensures a current user
   private 
-  def validate
+  def validate!
     if !current_user
       flash[:notice]="Sign In Already!"
       redirect_to root_path

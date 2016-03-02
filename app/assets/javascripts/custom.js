@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  //flash messages fade out on load
+  //flash messages fade out on load or on click
   if($('#flash').text() != ''){
     $('#flash').slideDown(500);
     $('#flash').on('click',function(){
@@ -12,6 +12,7 @@ $(document).ready(function(){
     }
   }
 
+  //feeds selectors for category and blog url
   $('#category_selector_category_id').on('change',function(){
     if($('#category_selector_category_id').val()!=""){
       window.location = '/category/'+ $('#category_selector_category_id').val();
@@ -23,6 +24,8 @@ $(document).ready(function(){
       window.location = '/blogs/'+ $('#blog_selector_blog_id').val();
     }
   })
+
+
   //hide signup initially
   $('#signin-swap-2').hide();
 
@@ -43,7 +46,7 @@ $(document).ready(function(){
   $('#loading-modal').hide();
   $('#loader').hide();
 
-  //on click of line item, if not the star show the item, and hide on close icon clicks
+  //on click of line item, if not certain types show the item, and hide on close icon clicks
   $('main').on('click','li',function(e){
     if($(e.target).is('i') ){
       return;
@@ -96,6 +99,7 @@ $(document).ready(function(){
     $('#signin-swap-1').toggle();
   });
 
+  //on delete, bring up modal for delete user
   $('#delete-button').on('click',function(){
     $('#loader').show();
     $('svg').hide();
@@ -142,6 +146,7 @@ $(document).ready(function(){
     $($(this).find('.un-complete-button')[0]).replaceWith("<a data-idnum='"+$(this).attr('data-idNum')+"' class='complete-button' data-remote='true' rel='nofollow' data-method='post' href='/todos/"+$(this).attr('data-idNum')+"/complete'><i class='material-icons circle'>radio_button_unchecked</i></a>");
   })
 
+  //new feed category only show if new selected
   $('.new-item').hide();
   $('#cat_category_id').on('change',function(){
     $('#new-category').val("");
@@ -153,6 +158,7 @@ $(document).ready(function(){
     }
   })
 
+  //scrolling append items
   if($('.pagination').length){
     $('.mdl-layout__content').scroll(function(e) {
       var nextPageUrl = $('.pagination .next_page').attr('href');
@@ -171,6 +177,7 @@ $(document).ready(function(){
     return $(window).scroll();
   }
 
+  //selector for suggestions
   if($(".js-example-basic-multiple")){
     $(".js-example-basic-multiple").select2({
       placeholder: "Select Categories",

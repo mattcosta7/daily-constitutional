@@ -1,4 +1,4 @@
-//edited from original found here - http://codepen.io/hoqqanen/pen/zvqGEG
+//edited somewhat from original found here - http://codepen.io/hoqqanen/pen/zvqGEG
 
 var checkmarkIdPrefix = "loadingCheckSVG-";
 var checkmarkCircleIdPrefix = "loadingCheckCircleSVG-";

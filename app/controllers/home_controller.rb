@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   require 'will_paginate/array'
+  
   def index
     if current_user
       @scroll = params[:scroll]

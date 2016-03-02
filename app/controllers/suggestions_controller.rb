@@ -1,5 +1,5 @@
 class SuggestionsController < ApplicationController
-  # before_filter :validate
+  before_filter :validate!
 
   def index
     @scroll = params[:scroll]
@@ -22,7 +22,7 @@ class SuggestionsController < ApplicationController
   end
 
   private
-  def validate
+  def validate!
     if !current_user
       flash[:notice]="Sign In Already!"
       redirect_to root_path

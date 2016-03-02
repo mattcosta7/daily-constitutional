@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_filter :validate, except: [:new,:create]
+  before_filter :validate!, except: [:new,:create]
+  
   def new
     @user = User.new
   end
@@ -94,7 +95,7 @@ class UsersController < ApplicationController
     params.require(:user).permit(:email, :password, :password_confirmation,:latitude, :longitude)
   end
 
-  def validate
+  def validate!
     if !current_user
       flash[:notice]="Sign In Already!"
       redirect_to root_path
