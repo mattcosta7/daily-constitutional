@@ -1,13 +1,10 @@
 <ul>
-  <h5>Feeds </h5><%=collection_select(:category_selector, :category_id, Category.order(:title), :title, :title, {prompt: "Filter By Category", selected: (@category ? @category.title : nil)})%>
-    <%current_user.blogs.each do |blog|%>
-    <li>
-      <%=link_to("#{truncate(blog.url, length:35, omission:'...')}", blog_path(blog))%>
-      <%=link_to remove_feed_path(blog), method: :delete, data: {confirm: "Really, really?"} do %>
-        <i class="material-icons feed-delete">delete_forever</i>
-      <%end%>
-    </li>
-    <%end%> 
+  <h5>Feeds </h5>
+  <%=collection_select(:category_selector, :category_id, Category.order(:title), :title, :title, {prompt: "Filter By Category", selected: (@category ? @category.title : nil)})%>
+
+  <%=collection_select(:blog_selector, :blog_id, current_user.blogs.all, :id, :url, {prompt: "Filer By Blog",selected: (@blog ? @blog.url : nil)})%>
+
+
 </ul>
 
 

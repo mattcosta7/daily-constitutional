@@ -9,11 +9,12 @@ class Category < ActiveRecord::Base
     @blogs = {}
     @categories = Category.order(:title).all
     @categories.each do |category|
-      hash = {}
-      category.blogs.map {|blog| hash[blog.id] = blog.reader_blogs.length}
-      array = hash.max_by{|k,v| k}
-      if array && array[1] != 0 
-        @blogs[category] = Blog.find(array[1])
+      array = category.blogs.collect{|x| [x,x.users.length]}
+      if array
+        blog = array.max_by{|k,v| v}
+        if blog
+          @blogs[category.title] = blog
+        end
       end
     end
     @blogs

@@ -17,6 +17,12 @@ $(document).ready(function(){
       window.location = '/category/'+ $('#category_selector_category_id').val();
     }
   })
+
+  $('#blog_selector_blog_id').on('change',function(){
+    if($('#blog_selector_blog_id').val()!=""){
+      window.location = '/blogs/'+ $('#blog_selector_blog_id').val();
+    }
+  })
   //hide signup initially
   $('#signin-swap-2').hide();
 
@@ -152,7 +158,14 @@ $(document).ready(function(){
       var nextPageUrl = $('.pagination .next_page').attr('href');
         if (nextPageUrl && $('.mdl-layout__content').scrollTop() + $('.mdl-layout__content').height()  >= $('.mdl-layout__content').prop('scrollHeight')) {
           $('.pagination').text("Fetching More Stuffs...");
+          if(nextPageUrl == '/?page=2'){
+            $('.pagination').remove();
             return $.getScript(nextPageUrl+"&scroll=true");
+          }
+          else{
+            $('.pagination').remove();
+            return $.getScript(nextPageUrl);
+          }
         }
     });
     return $(window).scroll();

@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :user_stars, dependent: :destroy
   has_many :stars, through: :user_stars, source: :entry
   has_many :entries, through: :blogs
+  has_many :categories, through: :blogs
   geocoded_by :location
   after_validation :geocode, :if => lambda{ |user| user.location_changed? }
   

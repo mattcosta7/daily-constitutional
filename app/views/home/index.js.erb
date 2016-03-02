@@ -1,8 +1,6 @@
 <%if @scroll %>
-  $('.add-posts-here').append("<%= j render 'entries/index' %>");
-  <% if @entries.next_page %>
-    $('.pagination').replaceWith("<%= j render partial: 'partials/paginate', locals: {entries: @entries}%>");
-  <% else %>
+  $('.mdl-list').append("<%= j render 'entries/index' %>");
+  <% if !@entries.next_page %>
     $(window).off('scroll');
     $('.pagination').remove();
   <% end %>

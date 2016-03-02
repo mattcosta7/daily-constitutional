@@ -10,8 +10,8 @@
   <% @categories.each do |category| %>
     <div id='<%=category.title%>' class='suggestions-hider'>
     <h5><%= category.title %></h5>
-    <%if @blogs[category]%>
-     <span><%=link_to @blogs[category].url, addblog_path(@blogs[category]), method: :post, class: 'suggestion-link', remote: true, id: "blognum-#{@blogs[category].id}" %></span>
+    <%if @blogs[category.title]%>
+     <span><%=link_to @blogs[category.title][0].url, addblog_path(@blogs[category.title][0].id), method: :post, class: 'suggestion-link', remote: true, id: "blognum-#{@blogs[category.title][0].id}" %></span>
     <%else%>
       <span> None of this type yet, sadly </span>
     <%end%>
