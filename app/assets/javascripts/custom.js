@@ -162,7 +162,7 @@ $(document).ready(function(){
   if($('.pagination').length){
     $('.mdl-layout__content').scroll(function(e) {
       var nextPageUrl = $('.pagination .next_page').attr('href');
-        if (nextPageUrl && $('.mdl-layout__content').scrollTop() + $('.mdl-layout__content').height()  >= $('.mdl-layout__content').prop('scrollHeight')) {
+        if (nextPageUrl && $('.mdl-layout__content').scrollTop() + $('.mdl-layout__content').height()  >= $('.mdl-layout__content').prop('scrollHeight') - 25 ) {
           $('.pagination').text("Fetching More Stuffs...");
           if(nextPageUrl == '/?page=2'){
             $('.pagination').remove();
