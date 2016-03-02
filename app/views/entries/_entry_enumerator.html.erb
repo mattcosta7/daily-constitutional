@@ -15,7 +15,9 @@
       </span>
     </div>
     <span class='blog-entry-content' style="display:none;">
+    Link To Original: <%=link_to entry.title, entry.url, target: "_blank"%><br>
       <%=entry.content.html_safe%>
+
     </span>
   </div>
 </li>

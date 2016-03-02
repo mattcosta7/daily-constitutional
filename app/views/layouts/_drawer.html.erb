@@ -27,4 +27,7 @@
       </p>
     </div>
   <%end%>
+  <div class='drawer-cell'>
+    <%=link_to 'Sign Out', login_path, method: :delete, class: 'nav-link', data: {confirm: "Don't Go!"}  if current_user %>
+  </div>
 </div>
