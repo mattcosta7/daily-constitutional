@@ -1,15 +1,12 @@
 <ul>
   <h5 class='feed-drawer-title'>Feeds</h5><br>
-    <%if @blog%>
-      <%=link_to remove_feed_path(@blog), method: :delete, data: {confirm: "Really, really?"} do %>
-        Delete This Feed
-      <%end%>
+  <%if @blog%>
+    <%=link_to remove_feed_path(@blog), method: :delete, data: {confirm: "Really, really?"} do %>
+      Delete This Feed
     <%end%>
+  <%end%>
   <%=collection_select(:category_selector, :category_id, current_user.categories.order(:title).uniq, :title, :title, {prompt: "Filter By Category", selected: (@category ? @category.title : nil)})%>
-
   <%=collection_select(:blog_selector, :blog_id, current_user.blogs.all, :id, :url, {prompt: "Filer By Blog",selected: (@blog ? @blog.url : nil)})%>
-
-
 </ul>
 
 

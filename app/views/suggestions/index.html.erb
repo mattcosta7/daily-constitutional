@@ -1,6 +1,5 @@
-
 <div class='suggestion-items'>
-<h3>Top Feeds</h3>
+  <h3>Top Feeds</h3>
   <select class="js-example-basic-multiple" multiple="multiple">
   <%@categories.each do |category|%>
     <option value="<%=category.title%>"><%=category.title%></option>
@@ -18,9 +17,8 @@
   </div>
   <%end%>
 </div>
-
-    <%=link_to root_path, class: 'homelink-sug' do %>
-      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Go To Main Feed</button>
-    <%end%>
+<%=link_to root_path, class: 'homelink-sug' do %>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Go To Main Feed</button>
+<%end%>
 
 
