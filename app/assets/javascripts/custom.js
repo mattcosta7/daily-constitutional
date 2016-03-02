@@ -158,7 +158,23 @@ $(document).ready(function(){
     return $(window).scroll();
   }
 
-  // $('.delete-todo').on('ajax:send', function(){
-  //   $(this).parent()[0].remove();
-  // })
+  if($(".js-example-basic-multiple")){
+    $(".js-example-basic-multiple").select2({
+      placeholder: "Select Categories",
+      allowClear: true
+    });
+
+    $(".js-example-basic-multiple").on('change',function(){
+      $('.suggestions-hider').hide();
+      var array = $(".js-example-basic-multiple").val()
+      if(array == null){
+        $('.suggestions-hider').show();
+        return;
+      }
+      var length = array.length
+      for(var i = 0; i<array.length ; i++){
+        $("#"+array[i]).show();
+      }
+    })
+  }
 })

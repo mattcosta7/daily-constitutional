@@ -2,20 +2,16 @@
 <div class='suggestion-items'>
 <h3>Suggested Feeds</h3>
   <select class="js-example-basic-multiple" multiple="multiple">
-  <%Category.all.order(:title).each do |category|%>
+  <%@categories.each do |category|%>
     <option value="<%=category.title%>"><%=category.title%></option>
   <%end%>
   </select>
 
-  <% Category.order(:title).each do |category| %>
+  <% @categories.each do |category| %>
     <div id='<%=category.title%>' class='suggestions-hider'>
-    <h6><%= category.title %></h6>
-    <% hash = {} %>
-    <% category.blogs.map {|blog| hash[blog.id] = blog.reader_blogs.length} %>
-    <% array = hash.max_by{|k,v| k} %>
-    <%if array && array[1] != 0 %>
-      <%blog = Blog.find(array[1])%>
-     <span><%=link_to blog.url, addblog_path(blog), method: :post, class: 'suggestion-link', remote: true, id: "blognum-#{blog.id}" %></span>
+    <h5><%= category.title %></h5>
+    <%if @blogs[category]%>
+     <span><%=link_to @blogs[category].url, addblog_path(@blogs[category]), method: :post, class: 'suggestion-link', remote: true, id: "blognum-#{@blogs[category].id}" %></span>
     <%else%>
       <span> None of this type yet, sadly </span>
     <%end%>
@@ -26,37 +22,5 @@
     <%=link_to root_path, class: 'homelink-sug' do %>
       <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Go To Main Feed</button>
     <%end%>
-
-
-
-
-
-
-
-<script type="text/javascript">
-$(".js-example-basic-multiple").select2({
-  placeholder: "Select a Category",
-  allowClear: true
-});
-
-$(".js-example-basic-multiple").on('change',function(){
-  $('.suggestions-hider').hide();
-  var array = $(".js-example-basic-multiple").val()
-  if(array == null){
-    $('.suggestions-hider').show();
-    return;
-  }
-  var length = array.length
-  for(var i = 0; i<array.length ; i++){
-    $("#"+array[i]).show();
-  }
-})
-</script>
-
-
-
-
-
-
 
 

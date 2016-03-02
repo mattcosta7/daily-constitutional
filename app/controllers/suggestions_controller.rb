@@ -11,6 +11,8 @@ class SuggestionsController < ApplicationController
     end
     @geo = Geocoder.search(@user.location)[0]
     @tStatus = User.getTrains(@user)
+    @categories = Category.order(:title).all
+    @blogs = Category.most_read
     if @scroll == true
      respond_to do |format|
        format.html
