@@ -5,11 +5,11 @@
   </div><br>
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <%=f.label :password, for: 'password', class: "mdl-textfield__label" %>
-    <%=f.password_field :password, class: "mdl-textfield__input", pattern: "^[a-zA-Z0-9]{6,}$" %>
+    <%=f.password_field :password, class: "mdl-textfield__input", pattern: "^[a-zA-Z0-9!@$%^&*()_+]{6,}$" %>
   </div><br>
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <%=f.label :'password_confirmation', for: 'password_confirmation', class: "mdl-textfield__label" %>
-    <%=f.password_field :password_confirmation, class: "mdl-textfield__input", pattern: "^[a-zA-Z0-9]{6,}$" %>
+    <%=f.password_field :password_confirmation, class: "mdl-textfield__input", pattern: "^[a-zA-Z0-9!@$%^&*()_+]{6,}$" %>
   </div>
   <br>
   <%=f.submit (current_user ? :'Edit User' : :'Sign Up!'), class: "mdl-button mdl-js-button mdl-button--flat mdl-button--accent sign-in-button", data:{disable_with: 'loading...'}%><br>
