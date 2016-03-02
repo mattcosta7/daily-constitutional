@@ -65,16 +65,16 @@ $(document).ready(function(){
     }
     $('#modal-content').html($(this).find('.blog-entry-content').html())
     $('#modal').show();
-    $('.mdl-list').hide();
+    // $('.mdl-list').hide();
 
     $('#close-icon').on('click',function(){
       $('#modal').hide();
-      $('.mdl-list').show();
+      // $('.mdl-list').show();
       
     })
     $('#close-icon-left').on('click',function(){
       $('#modal').hide();
-      $('.mdl-list').show();
+      // $('.mdl-list').show();
     })
   })
 
