@@ -73,11 +73,13 @@ $(document).ready(function(){
 
     $('#close-icon').on('click',function(){
       $('#modal').hide();
+      $("#modal").scrollTop('0')
       // $('.mdl-list').show();
       
     })
     $('#close-icon-left').on('click',function(){
       $('#modal').hide();
+      $("#modal").scrollTop('0')
       // $('.mdl-list').show();
     })
   })
