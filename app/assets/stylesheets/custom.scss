@@ -108,6 +108,7 @@ body{
     left:60px;
     top:-10px;
     width: 100%;
+    font-size: 1.2em;
   }
   .new-item{
     position: relative;
@@ -118,6 +119,9 @@ body{
     width: 100%;
     text-align: center;
     left: -75px;
+  }
+  #modal-content{
+    margin: 20px 0;
   }
   .login-page-form{
     position: relative;

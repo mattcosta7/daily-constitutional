@@ -42,9 +42,9 @@ class Blog < ActiveRecord::Base
     doc = Nokogiri::HTML(open(feed.url)) do |config|
       config.noent.noblanks.noerror
     end
-    doc.search("//script","//iframe","//object","//embed","//param","//form","//meta","//link","//title","//nav","//svg","//header").remove
-    doc.search("//div","//img","//p","//span","//a","//h1","//h2","//h3","//h4","//h5","//h6","//ul","//ol").attr('class','').attr('id','').attr('style','')
-    doc.search('//a').attr('href','#')
+    doc.search("//script","//iframe","//object","//embed","//param","//form","//meta","//link","//title","//nav","//svg","//header","//input","//textarea").remove
+    doc.search("//div","//img","//p","//span","//a","//h1","//h2","//h3","//h4","//h5","//h6","//ul","//ol","//li","//main","//body").attr('class','').attr('id','').attr('style','')
+    doc.xpath('//@*').remove
     doc.search('//img').attr('class','article-image')
     doc = doc.search("//p","//img").collect{ |p| p.parent }.uniq
     htmlReturn = ''
