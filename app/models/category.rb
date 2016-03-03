@@ -5,6 +5,7 @@ class Category < ActiveRecord::Base
   
   validates :title, presence:true, uniqueness:{ case_sensitive: false }
 
+#returns the blog with most readers in each category
   def self.most_read
     @blogs = {}
     @categories = Category.order(:title).all

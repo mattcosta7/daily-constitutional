@@ -27,29 +27,29 @@ class User < ActiveRecord::Base
 
   def self.getTrains(user)
     state = Geocoder.search(user.location)[0].state
-    if state == "New York"
-      return Apis::Mta.getNyc
-    elsif state == "Virginia"
-      return Apis::Mta.getWdc
-    elsif state == "Massachuessets"
-      return ["We Don't","Do Things", "In Boston, Yuck."]
-    elsif state == "Illinois"
-      return Apis::Mta.getChicago
-    else
-      nil
-    end
-    # if user.distance_to("New York City") == nil
-    #   return [nil,nil,nil]
-    # elsif user.distance_to("New York City") < 50
-    #   
-    # elsif user.distance_to("Washington,DC") < 50
+    # if state == "New York"
+    #   return Apis::Mta.getNyc
+    # elsif state == "Virginia"
     #   return Apis::Mta.getWdc
-    # elsif user.distance_to("Boston") < 50
+    # elsif state == "Massachuessets"
     #   return ["We Don't","Do Things", "In Boston, Yuck."]
-    # elsif user.distance_to("Chicago") < 50
+    # elsif state == "Illinois"
     #   return Apis::Mta.getChicago
     # else
     #   nil
     # end
+    if user.distance_to("New York City") == nil
+      return [nil,nil,nil]
+    elsif user.distance_to("New York City") < 50
+      return Apis::Mta.getNyc
+    elsif user.distance_to("Washington,DC") < 50
+      return Apis::Mta.getWdc
+    elsif user.distance_to("Boston") < 50
+      return ["We Don't","Do Things", "In Boston, Yuck."]
+    elsif user.distance_to("Chicago") < 50
+      return Apis::Mta.getChicago
+    else
+      nil
+    end
   end
 end

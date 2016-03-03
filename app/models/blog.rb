@@ -8,6 +8,8 @@ class Blog < ActiveRecord::Base
   VALID_URL_REGEX = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/
   validates :url, presence: true, format: { with: VALID_URL_REGEX },uniqueness:{ case_sensitive: false }
 
+#updates all entries of all blogs, by fetching the 
+#feed from the url, and seeding new entries
   def self.update_all_entries
     Blog.all.each do |blog|
       begin
@@ -24,6 +26,7 @@ class Blog < ActiveRecord::Base
     end
   end
 
+#puts feed entry into format necessary to seed database
   def self.makeEntryHash feed, id
     hash = {
       title: feed.title,
@@ -37,6 +40,9 @@ class Blog < ActiveRecord::Base
   end
 
 #edited from https://www.alfajango.com/blog/create-a-printable-format-for-any-webpage-with-ruby-and-nokogiri/
+#strips all unwanted tags, destyles the wanted tags, 
+#removes HREFs, restyles images as I defined in css, gets only 
+#p/img tags, and their parents and grandparents, writes to html, then returns
   def self.contentCheck feed
     require 'open-uri'
     doc = Nokogiri::HTML(open(feed.url)) do |config|
