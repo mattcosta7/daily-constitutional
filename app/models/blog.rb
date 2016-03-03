@@ -46,7 +46,7 @@ class Blog < ActiveRecord::Base
     doc.search("//div","//img","//p","//span","//a","//h1","//h2","//h3","//h4","//h5","//h6","//ul","//ol","//li","//main","//body").attr('class','').attr('id','').attr('style','')
     doc.xpath('//@*').remove
     doc.search('//img').attr('class','article-image')
-    doc = doc.search("//p","//img").collect{ |p| p.parent }.uniq
+    doc = doc.search("//p","//img").collect{ |p| p.parent.parent }.uniq
     htmlReturn = ''
     doc.each do |x|
       htmlReturn << x.to_xhtml
