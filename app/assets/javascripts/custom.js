@@ -72,14 +72,15 @@ $(document).ready(function(){
     // $('.mdl-list').hide();
 
     $('#close-icon').on('click',function(){
-      $('#modal').hide();
       $("#modal").scrollTop('0')
+      $('#modal').hide();
       // $('.mdl-list').show();
       
     })
     $('#close-icon-left').on('click',function(){
+      $("#modal").scrollTop('0');
       $('#modal').hide();
-      $("#modal").scrollTop('0')
+      
       // $('.mdl-list').show();
     })
   })
