@@ -12,7 +12,7 @@ class HomeController < ApplicationController
       end
       @geo = Geocoder.search(@user.location)[0]
       @tStatus = User.getTrains(@user)
-      @entries = @user.entries.order(:published).reverse.paginate(page: params[:page], per_page: 16)
+      @entries = @user.entries.order(:published).reverse.paginate(page: params[:page], per_page: 30)
       if @scroll == true
         respond_to do |format|
           format.html
