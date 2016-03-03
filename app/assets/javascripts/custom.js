@@ -86,12 +86,12 @@ $(document).ready(function(){
   })
 
   //on sign in, show modal loader, because it's slow
-  $('.sign-in-button').on('click',function(){
-    setTimeout(function(){
-      $('#loader').show();
-      $('#loading-modal').show();
-    },500);
-  })
+  // $('.sign-in-button').on('click',function(){
+  //   setTimeout(function(){
+  //     $('#loader').show();
+  //     $('#loading-modal').show();
+  //   },500);
+  // })
 
   //on new feed add button, show loader because it's slow
   $('#new-feed-button').on('click',function(){
