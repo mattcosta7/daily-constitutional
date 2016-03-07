@@ -1,6 +1,6 @@
 $(document).ready(function(){
   //flash messages fade out on load or on click
-    $('#category_selector_category_id').select2();
+  $('#category_selector_category_id').select2();
   $('#blog_selector_blog_id').select2();
   $('#cat_category_id').select2();
   
@@ -205,6 +205,11 @@ $(document).ready(function(){
     })
   }
 
-
-
-})
+  $(document).swipe({
+    swipeRight:function(event,direction,distance,duration,fingerCount){
+      $(".mdl-layout__drawer-button").click();
+    },
+    swipeLeft:function(event,direction,distance,duration,fingerCount){
+      $(".mdl-layout__drawer-button").click();
+  }});
+});
