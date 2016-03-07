@@ -205,11 +205,20 @@ $(document).ready(function(){
     })
   }
 
-  $(document).swipe({
-    swipeRight:function(event,direction,distance,duration,fingerCount){
-      $(".mdl-layout__drawer-button").click();
-    },
-    swipeLeft:function(event,direction,distance,duration,fingerCount){
-      $(".mdl-layout__drawer-button").click();
-  }});
 });
+
+onload=function(){
+  mc = new Hammer(document);
+  mc.on('panleft',function(e){
+    if(document.getElementsByClassName('mdl-layout__drawer')[0].classList.contains("is-visible")){
+      document.getElementsByClassName('mdl-layout__obfuscator')[0].classList.remove("is-visible");
+      document.getElementsByClassName('mdl-layout__drawer')[0].classList.remove("is-visible");
+    }
+  });
+  mc.on('panright',function(e){
+    if(!document.getElementsByClassName('mdl-layout__drawer')[0].classList.contains("is-visible")){
+      document.getElementsByClassName('mdl-layout__obfuscator')[0].classList.add("is-visible");
+      document.getElementsByClassName('mdl-layout__drawer')[0].classList.add("is-visible");
+    }
+  });
+}
